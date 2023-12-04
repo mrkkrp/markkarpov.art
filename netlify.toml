@@ -1,0 +1,8 @@
+[build]
+    command = "true"
+    publish = "publish/"
+
+[[redirects]]
+    from = "/"
+    to = "/exhibitions.html"
+    status = 200
