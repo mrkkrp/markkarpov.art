@@ -27,6 +27,11 @@ executable mk-art
         aeson >=2,
         base,
         containers,
+        lens,
+        lens-aeson >=1.2,
         shake,
+        stache,
         text,
-        time
+        time,
+        vector,
+        yaml

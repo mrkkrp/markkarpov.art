@@ -5,15 +5,27 @@
 
 module Main (main) where
 
+import Control.Lens hiding ((.=), (<.>))
+import Control.Monad.IO.Class
 import Data.Aeson
+import Data.Aeson.Key qualified as Key
+import Data.Aeson.KeyMap qualified as KeyMap
+import Data.Aeson.Lens
+import Data.List (foldl', foldl1', sortOn)
 import Data.Map.Strict qualified as Map
+import Data.Maybe (fromMaybe, mapMaybe)
 import Data.Set (Set)
 import Data.Set qualified as Set
 import Data.Text (Text)
 import Data.Text qualified as T
+import Data.Text.Lazy qualified as TL
+import Data.Text.Lazy.IO qualified as TL
 import Data.Time
+import Data.Vector qualified as V
+import Data.Yaml qualified as Y
 import Development.Shake hiding (Verbosity (..))
 import Development.Shake.FilePath
+import Text.Mustache
 
 ----------------------------------------------------------------------------
 -- Settings
@@ -230,7 +242,45 @@ menuItemTitle = \case
 -- Build system
 
 main :: IO ()
-main = return ()
+main = shakeArgs shakeOptions $ do
+  -- Helpers
+  phony "clean" $ do
+    putNormal ("Cleaning files in " ++ outdir)
+    removeFilesAfter outdir ["//*"]
+  commonEnv <- fmap ($ ()) . newCache $ \() -> do
+    let commonEnvFile = "env.yaml"
+    need [commonEnvFile]
+    r <- liftIO (Y.decodeFileEither commonEnvFile)
+    case r of
+      Left err -> fail (Y.prettyPrintParseException err)
+      Right value -> return value
+  templates <- fmap ($ ()) . newCache $ \() -> do
+    let templateP = "templates/*.mustache"
+    getMatchingFiles templateP >>= need
+    liftIO (compileMustacheDir "default" (takeDirectory templateP))
+  let justFromTemplate ::
+        Either Text MenuItem ->
+        PName ->
+        FilePath ->
+        Action ()
+      justFromTemplate etitle template output = do
+        env <- commonEnv
+        ts <- templates
+        renderAndWrite
+          ts
+          [template, "default"]
+          Nothing
+          [ either (const env) (`menuItem` env) etitle,
+            provideAs "title" (either id menuItemTitle etitle)
+          ]
+          output
+
+  -- Page implementations
+  buildRoute cssR copyFile'
+  buildRoute jsR copyFile'
+  buildRoute imgR copyFile'
+  buildRoute notFoundR $ \_ output ->
+    justFromTemplate (Left "404 Not Found") "404" output
 
 ----------------------------------------------------------------------------
 -- Helpers
@@ -238,7 +288,40 @@ main = return ()
 getMatchingFiles :: FilePattern -> Action [FilePath]
 getMatchingFiles = getDirectoryFiles "" . pure
 
--- | Human-readable medium name.
+selectTemplate :: PName -> Template -> Template
+selectTemplate name t = t {templateActual = name}
+
+renderAndWrite ::
+  (MonadIO m) =>
+  -- | Templates to use
+  Template ->
+  -- | Names of templates, in order
+  [PName] ->
+  -- | First inner value to interpolate
+  Maybe TL.Text ->
+  -- | Rendering context
+  [Value] ->
+  -- | File path where to write rendered file
+  FilePath ->
+  m ()
+renderAndWrite ts pnames minner context out =
+  liftIO . TL.writeFile out $
+    foldl f (fromMaybe TL.empty minner) pnames
+  where
+    f inner pname =
+      renderMustache
+        (selectTemplate pname ts)
+        (mkContext (provideAs "inner" inner : context))
+
+menuItem :: MenuItem -> Value -> Value
+menuItem item = over (key "main_menu" . _Array) . V.map $ \case
+  Object m ->
+    Object $
+      if KeyMap.lookup "title" m == (Just . String . menuItemTitle) item
+        then KeyMap.insert "active" (Bool True) m
+        else m
+  v -> v
+
 mediumName :: Medium -> Text
 mediumName = \case
   OilOnCanvas -> "oil on canvas"
@@ -249,3 +332,12 @@ parseDay = parseTimeM True defaultTimeLocale "%B %e, %Y" . T.unpack
 
 renderDay :: Day -> String
 renderDay = formatTime defaultTimeLocale "%B %e, %Y"
+
+mkContext :: [Value] -> Value
+mkContext = foldl1' f
+  where
+    f (Object m0) (Object m1) = Object (KeyMap.union m0 m1)
+    f _ _ = error "context merge failed"
+
+provideAs :: (ToJSON v) => Text -> v -> Value
+provideAs k v = Object (KeyMap.singleton (Key.fromText k) (toJSON v))
