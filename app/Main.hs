@@ -1,12 +1,16 @@
+{-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE RecordWildCards #-}
 
 module Main (main) where
 
 import Data.Aeson
 import Data.Map.Strict qualified as Map
 import Data.Set (Set)
+import Data.Set qualified as Set
 import Data.Text (Text)
+import Data.Text qualified as T
 import Data.Time
 import Development.Shake hiding (Verbosity (..))
 import Development.Shake.FilePath
@@ -94,43 +98,85 @@ data Exhibition = Exhibition
     exhibitionDescription :: !Text,
     exhibitionStart :: !Day,
     exhibitionEnd :: !Day,
-    exhibitionArtworks :: Set Artwork
+    exhibitionArtworks :: Set ArtworkId
   }
   deriving (Eq, Show)
 
 instance FromJSON Exhibition where
-  parseJSON = undefined
+  parseJSON = withObject "exhibition" $ \o -> do
+    exhibitionTitle <- o .: "title"
+    exhibitionLocation <- o .: "location"
+    exhibitionDescription <- o .: "description"
+    exhibitionStart <- (o .: "start") >>= parseDay
+    exhibitionEnd <- (o .: "end") >>= parseDay
+    exhibitionArtworks <- Set.fromList <$> (o .: "artworks")
+    return Exhibition {..}
 
 instance ToJSON Exhibition where
-  toJSON = undefined
+  toJSON Exhibition {..} =
+    object
+      [ "title" .= exhibitionTitle,
+        "location" .= exhibitionLocation,
+        "description" .= exhibitionDescription,
+        "start" .= exhibitionStart,
+        "end" .= exhibitionEnd,
+        "artworks" .= toJSON exhibitionArtworks
+      ]
+
+-- | Artwork id.
+newtype ArtworkId = ArtworkId Text
+  deriving (Eq, Ord, Show, FromJSON, ToJSON)
 
 -- | Information about an artwork.
 data Artwork = Artwork
-  { artworkTitle :: !Text,
+  { artworkId :: ArtworkId,
+    artworkTitle :: !Text,
     artworkDescription :: !(Maybe Text),
     artworkMedium :: !Medium,
     artworkHeight :: !Int,
-    artwokrWidth :: !Int,
+    artworkWidth :: !Int,
     artworkDate :: !Day
   }
   deriving (Eq, Show)
 
 instance FromJSON Artwork where
-  parseJSON = undefined
+  parseJSON = withObject "artwork" $ \o -> do
+    artworkId <- o .: "id"
+    artworkTitle <- o .: "title"
+    artworkDescription <- o .:? "description"
+    artworkMedium <- o .: "medium"
+    artworkHeight <- o .: "height"
+    artworkWidth <- o .: "width"
+    artworkDate <- (o .: "date") >>= parseDay
+    return Artwork {..}
 
 instance ToJSON Artwork where
-  toJSON = undefined
+  toJSON Artwork {..} =
+    object
+      [ "id" .= artworkId,
+        "title" .= artworkTitle,
+        "description" .= artworkDescription,
+        "medium" .= artworkMedium,
+        "height" .= artworkHeight,
+        "width" .= artworkWidth,
+        "date" .= artworkDate
+      ]
 
 -- | Art mediums.
 data Medium
   = OilOnCanvas
+  | OilOnPaper
   deriving (Eq, Show)
 
 instance FromJSON Medium where
-  parseJSON = undefined
+  parseJSON = withText "medium" $ \txt ->
+    case txt of
+      "oil_on_canvas" -> return OilOnCanvas
+      "oil_on_paper" -> return OilOnPaper
+      _ -> fail ("unknown medium: " ++ T.unpack txt)
 
 instance ToJSON Medium where
-  toJSON = undefined
+  toJSON = toJSON . mediumName
 
 -- | Information about an essay.
 data Essay = Essay
@@ -142,10 +188,24 @@ data Essay = Essay
   deriving (Eq, Show)
 
 instance FromJSON Essay where
-  parseJSON = undefined
+  parseJSON = withObject "essay" $ \o -> do
+    essayTitle <- o .: "title"
+    essayPublished <- (o .: "date") >>= (.: "published") >>= parseDay
+    essayUpdated <-
+      (o .: "date")
+        >>= (.:? "updated")
+        >>= maybe (pure Nothing) (fmap Just . parseDay)
+    let essayFile = ""
+    return Essay {..}
 
 instance ToJSON Essay where
-  toJSON = undefined
+  toJSON Essay {..} =
+    object
+      [ "title" .= essayTitle,
+        "published" .= renderDay essayPublished,
+        "updated" .= fmap renderDay essayUpdated,
+        "file" .= ("/" ++ essayFile)
+      ]
 
 ----------------------------------------------------------------------------
 -- Menu items
@@ -177,3 +237,15 @@ main = return ()
 
 getMatchingFiles :: FilePattern -> Action [FilePath]
 getMatchingFiles = getDirectoryFiles "" . pure
+
+-- | Human-readable medium name.
+mediumName :: Medium -> Text
+mediumName = \case
+  OilOnCanvas -> "oil on canvas"
+  OilOnPaper -> "oil on paper"
+
+parseDay :: (MonadFail m) => Text -> m Day
+parseDay = parseTimeM True defaultTimeLocale "%B %e, %Y" . T.unpack
+
+renderDay :: Day -> String
+renderDay = formatTime defaultTimeLocale "%B %e, %Y"
