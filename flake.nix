@@ -21,7 +21,7 @@
         "^README\.md$"
       ];
       siteSourceRegex = [
-        "^art\.yaml$"
+        "^artworks\.yaml$"
         "^contact\.md$"
         "^env\.yaml$"
         "^essay.*$"

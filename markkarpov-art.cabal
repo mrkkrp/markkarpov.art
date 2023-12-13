@@ -26,7 +26,10 @@ executable mk-art
     build-depends:
         aeson >=2,
         base,
+        binary,
+        bytestring,
         containers,
+        cryptonite,
         lens,
         lens-aeson >=1.2,
         shake,

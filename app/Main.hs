@@ -1,19 +1,28 @@
+{-# LANGUAGE DeriveAnyClass #-}
+{-# LANGUAGE DerivingStrategies #-}
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RecordWildCards #-}
+{-# OPTIONS_GHC -fno-warn-orphans #-}
 
 module Main (main) where
 
 import Control.Lens hiding ((.=), (<.>))
 import Control.Monad.IO.Class
+import Crypto.Hash qualified as Hash
+import Crypto.Hash.Algorithms (SHA256)
 import Data.Aeson
 import Data.Aeson.Key qualified as Key
 import Data.Aeson.KeyMap qualified as KeyMap
 import Data.Aeson.Lens
-import Data.List (foldl', foldl1', sortOn)
+import Data.Binary (Binary)
+import Data.Binary qualified as Binary
+import Data.ByteString qualified as BS
+import Data.List (find, foldl1', sortOn)
 import Data.Map.Strict qualified as Map
-import Data.Maybe (fromMaybe, mapMaybe)
+import Data.Maybe (fromMaybe)
+import Data.Ord (Down (..))
 import Data.Set (Set)
 import Data.Set qualified as Set
 import Data.Text (Text)
@@ -25,6 +34,7 @@ import Data.Vector qualified as V
 import Data.Yaml qualified as Y
 import Development.Shake hiding (Verbosity (..))
 import Development.Shake.FilePath
+import GHC.Generics (Generic)
 import Text.Mustache
 
 ----------------------------------------------------------------------------
@@ -108,20 +118,35 @@ data Exhibition = Exhibition
   { exhibitionTitle :: !Text,
     exhibitionLocation :: !Text,
     exhibitionDescription :: !Text,
+    exhibitionLink :: !Text,
     exhibitionStart :: !Day,
     exhibitionEnd :: !Day,
-    exhibitionArtworks :: Set ArtworkId
+    exhibitionArtworks :: !(Set ArtworkId),
+    exhibitionPage :: !FilePath
   }
   deriving (Eq, Show)
+  deriving stock (Generic)
+  deriving anyclass (Binary)
+
+deriving instance Generic Day
+
+deriving instance Binary Day
 
 instance FromJSON Exhibition where
   parseJSON = withObject "exhibition" $ \o -> do
     exhibitionTitle <- o .: "title"
     exhibitionLocation <- o .: "location"
     exhibitionDescription <- o .: "description"
+    exhibitionLink <- o .: "link"
     exhibitionStart <- (o .: "start") >>= parseDay
     exhibitionEnd <- (o .: "end") >>= parseDay
     exhibitionArtworks <- Set.fromList <$> (o .: "artworks")
+    let exhibitionDigest :: Hash.Digest SHA256
+        exhibitionDigest =
+          (Hash.hash . BS.toStrict . Binary.encode)
+            (exhibitionLink, exhibitionStart, exhibitionEnd)
+        exhibitionPage =
+          outdir </> "exhibition" </> show exhibitionDigest <.> "html"
     return Exhibition {..}
 
 instance ToJSON Exhibition where
@@ -130,14 +155,18 @@ instance ToJSON Exhibition where
       [ "title" .= exhibitionTitle,
         "location" .= exhibitionLocation,
         "description" .= exhibitionDescription,
+        "link" .= exhibitionLink,
         "start" .= exhibitionStart,
         "end" .= exhibitionEnd,
-        "artworks" .= toJSON exhibitionArtworks
+        "artworks" .= toJSON exhibitionArtworks,
+        "page" .= exhibitionPage
       ]
 
 -- | Artwork id.
 newtype ArtworkId = ArtworkId Text
-  deriving (Eq, Ord, Show, FromJSON, ToJSON)
+  deriving (Eq, Ord, Show)
+  deriving stock (Generic)
+  deriving anyclass (FromJSON, ToJSON, Binary)
 
 -- | Information about an artwork.
 data Artwork = Artwork
@@ -247,14 +276,12 @@ main = shakeArgs shakeOptions $ do
   phony "clean" $ do
     putNormal ("Cleaning files in " ++ outdir)
     removeFilesAfter outdir ["//*"]
-  commonEnv <- fmap ($ ()) . newCache $ \() -> do
-    let commonEnvFile = "env.yaml"
-    need [commonEnvFile]
-    r <- liftIO (Y.decodeFileEither commonEnvFile)
-    case r of
-      Left err -> fail (Y.prettyPrintParseException err)
-      Right value -> return value
-  templates <- fmap ($ ()) . newCache $ \() -> do
+  envCache <- cacheYamlFile "env.yaml"
+  exhibitionsCache :: Action [Exhibition] <-
+    fmap (sortOn (Down . exhibitionStart)) <$> cacheYamlFile "exhibitions.yaml"
+  artworksCache :: Action [Artwork] <-
+    fmap (sortOn (Down . artworkDate)) <$> cacheYamlFile "artworks.yaml"
+  templatesCache <- newCache' $ \() -> do
     let templateP = "templates/*.mustache"
     getMatchingFiles templateP >>= need
     liftIO (compileMustacheDir "default" (takeDirectory templateP))
@@ -264,8 +291,8 @@ main = shakeArgs shakeOptions $ do
         FilePath ->
         Action ()
       justFromTemplate etitle template output = do
-        env <- commonEnv
-        ts <- templates
+        env <- envCache
+        ts <- templatesCache
         renderAndWrite
           ts
           [template, "default"]
@@ -281,6 +308,39 @@ main = shakeArgs shakeOptions $ do
   buildRoute imgR copyFile'
   buildRoute notFoundR $ \_ output ->
     justFromTemplate (Left "404 Not Found") "404" output
+  buildRoute exhibitionsR $ \_ output -> do
+    env <- envCache
+    exhibitions <- exhibitionsCache
+    templates <- templatesCache
+    need (exhibitionPage <$> exhibitions)
+    -- TODO display in upcoming, current, and past sections
+    -- TODO group by years
+    renderAndWrite
+      templates
+      ["exhibitions", "default"]
+      Nothing
+      [ menuItem Exhibitions env,
+        provideAs "exhibition" exhibitions,
+        mkTitle Exhibitions
+      ]
+      output
+  buildRoute exhibitionR $ \_ output -> do
+    env <- envCache
+    exhibitions <- exhibitionsCache
+    templates <- templatesCache
+    thisExhibition <- case find ((== output) . exhibitionPage) exhibitions of
+      Nothing ->
+        fail $
+          "Trying to build " ++ output ++ " but no matching exhibitions found"
+      Just x -> return x
+    renderAndWrite
+      templates
+      ["exhibition", "default"]
+      Nothing
+      [ menuItem Exhibitions env,
+        toJSON thisExhibition
+      ]
+      output
 
 ----------------------------------------------------------------------------
 -- Helpers
@@ -339,5 +399,19 @@ mkContext = foldl1' f
     f (Object m0) (Object m1) = Object (KeyMap.union m0 m1)
     f _ _ = error "context merge failed"
 
+mkTitle :: MenuItem -> Value
+mkTitle = provideAs "title" . menuItemTitle
+
 provideAs :: (ToJSON v) => Text -> v -> Value
 provideAs k v = Object (KeyMap.singleton (Key.fromText k) (toJSON v))
+
+newCache' :: (() -> Action v) -> Rules (Action v)
+newCache' = fmap ($ ()) . newCache
+
+cacheYamlFile :: (FromJSON v) => FilePath -> Rules (Action v)
+cacheYamlFile yamlFile = newCache' $ \() -> do
+  need [yamlFile]
+  r <- liftIO (Y.decodeFileEither yamlFile)
+  case r of
+    Left err -> fail (Y.prettyPrintParseException err)
+    Right value -> return value
