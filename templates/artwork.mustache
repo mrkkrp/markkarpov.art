@@ -1,7 +1,14 @@
 <figure>
   <img src="/static/img/art/{{ id }}.png" alt="{{ date }} {{ title }}" class="img-fluid">
   <figcaption>
-    {{ date }} {{ title }} &sdot; {{ height }} cm &times; {{ width }} cm,
+    {{ date }}
+    {{# title }}
+    {{ . }}
+    {{/ title }}
+    {{^ title }}
+    Untitled
+    {{/ title }}
+    &sdot; {{ height }} &times; {{ width }} cm,
     {{ medium }}
     <br>
     {{# description }}

@@ -216,7 +216,7 @@ instance ToJSON Artwork where
         "medium" .= artworkMedium,
         "height" .= artworkHeight,
         "width" .= artworkWidth,
-        "date" .= artworkDate
+        "date" .= renderDay artworkDate
       ]
 
 -- | Art mediums.
@@ -520,13 +520,13 @@ mediumName = \case
   OilOnPaper -> "oil on paper"
   Watercolor -> "watercolor"
   Photo -> "photo"
-  MixedMedia -> "mixed_media"
+  MixedMedia -> "mixed media"
 
 parseDay :: (MonadFail m) => Text -> m Day
 parseDay = parseTimeM True defaultTimeLocale "%F" . T.unpack
 
 renderDay :: Day -> String
-renderDay = formatTime defaultTimeLocale "%F"
+renderDay = formatTime defaultTimeLocale "%d.%m.%Y"
 
 mkContext :: [Value] -> Value
 mkContext = foldl1' f
