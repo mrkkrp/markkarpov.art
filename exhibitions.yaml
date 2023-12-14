@@ -1,1 +1,7 @@
-[]
+- title: Foo
+  location: Paris
+  description: Blah
+  link: https://home.com
+  start: 2020-02-15
+  end: 2022-02-15
+  artworks: []

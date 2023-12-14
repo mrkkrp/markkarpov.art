@@ -3,12 +3,14 @@
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE RecordWildCards #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 
 module Main (main) where
 
 import Control.Lens hiding ((.=), (<.>))
+import Control.Monad
 import Control.Monad.IO.Class
 import Crypto.Hash qualified as Hash
 import Crypto.Hash.Algorithms (SHA256)
@@ -20,6 +22,7 @@ import Data.Binary (Binary)
 import Data.Binary qualified as Binary
 import Data.ByteString qualified as BS
 import Data.List (find, foldl1', sortOn)
+import Data.List.NonEmpty (NonEmpty (..))
 import Data.Map.Strict qualified as Map
 import Data.Maybe (fromMaybe)
 import Data.Ord (Down (..))
@@ -27,6 +30,7 @@ import Data.Set (Set)
 import Data.Set qualified as Set
 import Data.Text (Text)
 import Data.Text qualified as T
+import Data.Text.IO qualified as T
 import Data.Text.Lazy qualified as TL
 import Data.Text.Lazy.IO qualified as TL
 import Data.Time
@@ -35,7 +39,16 @@ import Data.Yaml qualified as Y
 import Development.Shake hiding (Verbosity (..))
 import Development.Shake.FilePath
 import GHC.Generics (Generic)
+import Lucid qualified as L
+import Text.MMark qualified as MMark
+import Text.MMark.Extension qualified as Ext
+import Text.MMark.Extension.Common qualified as Ext
+import Text.Megaparsec qualified as M
 import Text.Mustache
+import Text.URI (URI)
+import Text.URI qualified as URI
+import Text.URI.Lens (uriPath, uriScheme)
+import Text.URI.QQ (scheme)
 
 ----------------------------------------------------------------------------
 -- Settings
@@ -88,6 +101,12 @@ buildRoute (GenPat outFile') f = do
 ----------------------------------------------------------------------------
 -- Routes
 
+essayPattern :: FilePath
+essayPattern = "essay/*.md"
+
+essayMapOut :: FilePath -> FilePath
+essayMapOut = (-<.> "html")
+
 cssR,
   jsR,
   imgR,
@@ -107,7 +126,7 @@ exhibitionsR = Gen "exhibitions.html"
 exhibitionR = GenPat "exhibition/*.html"
 artR = Gen "art.html"
 essaysR = Gen "essays.html"
-essayR = Ins "essay/*.md" (-<.> "html")
+essayR = Ins essayPattern essayMapOut
 contactR = Ins "contact.md" (-<.> "html")
 
 ----------------------------------------------------------------------------
@@ -122,15 +141,13 @@ data Exhibition = Exhibition
     exhibitionStart :: !Day,
     exhibitionEnd :: !Day,
     exhibitionArtworks :: !(Set ArtworkId),
-    exhibitionPage :: !FilePath
+    exhibitionFile :: !FilePath
   }
   deriving (Eq, Show)
-  deriving stock (Generic)
-  deriving anyclass (Binary)
 
-deriving instance Generic Day
+deriving stock instance Generic Day
 
-deriving instance Binary Day
+deriving anyclass instance Binary Day
 
 instance FromJSON Exhibition where
   parseJSON = withObject "exhibition" $ \o -> do
@@ -145,7 +162,7 @@ instance FromJSON Exhibition where
         exhibitionDigest =
           (Hash.hash . BS.toStrict . Binary.encode)
             (exhibitionLink, exhibitionStart, exhibitionEnd)
-        exhibitionPage =
+        exhibitionFile =
           outdir </> "exhibition" </> show exhibitionDigest <.> "html"
     return Exhibition {..}
 
@@ -159,19 +176,18 @@ instance ToJSON Exhibition where
         "start" .= exhibitionStart,
         "end" .= exhibitionEnd,
         "artworks" .= toJSON exhibitionArtworks,
-        "page" .= exhibitionPage
+        "file" .= exhibitionFile
       ]
 
 -- | Artwork id.
 newtype ArtworkId = ArtworkId Text
   deriving (Eq, Ord, Show)
-  deriving stock (Generic)
-  deriving anyclass (FromJSON, ToJSON, Binary)
+  deriving newtype (FromJSON, ToJSON)
 
 -- | Information about an artwork.
 data Artwork = Artwork
   { artworkId :: ArtworkId,
-    artworkTitle :: !Text,
+    artworkTitle :: !(Maybe Text),
     artworkDescription :: !(Maybe Text),
     artworkMedium :: !Medium,
     artworkHeight :: !Int,
@@ -183,7 +199,7 @@ data Artwork = Artwork
 instance FromJSON Artwork where
   parseJSON = withObject "artwork" $ \o -> do
     artworkId <- o .: "id"
-    artworkTitle <- o .: "title"
+    artworkTitle <- o .:? "title"
     artworkDescription <- o .:? "description"
     artworkMedium <- o .: "medium"
     artworkHeight <- o .: "height"
@@ -207,6 +223,9 @@ instance ToJSON Artwork where
 data Medium
   = OilOnCanvas
   | OilOnPaper
+  | Watercolor
+  | Photo
+  | MixedMedia
   deriving (Eq, Show)
 
 instance FromJSON Medium where
@@ -214,6 +233,9 @@ instance FromJSON Medium where
     case txt of
       "oil_on_canvas" -> return OilOnCanvas
       "oil_on_paper" -> return OilOnPaper
+      "watercolor" -> return Watercolor
+      "photo" -> return Photo
+      "mixed_media" -> return MixedMedia
       _ -> fail ("unknown medium: " ++ T.unpack txt)
 
 instance ToJSON Medium where
@@ -277,14 +299,23 @@ main = shakeArgs shakeOptions $ do
     putNormal ("Cleaning files in " ++ outdir)
     removeFilesAfter outdir ["//*"]
   envCache <- cacheYamlFile "env.yaml"
-  exhibitionsCache :: Action [Exhibition] <-
+  exhibitionCache :: Action [Exhibition] <-
     fmap (sortOn (Down . exhibitionStart)) <$> cacheYamlFile "exhibitions.yaml"
-  artworksCache :: Action [Artwork] <-
+  artworkCache :: Action [Artwork] <-
     fmap (sortOn (Down . artworkDate)) <$> cacheYamlFile "artworks.yaml"
-  templatesCache <- newCache' $ \() -> do
+  templateCache <- newCache' $ \() -> do
     let templateP = "templates/*.mustache"
     getMatchingFiles templateP >>= need
     liftIO (compileMustacheDir "default" (takeDirectory templateP))
+  getMd <- newCache $ \path -> do
+    env <- envCache
+    getMdHelper env path
+  essayCache <- newCache' $ \() -> do
+    srcs <- getMatchingFiles essayPattern
+    fmap (sortOn (Down . essayPublished)) . forM srcs $ \src -> do
+      need [src]
+      v <- getMd src >>= interpretValue . fst
+      return v {essayFile = essayMapOut src}
   let justFromTemplate ::
         Either Text MenuItem ->
         PName ->
@@ -292,7 +323,7 @@ main = shakeArgs shakeOptions $ do
         Action ()
       justFromTemplate etitle template output = do
         env <- envCache
-        ts <- templatesCache
+        ts <- templateCache
         renderAndWrite
           ts
           [template, "default"]
@@ -310,9 +341,9 @@ main = shakeArgs shakeOptions $ do
     justFromTemplate (Left "404 Not Found") "404" output
   buildRoute exhibitionsR $ \_ output -> do
     env <- envCache
-    exhibitions <- exhibitionsCache
-    templates <- templatesCache
-    need (exhibitionPage <$> exhibitions)
+    exhibitions <- exhibitionCache
+    templates <- templateCache
+    need (exhibitionFile <$> exhibitions)
     -- TODO display in upcoming, current, and past sections
     -- TODO group by years
     renderAndWrite
@@ -326,21 +357,122 @@ main = shakeArgs shakeOptions $ do
       output
   buildRoute exhibitionR $ \_ output -> do
     env <- envCache
-    exhibitions <- exhibitionsCache
-    templates <- templatesCache
-    thisExhibition <- case find ((== output) . exhibitionPage) exhibitions of
+    exhibitions <- exhibitionCache
+    artworks <- artworkCache
+    templates <- templateCache
+    thisExhibition <- case find ((== output) . exhibitionFile) exhibitions of
       Nothing ->
         fail $
           "Trying to build " ++ output ++ " but no matching exhibitions found"
       Just x -> return x
+    let relevantArtworks =
+          filter
+            ((`Set.member` exhibitionArtworks thisExhibition) . artworkId)
+            artworks
     renderAndWrite
       templates
       ["exhibition", "default"]
       Nothing
       [ menuItem Exhibitions env,
-        toJSON thisExhibition
+        toJSON thisExhibition,
+        provideAs "artwork" relevantArtworks
       ]
       output
+  buildRoute artR $ \_ output -> do
+    env <- envCache
+    artworks <- artworkCache
+    templates <- templateCache
+    renderAndWrite
+      templates
+      ["artworks", "default"]
+      Nothing
+      [ menuItem Art env,
+        provideAs "artwork" artworks,
+        mkTitle Art
+      ]
+      output
+  buildRoute essaysR $ \_ output -> do
+    env <- envCache
+    essays <- essayCache
+    templates <- templateCache
+    renderAndWrite
+      templates
+      ["essays", "default"]
+      Nothing
+      [ menuItem Essays env,
+        provideAs "essay" essays,
+        mkTitle Essays
+      ]
+      output
+  buildRoute essayR $ \input output -> do
+    env <- envCache
+    templates <- templateCache
+    need [input]
+    (v, content) <- getMd input
+    renderAndWrite
+      templates
+      ["essay", "default"]
+      (Just content)
+      [ menuItem Essays env,
+        v
+      ]
+      output
+  buildRoute contactR $ \input output -> do
+    env <- envCache
+    templates <- templateCache
+    need [input]
+    (v, content) <- getMd input
+    renderAndWrite
+      templates
+      ["contact", "default"]
+      (Just content)
+      [ menuItem Contact env,
+        mkTitle Contact,
+        v
+      ]
+      output
+
+----------------------------------------------------------------------------
+-- Custom MMark extensions
+
+addTableClasses :: MMark.Extension
+addTableClasses = Ext.blockRender $ \old block ->
+  case block of
+    t@(Ext.Table _ _) -> L.with (old t) [L.class_ "table table-striped"]
+    other -> old other
+
+addImageClasses :: MMark.Extension
+addImageClasses = Ext.inlineRender $ \old inline ->
+  case inline of
+    i@Ext.Image {} -> L.with (old i) [L.class_ "img-fluid"]
+    other -> old other
+
+provideSocialUrls :: Value -> MMark.Extension
+provideSocialUrls v = Ext.inlineTrans $ \case
+  l@(Ext.Link inner uri mtitle) ->
+    if URI.uriScheme uri == Just [scheme|social|]
+      then case uri ^. uriPath of
+        [x] ->
+          case v
+            ^? key "social"
+              . key (Key.fromText (URI.unRText x))
+              . _String
+              . getURI of
+            Nothing -> Ext.Plain "!lookup failed!"
+            Just t ->
+              if Ext.asPlainText inner == "x"
+                then
+                  Ext.Link
+                    (Ext.Plain (URI.render t) :| [])
+                    ((uriScheme ?~ [scheme|mailto|]) t)
+                    mtitle
+                else Ext.Link inner t mtitle
+        _ -> l
+      else l
+  other -> other
+
+getURI :: Traversal' Text URI
+getURI f txt = maybe txt URI.render <$> traverse f (URI.mkURI txt :: Maybe URI)
 
 ----------------------------------------------------------------------------
 -- Helpers
@@ -386,12 +518,15 @@ mediumName :: Medium -> Text
 mediumName = \case
   OilOnCanvas -> "oil on canvas"
   OilOnPaper -> "oil on paper"
+  Watercolor -> "watercolor"
+  Photo -> "photo"
+  MixedMedia -> "mixed_media"
 
 parseDay :: (MonadFail m) => Text -> m Day
-parseDay = parseTimeM True defaultTimeLocale "%B %e, %Y" . T.unpack
+parseDay = parseTimeM True defaultTimeLocale "%F" . T.unpack
 
 renderDay :: Day -> String
-renderDay = formatTime defaultTimeLocale "%B %e, %Y"
+renderDay = formatTime defaultTimeLocale "%F"
 
 mkContext :: [Value] -> Value
 mkContext = foldl1' f
@@ -415,3 +550,36 @@ cacheYamlFile yamlFile = newCache' $ \() -> do
   case r of
     Left err -> fail (Y.prettyPrintParseException err)
     Right value -> return value
+
+getMdHelper :: Value -> FilePath -> Action (Value, TL.Text)
+getMdHelper env path = do
+  txt <- liftIO (T.readFile path)
+  case MMark.parse path txt of
+    Left bundle -> fail (M.errorBundlePretty bundle)
+    Right doc -> do
+      let toc = MMark.runScanner doc (Ext.tocScanner (\x -> x > 1 && x < 5))
+          r =
+            MMark.useExtensions
+              [ Ext.fontAwesome,
+                Ext.footnotes,
+                Ext.kbd,
+                Ext.linkTarget,
+                Ext.mathJax (Just '$'),
+                Ext.obfuscateEmail "protected-email",
+                Ext.punctuationPrettifier,
+                Ext.ghcSyntaxHighlighter,
+                Ext.skylighting,
+                Ext.toc "toc" toc,
+                addTableClasses,
+                addImageClasses,
+                provideSocialUrls env
+              ]
+              doc
+          v = fromMaybe (object []) (MMark.projectYaml doc)
+      return (v, L.renderText (MMark.render r))
+
+interpretValue :: (FromJSON v) => Value -> Action v
+interpretValue v =
+  case fromJSON v of
+    Error str -> fail str
+    Success a -> return a
