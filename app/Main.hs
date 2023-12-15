@@ -21,7 +21,8 @@ import Data.Aeson.Lens
 import Data.Binary (Binary)
 import Data.Binary qualified as Binary
 import Data.ByteString qualified as BS
-import Data.List (find, foldl1', sortOn)
+import Data.Function (on)
+import Data.List (find, foldl1', groupBy, sortOn)
 import Data.List.NonEmpty (NonEmpty (..))
 import Data.Map.Strict qualified as Map
 import Data.Maybe (fromMaybe)
@@ -163,7 +164,7 @@ instance FromJSON Exhibition where
           (Hash.hash . BS.toStrict . Binary.encode)
             (exhibitionLink, exhibitionStart, exhibitionEnd)
         exhibitionFile =
-          outdir </> "exhibition" </> show exhibitionDigest <.> "html"
+          "exhibition" </> show exhibitionDigest <.> "html"
     return Exhibition {..}
 
 instance ToJSON Exhibition where
@@ -173,10 +174,24 @@ instance ToJSON Exhibition where
         "location" .= exhibitionLocation,
         "description" .= exhibitionDescription,
         "link" .= exhibitionLink,
-        "start" .= exhibitionStart,
-        "end" .= exhibitionEnd,
+        "start" .= renderDay exhibitionStart,
+        "end" .= renderDay exhibitionEnd,
         "artworks" .= toJSON exhibitionArtworks,
-        "file" .= exhibitionFile
+        "file" .= ("/" ++ exhibitionFile)
+      ]
+
+-- | Exhibitions grouped by year.
+data ExhibitionPerYear = ExhibitionPerYear
+  { epyYear :: Year,
+    epyExhibitions :: [Exhibition]
+  }
+  deriving (Eq, Show)
+
+instance ToJSON ExhibitionPerYear where
+  toJSON ExhibitionPerYear {..} =
+    object
+      [ "year" .= epyYear,
+        "exhibition" .= epyExhibitions
       ]
 
 -- | Artwork id.
@@ -343,15 +358,17 @@ main = shakeArgs shakeOptions $ do
     env <- envCache
     exhibitions <- exhibitionCache
     templates <- templateCache
-    need (exhibitionFile <$> exhibitions)
-    -- TODO display in upcoming, current, and past sections
-    -- TODO group by years
+    need ((outdir </>) . exhibitionFile <$> exhibitions)
+    let exhibitionsByYear =
+          fmap
+            (\xs -> ExhibitionPerYear (exhibitionYear (head xs)) xs)
+            (groupBy ((==) `on` exhibitionYear) exhibitions)
     renderAndWrite
       templates
       ["exhibitions", "default"]
       Nothing
       [ menuItem Exhibitions env,
-        provideAs "exhibition" exhibitions,
+        provideAs "exhibitions_by_year" exhibitionsByYear,
         mkTitle Exhibitions
       ]
       output
@@ -360,7 +377,7 @@ main = shakeArgs shakeOptions $ do
     exhibitions <- exhibitionCache
     artworks <- artworkCache
     templates <- templateCache
-    thisExhibition <- case find ((== output) . exhibitionFile) exhibitions of
+    thisExhibition <- case find ((== output) . (outdir </>) . exhibitionFile) exhibitions of
       Nothing ->
         fail $
           "Trying to build " ++ output ++ " but no matching exhibitions found"
@@ -564,11 +581,8 @@ getMdHelper env path = do
                 Ext.footnotes,
                 Ext.kbd,
                 Ext.linkTarget,
-                Ext.mathJax (Just '$'),
                 Ext.obfuscateEmail "protected-email",
                 Ext.punctuationPrettifier,
-                Ext.ghcSyntaxHighlighter,
-                Ext.skylighting,
                 Ext.toc "toc" toc,
                 addTableClasses,
                 addImageClasses,
@@ -583,3 +597,6 @@ interpretValue v =
   case fromJSON v of
     Error str -> fail str
     Success a -> return a
+
+exhibitionYear :: Exhibition -> Year
+exhibitionYear Exhibition {..} = dayPeriod exhibitionStart

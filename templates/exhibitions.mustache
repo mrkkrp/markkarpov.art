@@ -1,11 +1,14 @@
 <h1>Exhibitions</h1>
 
-<table class="table table-striped mt-3">
+{{# exhibitions_by_year }}
+<h2>{{ year }}</h2>
+<ul>
   {{# exhibition }}
-  <tr>
-    <td>
-      <a href="{{ file }}">{{ title }}</a>
-    </td>
-  </tr>
+  <li><a href="{{ file }}">{{ title }} ({{ location }}, from {{ start }} to {{ end }})</a></li>
   {{/ exhibition }}
-</table>
+</ul>
+{{/ exhibitions_by_year }}
+
+{{^ exhibitions_by_year }}
+<p>No exhibitions.</p>
+{{/ exhibitions_by_year }}
