@@ -312,7 +312,7 @@ main = shakeArgs shakeOptions $ do
     getMdHelper env path
   essayCache <- newCache' $ \() -> do
     srcs <- getMatchingFiles essayPattern
-    fmap (sortOn (Down . essayPublished)) . forM srcs $ \src -> do
+    fmap (sortOn essayPublished) . forM srcs $ \src -> do
       need [src]
       v <- getMd src >>= interpretValue . fst
       return v {essayFile = essayMapOut src}
