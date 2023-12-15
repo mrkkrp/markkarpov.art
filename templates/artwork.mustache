@@ -2,13 +2,12 @@
   <img src="/static/img/art/{{ id }}.png" alt="{{ date }} {{ title }}" class="img-fluid">
   <figcaption>
     {{ date }}
-    {{# title }}
-    {{ . }}
-    {{/ title }}
-    {{^ title }}
-    Untitled
-    {{/ title }}
-    &sdot; {{ height }} &times; {{ width }} cm,
+    &sdot;
+    {{# title }}{{ . }}{{/ title }}
+    {{^ title }}Untitled{{/ title }}
+    &sdot;
+    {{ height }} &times; {{ width }} cm
+    &sdot;
     {{ medium }}
     <br>
     {{# description }}

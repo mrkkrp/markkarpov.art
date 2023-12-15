@@ -302,7 +302,7 @@ main = shakeArgs shakeOptions $ do
   exhibitionCache :: Action [Exhibition] <-
     fmap (sortOn (Down . exhibitionStart)) <$> cacheYamlFile "exhibitions.yaml"
   artworkCache :: Action [Artwork] <-
-    fmap (sortOn (Down . artworkDate)) <$> cacheYamlFile "artworks.yaml"
+    fmap (sortOn (Down . artworkId)) <$> cacheYamlFile "artworks.yaml"
   templateCache <- newCache' $ \() -> do
     let templateP = "templates/*.mustache"
     getMatchingFiles templateP >>= need
