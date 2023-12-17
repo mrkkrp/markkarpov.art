@@ -441,7 +441,7 @@ main = shakeArgs shakeOptions $ do
     (v, content) <- getMd input
     renderAndWrite
       templates
-      ["contact", "default"]
+      ["default"]
       (Just content)
       [ menuItem Contact env,
         mkTitle Contact,
