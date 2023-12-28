@@ -426,12 +426,13 @@ main = shakeArgs shakeOptions $ do
     templates <- templateCache
     need [input]
     (v, content) <- getMd input
+    essayMetadata :: Essay <- interpretValue v
     renderAndWrite
       templates
       ["essay", "default"]
       (Just content)
       [ menuItem Essays env,
-        v
+        toJSON essayMetadata
       ]
       output
   buildRoute contactR $ \input output -> do
