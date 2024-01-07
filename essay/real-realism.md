@@ -159,7 +159,7 @@ the *real realist intention*:
 
 One goal of real realism is to remind us that perception of reality is a
 great privilege, a miracle, the foundation for everything else. Another goal
-of real realism is to call for a reexamination of where we are going and
+of real realism is to call for a re-examination of where we are going and
 what we want to do with the latest technological advances.
 
 ## Reality and art
