@@ -96,7 +96,7 @@ coincidence that impressionists were in love with the countryside and the
 peasant lifestyle. It was a natural response to industrialization. Many
 changes in today's world are rapid and drastic, they fit in a person's
 lifetime. However, there are also those that are more fundamental, slower,
-and therefore may not be obvious. One such change might has been happening
+and therefore may not be obvious. One such change might have been happening
 throughout the whole human history and it concerns our perception of
 reality.
 
