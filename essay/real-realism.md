@@ -61,7 +61,7 @@ single artwork cannot pinpoint the intention unambiguously.
 
 Next, let us suppose that the intention is explained through the language
 but it is in conflict with what the audience perceives by observing the
-physical object itself, that is, the inferred and the explained intentions
+physical object itself, that is, the inferred and the explained intention
 differ. In this case either the explanation is incorrect or the object fails
 to implement the intention as stated. Such a pair object-intention does not
 work. Indeed, the only way it could work is if the discrepancy between the
