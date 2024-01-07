@@ -19,6 +19,6 @@ $ ./watch.sh
 
 ## License
 
-Copyright © 2017–present Mark Karpov
+Copyright © 2023–present Mark Karpov
 
 All rights reserved.
