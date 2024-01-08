@@ -115,6 +115,7 @@ cssR,
   exhibitionsR,
   exhibitionR,
   artR,
+  artYearR,
   essaysR,
   essayR,
   contactR ::
@@ -126,6 +127,7 @@ notFoundR = Gen "404.html"
 exhibitionsR = Gen "exhibitions.html"
 exhibitionR = GenPat "exhibition/*.html"
 artR = Gen "art.html"
+artYearR = GenPat "art/*.html"
 essaysR = Gen "essays.html"
 essayR = Ins essayPattern essayMapOut
 contactR = Ins "contact.md" (-<.> "html")
@@ -319,7 +321,7 @@ main = shakeArgs shakeOptions $ do
   exhibitionCache :: Action [Exhibition] <-
     fmap (sortOn (Down . exhibitionStart)) <$> cacheYamlFile "exhibitions.yaml"
   artworkCache :: Action [Artwork] <-
-    fmap (sortOn (Down . artworkId)) <$> cacheYamlFile "artworks.yaml"
+    fmap (sortOn artworkId) <$> cacheYamlFile "artworks.yaml"
   templateCache <- newCache' $ \() -> do
     let templateP = "templates/*.mustache"
     getMatchingFiles templateP >>= need
@@ -399,15 +401,35 @@ main = shakeArgs shakeOptions $ do
       output
   buildRoute artR $ \_ output -> do
     env <- envCache
+    templates <- templateCache
+    years <- getArtworkYears <$> artworkCache
+    need (artworkYearToPath <$> Set.toList years)
+    renderAndWrite
+      templates
+      ["art", "default"]
+      Nothing
+      [ menuItem Art env,
+        provideAs "year" years,
+        mkTitle Art
+      ]
+      output
+  buildRoute artYearR $ \_ output -> do
+    env <- envCache
     artworks <- artworkCache
     templates <- templateCache
+    let thisYear = read (takeBaseName output)
+        prefaceFile = "art-per-year" </> show thisYear <.> "md"
+        thisYearArtworks = filterArtworksByYear thisYear artworks
+    preface <- snd <$> getMd prefaceFile
     renderAndWrite
       templates
       ["artworks", "default"]
-      Nothing
+      (Just preface)
       [ menuItem Art env,
-        provideAs "artwork" artworks,
-        mkTitle Art
+        provideAs "artwork" thisYearArtworks,
+        provideAs "this_year" thisYear,
+        provideAs "artworks_total" (length thisYearArtworks),
+        provideAs "title" (menuItemTitle Art <> " " <> T.pack (show thisYear))
       ]
       output
   buildRoute essaysR $ \_ output -> do
@@ -604,3 +626,14 @@ interpretValue v =
 
 exhibitionYear :: Exhibition -> Year
 exhibitionYear Exhibition {..} = dayPeriod exhibitionStart
+
+getArtworkYears :: [Artwork] -> Set Year
+getArtworkYears = Set.fromList . fmap (dayPeriod . artworkDate)
+
+artworkYearToPath :: Year -> FilePath
+artworkYearToPath year = outdir </> "art" </> show year <.> "html"
+
+filterArtworksByYear :: Year -> [Artwork] -> [Artwork]
+filterArtworksByYear year = filter f
+  where
+    f x = dayPeriod (artworkDate x) == year
