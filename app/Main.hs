@@ -241,6 +241,7 @@ data Medium
   | Watercolor
   | Photo
   | MixedMedia
+  | CPencilsConteOnPaper
   deriving (Eq, Show)
 
 instance FromJSON Medium where
@@ -251,6 +252,7 @@ instance FromJSON Medium where
       "watercolor" -> return Watercolor
       "photo" -> return Photo
       "mixed_media" -> return MixedMedia
+      "cpencils_conte_on_paper" -> return CPencilsConteOnPaper
       _ -> fail ("unknown medium: " ++ T.unpack txt)
 
 instance ToJSON Medium where
@@ -539,6 +541,7 @@ mediumName = \case
   Watercolor -> "watercolor"
   Photo -> "photo"
   MixedMedia -> "mixed media"
+  CPencilsConteOnPaper -> "colored pencils and conté crayon on paper"
 
 parseDay :: (MonadFail m) => Text -> m Day
 parseDay = parseTimeM True defaultTimeLocale "%F" . T.unpack
