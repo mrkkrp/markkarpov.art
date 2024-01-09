@@ -241,6 +241,7 @@ data Medium
   = OilOnCanvas
   | OilOnPaper
   | Watercolor
+  | WatercolorAndInk
   | Photo
   | MixedMedia
   | CPencilsConteOnPaper
@@ -252,6 +253,7 @@ instance FromJSON Medium where
       "oil_on_canvas" -> return OilOnCanvas
       "oil_on_paper" -> return OilOnPaper
       "watercolor" -> return Watercolor
+      "watercolor_and_ink" -> return WatercolorAndInk
       "photo" -> return Photo
       "mixed_media" -> return MixedMedia
       "cpencils_conte_on_paper" -> return CPencilsConteOnPaper
@@ -403,7 +405,7 @@ main = shakeArgs shakeOptions $ do
     env <- envCache
     templates <- templateCache
     years <- getArtworkYears <$> artworkCache
-    need (artworkYearToPath <$> Set.toList years)
+    need (artworkYearToPath <$> Set.toAscList years)
     renderAndWrite
       templates
       ["art", "default"]
@@ -561,6 +563,7 @@ mediumName = \case
   OilOnCanvas -> "oil on canvas"
   OilOnPaper -> "oil on paper"
   Watercolor -> "watercolor"
+  WatercolorAndInk -> "watercolor and ink"
   Photo -> "photo"
   MixedMedia -> "mixed media"
   CPencilsConteOnPaper -> "colored pencils and conté crayon on paper"
