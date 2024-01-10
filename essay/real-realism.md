@@ -214,7 +214,7 @@ observation and that is all the PGRR is concerned with.
 If an artwork is intended for the public and is not destroyed upon
 completion, it must be that the artist believes that the artwork is valuable
 for others. As per our earlier discussion, it has to be because it is a
-composite artwork consisting of the psychical object and the corresponding
+composite artwork consisting of the physical object and the corresponding
 non-trivial intention (the real realist intention in our case). If so, the
 intention needs to be explainable or inferable or both. The explained
 intention, if provided, also needs to be compatible with the inferred
