@@ -446,14 +446,14 @@ landscapes, etc.
 
 Finally, it must be pointed out that even though real realist paintings may
 appear to treat this or that subject, fundamentally they always treat the
-same subject—the reality itself. This reality cannot be shown or understood
-in its entirety, therefore only a fragment of reality is depicted in any
-given painting. Does it matter what fragment is shown as long as the goals
-of real realism are satisfied? It matters in the sense that the artist may
-find certain scenes more interesting than the others when it comes to
-exercising their perception, but no matter what is shown in a real realist
-painting it is at best only a link to the whole of reality that the audience
-can continue discovering on their own.
+same subject—reality itself. Reality cannot be shown or understood in its
+entirety, therefore only a fragment of reality is depicted in any given
+painting. Does it matter what fragment is shown as long as the goals of real
+realism are satisfied? It matters in the sense that the artist may find
+certain scenes more interesting than the others when it comes to exercising
+their perception, but no matter what is shown in a real realist painting it
+is at best only a link to the whole of reality that the audience can
+continue discovering on their own.
 
 ### Framing
 
