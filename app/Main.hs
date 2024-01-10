@@ -108,10 +108,7 @@ essayPattern = "essay/*.md"
 essayMapOut :: FilePath -> FilePath
 essayMapOut = (-<.> "html")
 
-cssR,
-  jsR,
-  imgR,
-  notFoundR,
+notFoundR,
   exhibitionsR,
   exhibitionR,
   artR,
@@ -120,9 +117,6 @@ cssR,
   essayR,
   contactR ::
     Route
-cssR = Ins "static/css/*.css" id
-jsR = Ins "static/js/*.js" id
-imgR = Ins "static/img/**/*" id
 notFoundR = Gen "404.html"
 exhibitionsR = Gen "exhibitions.html"
 exhibitionR = GenPat "exhibition/*.html"
@@ -355,9 +349,6 @@ main = shakeArgs shakeOptions $ do
           output
 
   -- Page implementations
-  buildRoute cssR copyFile'
-  buildRoute jsR copyFile'
-  buildRoute imgR copyFile'
   buildRoute notFoundR $ \_ output ->
     justFromTemplate (Left "404 Not Found") "404" output
   buildRoute exhibitionsR $ \_ output -> do

@@ -27,7 +27,6 @@
         "^env\.yaml$"
         "^essay.*$"
         "^exhibitions\.yaml$"
-        "^static.*$"
         "^templates.*$"
       ];
       haskellPackages = pkgs.haskell.packages.${compiler}.override
