@@ -499,9 +499,8 @@ colors and/or shapes that are different from those that they perceive, then
 careful observation would no longer be necessary. However, if the right
 color cannot be easily mixed or the right shape refuses to materialize, it
 is not a big problem. An artwork will always be only abstraction or an
-approximation of actual reality. The result matters much less than the
-actual act of working through perception of reality and the intention behind
-the work.
+approximation of reality. The result matters much less than the act of
+working through perception of reality and the intention behind the work.
 
 ### Mistakes and imperfections
 
