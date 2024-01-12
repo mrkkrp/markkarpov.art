@@ -18,9 +18,9 @@ which I suggest to call (somewhat arbitrarily) “real realism”.
 
 ### The role of intention
 
-The invention of photographic film once made visual arts seek values other
-than accurate reproduction of observable reality. This direction proved
-fertile for more than a century. Now artists are facing a different
+The invention of photographic film once made the visual arts seek values
+other than accurate reproduction of observable reality. This direction
+proved fertile for more than a century. Now artists are facing a different
 challenge: AI technologies demonstrate that they can, or soon will be able
 to, produce output that is on par or superior to human creativity in purely
 technical terms. This is the future that cannot be avoided, no matter how
@@ -32,13 +32,13 @@ technical merits. We should learn to ask how and why something came to be
 rather than simply admiring its properties. New art is in intentions, and
 that's something a computer will not have for a while.
 
-The idea that intentions behind art matter is not new. In fact, a big part
-of art of the last century did have interesting intentions behind it. The
-new twist is that intentions now become more important and even necessary.
-In other words, *there cannot be a work of art without a good reason behind
-it*. If so, a work of art can no longer be simply a physical object of art,
-it becomes a combination of a physical object and the artist's intention
-behind it.
+The idea that the intentions behind art matter is not new. In fact, a big
+part of art of the last century did have interesting intentions behind it.
+The new twist is that intentions now become more important and even
+necessary. In other words, *there cannot be a work of art without a good
+reason behind it*. Under this view, a work of art can no longer be simply a
+physical object of art, it becomes a combination of a physical object and
+the artist's intention behind it.
 
 What can be said of the relationship between the two components of such a
 composite artwork—the object and the intention? Assuming that we follow the
@@ -60,7 +60,7 @@ explicit explanation. This approach requires multiple artworks, since a
 single artwork cannot pinpoint the intention unambiguously.
 
 Next, let us suppose that the intention is explained through the language
-but it is in conflict with what the audience perceives by observing the
+but it is in conflict with what the audience perceives when observing the
 physical object itself, that is, the inferred and the explained intention
 differ. In this case either the explanation is incorrect or the object fails
 to implement the intention as stated. Such a pair object-intention does not
@@ -91,9 +91,9 @@ object being exposed.
 
 Let us now start working towards an intention that is non-trivial and
 central to this essay. One goal of art is to focus on things that are less
-known, scarce, less understood, or about to disappear. For example, it is no
-coincidence that impressionists were in love with the countryside and the
-peasant lifestyle. It was a natural response to industrialization. Many
+known, scarce, poorly understood, or about to disappear. For example, it is
+no coincidence that the impressionists were in love with the countryside and
+the peasant lifestyle. It was a natural response to industrialization. Many
 changes in today's world are rapid and drastic, they fit in a person's
 lifetime. However, there are also those that are more fundamental, slower,
 and therefore may not be obvious. One such change might have been happening
@@ -137,12 +137,12 @@ reality in the form of books, recordings, artworks, etc. is a medium of
 culture and culture becomes increasingly important as we progress as a
 species. In today's world computers (a particularly versatile type of
 carrier reality) occupy our attention more than any other type of object
-before. Internet in general and social networks in particular definitely
+before. The internet in general and social networks in particular definitely
 claim a lot of real estate in our minds. Assuming this is only a
 continuation of a general trend, we could formulate a hypothesis:
 
-> Development of humanity progressively shifts attention of people from raw
-  reality to carrier reality.
+> Development of humanity progressively shifts the attention of people from
+  raw reality to carrier reality.
 
 Now, this seems plausible, yet it may or may not be true. It may be as well
 that there is a natural balance between the time an average person spends
@@ -166,22 +166,22 @@ what we want to do with the latest technological advances.
 
 ### The principal goal of real realism
 
-Strictly speaking, there is no need for art for appreciation of reality.
+Strictly speaking, there is no need in art for appreciation of reality.
 There is nothing preventing people from enjoying it outside of museums and
 galleries. Perceiving reality for its own sake is an infinitely more
 intimate and pure act compared to perceiving reality while also creating an
 artwork, since all kinds of extraneous considerations enter the artist's
 mind in the latter case. One benefit of creating an artwork while perceiving
-reality is that while working on an artwork reality is likely to be explored
-more fully and deeply than it is in everyday experience. This justifies
-artistic practice, i.e. production of instances of carrier reality in the
-context of exploration of its opposite—raw reality. However, if the goal of
-the artist is to explore raw reality more thoroughly through perception,
-there is no justification for preserving the resulting artworks. They can be
-destroyed as soon as they are completed or slightly later on the condition
-that they are not shown to anyone and no record of them remains. If the
-artworks are preserved on purpose or are intended to be made public, it
-means that the goal of the artist is not exploration of reality through
+reality is that while working on an artwork, reality is likely to be
+explored more fully and deeply than it is in everyday experience. This
+justifies artistic practice, i.e. production of instances of carrier reality
+in the context of exploration of its opposite—raw reality. However, if the
+goal of the artist is to explore raw reality more thoroughly through
+perception, there is no justification for preserving the resulting artworks.
+They can be destroyed as soon as they are completed or slightly later on the
+condition that they are not shown to anyone and no record of them remains.
+If the artworks are preserved on purpose or are intended to be made public,
+it means that the goal of the artist is not exploration of reality through
 perception or not only that. We will consider that case in the next section.
 
 Let us define *the principal goal of real realism* (PGRR). It has to do with
@@ -204,7 +204,7 @@ of time and is often incompatible with direct observation of reality since
 many subjects are often in constant change.
 
 Another option would be to concentrate on intention rather than the result.
-Is the intention to represent reality truthfully through observation not
+Is the intention to represent reality faithfully through observation not
 enough? Indeed, does it matter what the result is as long as the artist
 honestly works towards a realistic rendition? The intention guarantees
 observation and that is all the PGRR is concerned with.
@@ -231,7 +231,7 @@ same kind of situation as if the artwork was immediately destroyed upon
 completion, possibly with the exception that the artist themselves knows of
 the artwork's nature and existence. If the public becomes aware of the
 artwork at some point in the future, then by allowing such a possibility the
-artist made the artwork available to the public just the same.
+artist effectively made the artwork available to the public just the same.
 
 Since we cannot avoid having a cultural message attached to a real realist
 artwork, what is the most appropriate cultural message to have? It seems
@@ -243,7 +243,7 @@ logical that it should be:
 Let us call this *the real realist message* (RRM).
 
 It is worth noting that a given artwork rarely has only one cultural
-message. Typically an artwork has one most obvious cultural message which we
+message. Typically an artwork has one more obvious cultural message which we
 are going to call *the primary cultural message* and other, *secondary
 cultural messages* that are less prominent, similar to how a periodic signal
 has the first harmonic and higher harmonics. Secondary cultural messages are
@@ -336,7 +336,7 @@ must be eliminated*.
 
 In the following sections I'm going to discuss how the two goals of real
 realism can be achieved in painting. I chose painting because it is the form
-of art which I am quite familiar with and which seems suitable for real
+of art with which I am most familiar and which seems suitable for real
 realistic practice. Some of the ideas from this essay might apply to other
 forms of art.
 
@@ -509,13 +509,13 @@ medium, but they are perhaps not as unacceptable as some people might think.
 In a way, mistakes reveal how one processed reality there and then while
 painting the picture and so they are valid in the sense that like the
 correct parts they come from confronting reality and paying attention.
-Mistakes might well be the most profound record about the interaction
-between the artist and reality. Of course, it does not mean that one should
-be careless and commit freely any mistakes whatsoever—that would be against
-the PGRR. The intention should be to paint accurately and true to
-perception, however if there happen to be deviations that the artist does
-not correct e.g. because they do not notice them while painting, they are to
-be left alone and accepted as artifacts of the real realist process.
+Mistakes might well be the most profound record of the interaction between
+the artist and reality. Of course, it does not mean that one should be
+careless and freely commit any mistake whatsoever—that would be against the
+PGRR. The intention should be to paint accurately and true to perception.
+However, if there happen to be deviations that the artist does not correct
+e.g. because they do not notice them while painting, they are to be left
+alone and accepted as artifacts of the real realist process.
 
 In general, any mistakes and imperfections whether introduced by the artist,
 low quality art supplies, or adverse conditions can be understood as an
@@ -598,7 +598,7 @@ Realism of the mid-19th century as practiced by such artists as Gustave
 Courbet and Jean-François Millet began as a reaction to romanticism. These
 artists wanted to show the “real” life of ordinary people, which was the
 opposite of the fixation on elevated emotions and individualism of
-romantics. Therefore, importantly, already then it was the subject matter
+romantics. Therefore, importantly, it was then already the subject matter
 rather than the technique that distinguished the realist approach. In a way,
 it was also a shift from emphasizing the inner towards recognition of the
 importance of observing the outer without embellishing it.
