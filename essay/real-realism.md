@@ -111,8 +111,8 @@ real, however no one should be persuaded to appreciate them.
 Next, I am going to introduce a distinction between reality that transmits a
 *cultural message* (let us call this *carrier reality*) and reality that
 does not (let us call this *raw reality*). By cultural message I mean *an
-interpretation of a man-made object by an individual*. If we are to take the
-realist point of view, namely that reality exists independently of the
+interpretation of a human-made object by an individual*. If we are to take
+the realist point of view, namely that reality exists independently of the
 observer, then for different people the same objective reality might or
 might not have a cultural message, let alone the same cultural message. The
 message can also vary in time, e.g. it can be updated based on new knowledge
@@ -125,7 +125,7 @@ Generally, it is not possible to perceive the same objective reality as both
 carrier and raw reality at the same time, i.e. it is not possible to see a
 painted canvas not as a conduit of some kind of artistic message (unless the
 observer has never seen a painting before and does not know that it is
-man-made).
+human-made).
 
 Because of our social nature, carrier reality as an interpersonal medium has
 certain attractiveness that raw reality does not have. In other words, we
@@ -285,7 +285,7 @@ satisfies the PGRR necessarily also satisfies the IGRR. To understand why we
 have to look more closely at how cultural messages work.
 
 Recall that we defined *cultural message* as *an interpretation of a
-man-made object by an individual*. Such interpretations are backed by
+human-made object by an individual*. Such interpretations are backed by
 culture and happen in three ways:
 
 * through a title and/or description of the artwork provided by the author
@@ -319,7 +319,7 @@ interpretation and/or classification.
 
 Classification makes it possible to create an artwork that represents raw
 reality without any cultural message (e.g. a flower, which by itself is not
-a man-made object and so it does not have a cultural message), yet it ends
+a human-made object and so it does not have a cultural message), yet it ends
 up being assigned a cultural message because of our cultural baggage that
 guides us towards a more familiar interpretation (e.g. a painting of a
 flower is meant to show the beauty of the flower and/or be itself beautiful
