@@ -396,13 +396,13 @@ main = shakeArgs shakeOptions $ do
     env <- envCache
     templates <- templateCache
     years <- getArtworkYears <$> artworkCache
-    need (artworkYearToPath <$> Set.toAscList years)
+    need (artworkYearToPath <$> Set.toList years)
     renderAndWrite
       templates
       ["art", "default"]
       Nothing
       [ menuItem Art env,
-        provideAs "year" years,
+        provideAs "year" (Set.toDescList years),
         mkTitle Art
       ]
       output
