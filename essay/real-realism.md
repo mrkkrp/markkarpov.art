@@ -82,10 +82,8 @@ intentions:
 
 Since these intentions can be by default claimed for any work of art they
 are *trivial*, in the sense that they do not add anything of value to the
-physical object that is exhibited. These intentions can also be freely
-applied to generative art or arbitrary readymade objects. Therefore, they do
-not fit the approach where the intention is as valuable as the physical
-object being exposed.
+physical object that is exhibited. Therefore, they do not fit the approach
+where the intention is as valuable as the physical object being exposed.
 
 ### The real realist intention
 
@@ -158,9 +156,9 @@ the *real realist intention*:
   reality more thoroughly.
 
 One goal of real realism is to remind us that perception of reality is a
-great privilege, a miracle, the foundation for everything else. Another goal
-of real realism is to call for a re-examination of where we are going and
-what we want to do with the latest technological advances.
+great privilege, the foundation for everything else. Another goal of real
+realism is to call for a re-examination of where we are going and what we
+want to do with the latest technological advances.
 
 ## Reality and art
 
