@@ -52,12 +52,18 @@ If the intention is explainable, one approach to stating the intention is
 through the language. In this case the intention is to be explained in the
 written form either as a title or a description, or indeed a written piece
 like this one which is then to be referenced when the corresponding artwork
-is exhibited. If the intention is inferable, but not explicitly explained,
-it is necessary to have a collection of works that explore the same
-intention from different angles. This way the public is given a chance to
-understand what the intention might have been without the need for an
-explicit explanation. This approach requires multiple artworks, since a
-single artwork cannot pinpoint the intention unambiguously.
+is exhibited.
+
+If the intention is inferable, but not explicitly explained, it is necessary
+to have a collection of works that explore the same intention from different
+angles. This way the public is given a chance to understand what the
+intention might have been without the need for an explicit explanation. This
+approach requires multiple artworks, since a single artwork cannot pinpoint
+the intention unambiguously. If only a single artwork is available, or the
+number of artworks is insufficient for unambiguous inference of the
+intention by the observer in question, it still makes sense to talk about
+the inferred intention, even if it does not yet match the original artistic
+intention and needs further refinement.
 
 Next, let us suppose that the intention is explained through the language
 but it is in conflict with what the audience perceives when observing the
