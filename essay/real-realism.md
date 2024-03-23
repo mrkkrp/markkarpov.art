@@ -49,7 +49,7 @@ of the artwork would be incomplete. For the intention to reach the audience
 it has to be either *explainable* or *inferable* or both.
 
 If the intention is explainable, one approach to stating the intention is
-through the language. In this case the intention is to be explained in the
+through language. In this case the intention is to be explained in the
 written form either as a title or a description, or indeed a written piece
 like this one which is then to be referenced when the corresponding artwork
 is exhibited.
@@ -65,11 +65,11 @@ intention by the observer in question, it still makes sense to talk about
 the inferred intention, even if it does not yet match the original artistic
 intention and needs further refinement.
 
-Next, let us suppose that the intention is explained through the language
-but it is in conflict with what the audience perceives when observing the
-physical object itself, that is, the inferred and the explained intention
-differ. In this case either the explanation is incorrect or the object fails
-to implement the intention as stated. Such a pair object-intention does not
+Next, let us suppose that the intention is explained through language but it
+is in conflict with what the audience perceives when observing the physical
+object itself, that is, the inferred and the explained intention differ. In
+this case either the explanation is incorrect or the object fails to
+implement the intention as stated. Such a pair object-intention does not
 work. Indeed, the only way it could work is if the discrepancy between the
 inferred and the explained intention were intentional; if it were
 intentional it should have been part of the explained intention, but in that
