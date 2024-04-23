@@ -106,8 +106,8 @@ reality.
 
 The word *reality* is broad and overloaded with meanings. In this text,
 whenever I say *reality* I mean human perception of reality, or to be even
-more pedantic *direct perception of material world immediately surrounding a
-human observer in real time*. Therefore, I might talk about *appreciation of
+more pedantic *direct perception of material world immediately surrounding
+the subject in real time*. Therefore, I might talk about *appreciation of
 reality*, which should not be misunderstood as appreciation of everything
 that is real, since without a doubt there are many terrible things that are
 real, however no one should be persuaded to appreciate them.
@@ -135,10 +135,10 @@ Because of our social nature, carrier reality as an interpersonal medium has
 certain attractiveness that raw reality does not have. In other words, we
 are more interested in what others want to communicate to us via carrier
 reality than in observing raw reality which by definition does not transmit
-any messages. Instances of carrier reality have been produced throughout
-human history at an ever-increasing rate. It can be argued that carrier
-reality in the form of books, recordings, artworks, etc. is a medium of
-culture and culture becomes increasingly important as we progress as a
+any cultural messages. Instances of carrier reality have been produced
+throughout human history at an ever-increasing rate. It can be argued that
+carrier reality in the form of books, recordings, artworks, etc. is a medium
+of culture and culture becomes increasingly important as we progress as a
 species. In today's world computers (a particularly versatile type of
 carrier reality) occupy our attention more than any other type of object
 before. The internet in general and social networks in particular definitely
@@ -310,7 +310,7 @@ are two possibilities:
 * The title/description can contribute to a new cultural message if they are
   sufficiently different from the cultural message the artwork itself
   provokes. By “new cultural message” I mean such a message that accounts
-  for uncertainty or confusion that is brought about by the difference
+  for the uncertainty or confusion that is brought about by the difference
   between the cultural message inferred by an individual via ad-hoc
   interpretation and/or classification and the title/description.
 
@@ -335,7 +335,7 @@ assigned through classification tend to be quite strong and therefore they
 often end up being perceived as primary cultural messages. On the other hand
 the RRM is not common or familiar, it is weak and is going to be readily
 shadowed by other cultural messages. Therefore, *for an artwork to have the
-RRM as the primary cultural message, all stronger (more obvious) messages
+RRM as its primary cultural message, all stronger (more obvious) messages
 must be eliminated*.
 
 In the following sections I'm going to discuss how the two goals of real
