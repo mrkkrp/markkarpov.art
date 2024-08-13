@@ -133,7 +133,8 @@ contactR = Ins "contact.md" (-<.> "html")
 data Exhibition = Exhibition
   { exhibitionTitle :: !Text,
     exhibitionLocation :: !Text,
-    exhibitionDescription :: !Text,
+    exhibitionDescriptionRaw :: !Text,
+    exhibitionDescriptionRendered :: !TL.Text,
     exhibitionLink :: !Text,
     exhibitionStart :: !Day,
     exhibitionEnd :: !Day,
@@ -150,7 +151,8 @@ instance FromJSON Exhibition where
   parseJSON = withObject "exhibition" $ \o -> do
     exhibitionTitle <- o .: "title"
     exhibitionLocation <- o .: "location"
-    exhibitionDescription <- o .: "description"
+    exhibitionDescriptionRaw <- o .: "description"
+    let exhibitionDescriptionRendered = TL.empty
     exhibitionLink <- o .: "link"
     exhibitionStart <- (o .: "start") >>= parseDay
     exhibitionEnd <- (o .: "end") >>= parseDay
@@ -168,7 +170,8 @@ instance ToJSON Exhibition where
     object
       [ "title" .= exhibitionTitle,
         "location" .= exhibitionLocation,
-        "description" .= exhibitionDescription,
+        "description_raw" .= exhibitionDescriptionRaw,
+        "description_rendered" .= exhibitionDescriptionRendered,
         "link" .= exhibitionLink,
         "start" .= renderDay exhibitionStart,
         "end" .= renderDay exhibitionEnd,
@@ -378,7 +381,14 @@ main = shakeArgs shakeOptions $ do
       Nothing ->
         fail $
           "Trying to build " ++ output ++ " but no matching exhibitions found"
-      Just x -> return x
+      Just x -> do
+        descRendered <-
+          snd
+            <$> renderMarkdown
+              env
+              (exhibitionDescriptionRaw x)
+              ("Description of " ++ T.unpack (exhibitionTitle x))
+        return x {exhibitionDescriptionRendered = descRendered}
     let relevantArtworks =
           filter
             ((`Set.member` exhibitionArtworks thisExhibition) . artworkId)
@@ -591,6 +601,10 @@ cacheYamlFile yamlFile = newCache' $ \() -> do
 getMdHelper :: Value -> FilePath -> Action (Value, TL.Text)
 getMdHelper env path = do
   txt <- liftIO (T.readFile path)
+  renderMarkdown env txt path
+
+renderMarkdown :: Value -> Text -> FilePath -> Action (Value, TL.Text)
+renderMarkdown env txt path =
   case MMark.parse path txt of
     Left bundle -> fail (M.errorBundlePretty bundle)
     Right doc -> do
