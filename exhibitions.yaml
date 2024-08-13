@@ -1,1 +1,13 @@
-[]
+- title: Salon d'Automne
+  location: Pavillons éphémères des Champs-Elysées, Paris
+  description: |
+    For Salon d'Automne this autumn I decided to send one of the [real
+    realist](/essay/real-realism.html) paintings I made last year. Even
+    though real realism is not something I still develop these days (in
+    2024), it seemed to me that if I were to expose one single painting, I
+    had to start with my real realist works.
+  link: https://salon-automne.com/
+  start: 2024-10-23
+  end: 2024-10-27
+  artworks:
+    - '20231118'
