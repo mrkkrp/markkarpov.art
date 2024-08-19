@@ -147,11 +147,6 @@
   height: 50
   width: 50
   date: 2023-01-11
-- id: '20230205'
-  medium: oil_on_canvas
-  height: 38
-  width: 55
-  date: 2023-02-05
 - id: '20230304'
   title: Brasles
   medium: oil_on_canvas
@@ -375,15 +370,10 @@
   height: 55
   width: 38
   date: 2023-10-21
-- id: '20231028a'
+- id: '20231028'
   medium: oil_on_canvas
   height: 61
   width: 50
-  date: 2023-10-28
-- id: '20231028b'
-  medium: oil_on_canvas
-  height: 61
-  width: 38
   date: 2023-10-28
 - id: '20231029'
   medium: oil_on_canvas
@@ -415,11 +405,6 @@
   height: 61
   width: 46
   date: 2023-11-24
-- id: '20231128'
-  medium: oil_on_canvas
-  height: 60
-  width: 60
-  date: 2023-11-28
 - id: '20231206'
   medium: oil_on_paper
   height: 56
