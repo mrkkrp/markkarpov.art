@@ -204,8 +204,7 @@ data Artwork = Artwork
     artworkTitle :: !(Maybe Text),
     artworkDescription :: !(Maybe Text),
     artworkMedium :: !Medium,
-    artworkHeight :: !Int,
-    artworkWidth :: !Int,
+    artworkDimensions :: !(Maybe (Int, Int)),
     artworkDate :: !Day
   }
   deriving (Eq, Show)
@@ -216,8 +215,12 @@ instance FromJSON Artwork where
     artworkTitle <- o .:? "title"
     artworkDescription <- o .:? "description"
     artworkMedium <- o .: "medium"
-    artworkHeight <- o .: "height"
-    artworkWidth <- o .: "width"
+    artworkDimensions <- case artworkMedium of
+      Photograph -> return Nothing
+      _ -> do
+        artworkHeight <- o .: "height"
+        artworkWidth <- o .: "width"
+        return $ Just (artworkHeight, artworkWidth)
     artworkDate <- (o .: "date") >>= parseDay
     return Artwork {..}
 
@@ -228,8 +231,8 @@ instance ToJSON Artwork where
         "title" .= artworkTitle,
         "description" .= artworkDescription,
         "medium" .= artworkMedium,
-        "height" .= artworkHeight,
-        "width" .= artworkWidth,
+        "height" .= (fst <$> artworkDimensions),
+        "width" .= (snd <$> artworkDimensions),
         "date" .= renderDay artworkDate
       ]
 
@@ -239,9 +242,9 @@ data Medium
   | OilOnPaper
   | Watercolor
   | WatercolorAndInk
-  | Photo
   | MixedMedia
   | CPencilsConteOnPaper
+  | Photograph
   deriving (Eq, Show)
 
 instance FromJSON Medium where
@@ -251,9 +254,9 @@ instance FromJSON Medium where
       "oil_on_paper" -> return OilOnPaper
       "watercolor" -> return Watercolor
       "watercolor_and_ink" -> return WatercolorAndInk
-      "photo" -> return Photo
       "mixed_media" -> return MixedMedia
       "cpencils_conte_on_paper" -> return CPencilsConteOnPaper
+      "photograph" -> return Photograph
       _ -> fail ("unknown medium: " ++ T.unpack txt)
 
 instance ToJSON Medium where
@@ -565,9 +568,9 @@ mediumName = \case
   OilOnPaper -> "oil on paper"
   Watercolor -> "watercolor"
   WatercolorAndInk -> "watercolor and ink"
-  Photo -> "photo"
   MixedMedia -> "mixed media"
   CPencilsConteOnPaper -> "colored pencils and conté crayon on paper"
+  Photograph -> "Photograph"
 
 parseDay :: (MonadFail m) => Text -> m Day
 parseDay = parseTimeM True defaultTimeLocale "%F" . T.unpack
