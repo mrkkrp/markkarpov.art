@@ -73,11 +73,13 @@
   width: 55
   date: 2022-08-07
 - id: '20221016a'
+  title: In Nuna's garden
   medium: watercolor
   height: 33
   width: 55
   date: 2022-10-16
 - id: '20221016b'
+  title: In Nuna's garden
   medium: watercolor
   height: 38
   width: 46
@@ -147,6 +149,19 @@
   height: 50
   width: 50
   date: 2023-01-11
+- id: '20230121'
+  title: Brasles
+  medium: photograph
+  date: 2023-01-21
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+- id: '20230204'
+  medium: photograph
+  date: 2023-02-04
+  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+- id: '20230207'
+  medium: photograph
+  date: 2023-02-07
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Fujicolor Pro 400H
 - id: '20230304'
   title: Brasles
   medium: oil_on_canvas
@@ -158,6 +173,14 @@
   height: 50
   width: 50
   date: 2023-03-05
+- id: '20230312a'
+  medium: photograph
+  date: 2023-03-12
+  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+- id: '20230312b'
+  medium: photograph
+  date: 2023-03-12
+  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20230401'
   title: Oni is preparing for gardening
   medium: oil_on_canvas
@@ -221,6 +244,21 @@
   height: 55
   width: 46
   date: 2023-05-08
+- id: '20230514a'
+  title: Brasles
+  medium: photograph
+  date: 2023-05-14
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Fujicolor Pro 400H
+- id: '20230514b'
+  title: Brasles
+  medium: photograph
+  date: 2023-05-14
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Fujicolor Pro 400H
+- id: '20230514c'
+  title: Brasles
+  medium: photograph
+  date: 2023-05-14
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Fujicolor Pro 400H
 - id: '20230528'
   medium: oil_on_canvas
   height: 40
@@ -232,6 +270,10 @@
   height: 38
   width: 55
   date: 2023-05-29
+- id: '20230601'
+  medium: photograph
+  date: 2023-06-01
+  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20230603'
   title: La Marne
   medium: oil_on_canvas
@@ -262,6 +304,21 @@
   height: 46
   width: 38
   date: 2023-06-27
+- id: '20230701a'
+  title: Brasles
+  medium: photograph
+  date: 2023-07-01
+  description: Harman Titan 4x5 + 150mm cone + Kodak Portra 160
+- id: '20230701b'
+  title: Brasles
+  medium: photograph
+  date: 2023-07-01
+  description: Harman Titan 4x5 + 150mm cone + Kodak Portra 160
+- id: '20230715'
+  title: In Nuna's garden
+  medium: photograph
+  date: 2023-07-15
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Fujicolor Pro 400H
 - id: '20230731'
   title: Self-portrait
   medium: oil_on_canvas
@@ -342,17 +399,37 @@
   height: 61
   width: 38
   date: 2023-10-04
-- id: '20231007'
+- id: '20231007a'
   title: Piles of rubbish with poppies in bloom
   medium: oil_on_canvas
   height: 60
   width: 60
   date: 2023-10-07
+- id: '20231007b'
+  medium: photograph
+  date: 2023-10-07
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+- id: '20231007c'
+  medium: photograph
+  date: 2023-10-07
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+- id: '20231007d'
+  medium: photograph
+  date: 2023-10-07
+  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+- id: '20231007e'
+  medium: photograph
+  date: 2023-10-07
+  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20231008'
   medium: oil_on_canvas
   height: 50
   width: 61
   date: 2023-10-08
+- id: '20231013'
+  medium: photograph
+  date: 2023-10-13
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
 - id: '20231016'
   medium: oil_on_canvas
   height: 46
@@ -415,11 +492,55 @@
   height: 70
   width: 56
   date: 2023-12-09
+- id: '20231207a'
+  medium: photograph
+  date: 2023-12-07
+  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+- id: '20231207b'
+  medium: photograph
+  date: 2023-12-07
+  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+- id: '20231207c'
+  medium: photograph
+  date: 2023-12-07
+  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+- id: '20231207d'
+  medium: photograph
+  date: 2023-12-07
+  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+- id: '20231207e'
+  medium: photograph
+  date: 2023-12-07
+  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+- id: '20231208a'
+  medium: photograph
+  date: 2023-12-08
+  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+- id: '20231208b'
+  medium: photograph
+  date: 2023-12-08
+  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+- id: '20231208c'
+  medium: photograph
+  date: 2023-12-08
+  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20231213'
   medium: oil_on_paper
   height: 56
   width: 70
   date: 2023-12-13
+- id: '20231218a'
+  medium: photograph
+  date: 2023-12-18
+  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+- id: '20231218b'
+  medium: photograph
+  date: 2023-12-18
+  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+- id: '20231218c'
+  medium: photograph
+  date: 2023-12-18
+  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
 - id: '20231219'
   medium: oil_on_canvas
   height: 54
@@ -435,6 +556,19 @@
   height: 55
   width: 38
   date: 2023-12-21
+- id: '20231226'
+  title: Evening rain
+  medium: photograph
+  date: 2023-12-26
+  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+- id: '20231231a'
+  medium: photograph
+  date: 2023-12-31
+  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+- id: '20231231b'
+  medium: photograph
+  date: 2023-12-31
+  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
 - id: '20240106'
   title: Brasles
   medium: watercolor
