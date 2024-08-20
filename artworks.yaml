@@ -651,6 +651,18 @@
   height: 50
   width: 65
   date: 2024-03-22
+- id: '20240324a'
+  medium: photograph
+  date: 2024-03-24
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+- id: '20240324b'
+  medium: photograph
+  date: 2024-03-24
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+- id: '20240324c'
+  medium: photograph
+  date: 2024-03-24
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
 - id: '20240329'
   medium: oil_on_canvas
   height: 40
@@ -662,6 +674,26 @@
   height: 38
   width: 61
   date: 2024-03-30
+- id: '20240406a'
+  medium: photograph
+  date: 2024-04-06
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
+- id: '20240406b'
+  medium: photograph
+  date: 2024-04-06
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+- id: '20240406c'
+  medium: photograph
+  date: 2024-04-06
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+- id: '20240406d'
+  medium: photograph
+  date: 2024-04-06
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+- id: '20240406e'
+  medium: photograph
+  date: 2024-04-06
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
 - id: '20240408'
   medium: oil_on_canvas
   height: 54
