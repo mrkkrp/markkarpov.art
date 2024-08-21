@@ -89,7 +89,49 @@
   height: 55
   width: 38
   date: 2022-11-11
-- id: '20221119'
+- id: '20221112a'
+  title: In Nuna's garden
+  medium: photograph
+  date: 2022-11-12
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+- id: '20221112b'
+  medium: photograph
+  date: 2022-11-12
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+- id: '20221112c'
+  medium: photograph
+  date: 2022-11-12
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+- id: '20221112d'
+  medium: photograph
+  date: 2022-11-12
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+- id: '20221119a'
+  title: Essômes-sur-Marne
+  medium: photograph
+  date: 2022-11-19
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+- id: '20221119b'
+  medium: photograph
+  date: 2022-11-19
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+- id: '20221119c'
+  medium: photograph
+  date: 2022-11-19
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+- id: '20221119d'
+  medium: photograph
+  date: 2022-11-19
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+- id: '20221119e'
+  medium: photograph
+  date: 2022-11-19
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+- id: '20221119f'
+  medium: photograph
+  date: 2022-11-19
+  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+- id: '20221119g'
   medium: watercolor
   height: 46
   width: 55
