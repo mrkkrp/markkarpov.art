@@ -776,23 +776,23 @@
 - id: '20240516a'
   medium: photograph
   date: 2024-05-16
-  description: Nikon F2AS + Nikkor 50mm f/1.8 + Kodak Portra 400
+  description: Nikon F2AS + Nikkor 50mm f/1.8 ais + Kodak Portra 400
 - id: '20240516b'
   medium: photograph
   date: 2024-05-16
-  description: Nikon F2AS + Nikkor 50mm f/1.8 + Kodak Portra 400
+  description: Nikon F2AS + Nikkor 50mm f/1.8 ais + Kodak Portra 400
 - id: '20240516c'
   medium: photograph
   date: 2024-05-16
-  description: Nikon F2AS + Nikkor 50mm f/1.8 + Kodak Portra 400
+  description: Nikon F2AS + Nikkor 50mm f/1.8 ais + Kodak Portra 400
 - id: '20240516d'
   medium: photograph
   date: 2024-05-16
-  description: Nikon F2AS + Nikkor 50mm f/1.8 + Kodak Portra 400
+  description: Nikon F2AS + Nikkor 50mm f/1.8 ais + Kodak Portra 400
 - id: '20240516e'
   medium: photograph
   date: 2024-05-16
-  description: Nikon F2AS + Nikkor 50mm f/1.8 + Kodak Portra 400
+  description: Nikon F2AS + Nikkor 50mm f/1.8 ais + Kodak Portra 400
 - id: '20240520'
   medium: photograph
   date: 2024-05-20
@@ -817,6 +817,22 @@
   medium: photograph
   date: 2024-05-26
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + Kodak Portra 400
+- id: '20240603'
+  medium: photograph
+  date: 2024-06-03
+  description: Nikon F2 + Nikkor 85mm f/2.0 ais + Kodak Portra 400
+- id: '20240616'
+  medium: photograph
+  date: 2024-06-16
+  description: Nikon F2 + Nikkor 50mm f/1.8 ais + Kodak Portra 400
+- id: '20240622'
+  medium: photograph
+  date: 2024-06-22
+  description: Nikon F2 + Nikkor 50mm f/1.8 ais + Kodak Portra 400
+- id: '20240623'
+  medium: photograph
+  date: 2024-06-23
+  description: Nikon F2 + Nikkor 85mm f/2.0 ais + Kodak Portra 400
 - id: '20240623a'
   medium: photograph
   date: 2024-06-23
@@ -833,6 +849,42 @@
   medium: photograph
   date: 2024-06-23
   description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+- id: '20240623e'
+  medium: photograph
+  date: 2024-06-23
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+- id: '20240623f'
+  medium: photograph
+  date: 2024-06-23
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
+- id: '20240708a'
+  medium: photograph
+  date: 2024-07-08
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
+- id: '20240708b'
+  medium: photograph
+  date: 2024-07-08
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+- id: '20240708c'
+  medium: photograph
+  date: 2024-07-08
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
+- id: '20240708d'
+  medium: photograph
+  date: 2024-07-08
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
+- id: '20240708e'
+  medium: photograph
+  date: 2024-07-08
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
+- id: '20240708f'
+  medium: photograph
+  date: 2024-07-08
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
+- id: '20240708g'
+  medium: photograph
+  date: 2024-07-08
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
 - id: '20240714a'
   medium: photograph
   date: 2024-07-14
