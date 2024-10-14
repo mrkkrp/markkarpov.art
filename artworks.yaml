@@ -833,3 +833,80 @@
   medium: photograph
   date: 2024-07-14
   description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+- id: '20240802'
+  title: Château-Thierry, an overcast day
+  medium: oil_on_canvas
+  height: 65
+  width: 50
+  date: 2024-08-02
+- id: '20240806'
+  title: Our garden in the evening
+  medium: oil_on_canvas
+  height: 50
+  width: 50
+  date: 2024-08-06
+- id: '20240820'
+  title: Château-Thierry, a bright day, noon
+  medium: oil_on_canvas
+  height: 61
+  width: 38
+  date: 2024-08-20
+- id: '20240906'
+  title: A view near the railroad
+  medium: oil_on_canvas
+  height: 38
+  width: 61
+  date: 2024-09-06
+- id: '20240908'
+  title: A view near the railroad
+  medium: oil_on_canvas
+  height: 65
+  width: 46
+  date: 2024-09-08
+- id: '20240914'
+  title: Brasles
+  medium: oil_on_canvas
+  height: 60
+  width: 60
+  date: 2024-09-14
+- id: '20240923'
+  title: "Our garden"
+  medium: oil_on_canvas
+  height: 61
+  width: 46
+  date: 2024-09-23
+- id: '20241001'
+  title: "Our garden"
+  medium: oil_on_canvas
+  height: 30
+  width: 60
+  date: 2024-10-01
+- id: '20241002'
+  medium: oil_on_canvas
+  height: 38
+  width: 55
+  date: 2024-10-02
+- id: '20241004'
+  title: Château-Thierry, roofs at noon
+  medium: oil_on_canvas
+  height: 46
+  width: 55
+  date: 2024-10-04
+- id: '20241005'
+  title: The electrical station close to Nogentel
+  medium: oil_on_canvas
+  height: 38
+  width: 55
+  date: 2024-10-05
+- id: '20241006'
+  title: A view near the railroad
+  medium: oil_on_canvas
+  height: 46
+  width: 65
+  date: 2024-10-06
+- id: '20241008'
+  title: A rose
+  medium: oil_on_canvas
+  height: 55
+  width: 46
+  date: 2024-10-08
