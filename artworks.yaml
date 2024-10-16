@@ -480,16 +480,6 @@
   height: 61
   width: 46
   date: 2023-11-24
-- id: '20231206'
-  medium: oil_on_paper
-  height: 56
-  width: 70
-  date: 2023-12-06
-- id: '20231209'
-  medium: oil_on_paper
-  height: 70
-  width: 56
-  date: 2023-12-09
 - id: '20231207a'
   medium: photograph
   date: 2023-12-07
@@ -522,11 +512,6 @@
   medium: photograph
   date: 2023-12-08
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
-- id: '20231213'
-  medium: oil_on_paper
-  height: 56
-  width: 70
-  date: 2023-12-13
 - id: '20231218a'
   medium: photograph
   date: 2023-12-18
