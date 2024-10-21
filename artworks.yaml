@@ -206,17 +206,7 @@
   height: 55
   width: 46
   date: 2023-05-08
-- id: '20230514a'
-  title: Brasles
-  medium: photograph
-  date: 2023-05-14
-  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Fujicolor Pro 400H
-- id: '20230514b'
-  title: Brasles
-  medium: photograph
-  date: 2023-05-14
-  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Fujicolor Pro 400H
-- id: '20230514c'
+- id: '20230514'
   title: Brasles
   medium: photograph
   date: 2023-05-14
@@ -364,16 +354,8 @@
 - id: '20231007b'
   medium: photograph
   date: 2023-10-07
-  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
-- id: '20231007c'
-  medium: photograph
-  date: 2023-10-07
-  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
-- id: '20231007d'
-  medium: photograph
-  date: 2023-10-07
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
-- id: '20231007e'
+- id: '20231007c'
   medium: photograph
   date: 2023-10-07
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
@@ -408,11 +390,6 @@
   height: 61
   width: 50
   date: 2023-10-28
-- id: '20231029'
-  medium: oil_on_canvas
-  height: 65
-  width: 46
-  date: 2023-10-29
 - id: '20231101'
   medium: oil_on_canvas
   height: 54
