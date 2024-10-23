@@ -704,12 +704,20 @@
   medium: photograph
   date: 2024-07-14
   description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+- id: '20240728'
+  medium: photograph
+  date: 2024-07-28
+  description: Pentax SV + Auto-Takumar 55mm f/2.0 + Kodak Portra 400
 - id: '20240802'
   title: Château-Thierry, an overcast day
   medium: oil_on_canvas
   height: 65
   width: 50
   date: 2024-08-02
+- id: '20240803'
+  medium: photograph
+  date: 2024-08-03
+  description: Pentax SV + Auto-Takumar 55mm f/2.0 + Kodak Portra 400
 - id: '20240806'
   title: Our garden in the evening
   medium: oil_on_canvas
