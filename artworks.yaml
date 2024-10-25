@@ -533,11 +533,7 @@
   height: 46
   width: 61
   date: 2024-03-10
-- id: '20240316a'
-  medium: photograph
-  date: 2024-03-16
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Portra 400
-- id: '20240316b'
+- id: '20240316'
   medium: oil_on_canvas
   height: 50
   width: 50
@@ -696,11 +692,7 @@
   medium: photograph
   date: 2024-07-08
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
-- id: '20240714a'
-  medium: photograph
-  date: 2024-07-14
-  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
-- id: '20240714b'
+- id: '20240714'
   medium: photograph
   date: 2024-07-14
   description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
