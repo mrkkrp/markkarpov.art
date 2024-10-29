@@ -736,6 +736,10 @@
   height: 60
   width: 60
   date: 2024-09-14
+- id: '20240918'
+  medium: photograph
+  date: 2024-09-18
+  description: Mamiya Universal Press + Mamiya-Sekor 100mm f/3.5 + Kodak Portra 400
 - id: '20240923'
   title: "Our garden"
   medium: oil_on_canvas
@@ -771,6 +775,10 @@
   height: 46
   width: 65
   date: 2024-10-06
+- id: '20241007'
+  medium: photograph
+  date: 2024-10-07
+  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
 - id: '20241008'
   title: A rose
   medium: oil_on_canvas
