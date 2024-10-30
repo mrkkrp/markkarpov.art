@@ -1,14 +1,11 @@
-{-# LANGUAGE DeriveAnyClass #-}
 {-# LANGUAGE DerivingStrategies #-}
-{-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE RecordWildCards #-}
-{-# OPTIONS_GHC -fno-warn-orphans #-}
 
 module Main (main) where
 
+import Artwork (Artwork (..))
 import Control.Lens hiding ((.=), (<.>))
 import Control.Monad
 import Control.Monad.IO.Class
@@ -18,13 +15,8 @@ import Data.Aeson
 import Data.Aeson.Key qualified as Key
 import Data.Aeson.KeyMap qualified as KeyMap
 import Data.Aeson.Lens
-import Data.Binary (Binary)
-import Data.Binary qualified as Binary
-import Data.ByteString qualified as BS
 import Data.Function (on)
 import Data.List (find, foldl1', groupBy, sortOn)
-import Data.List.NonEmpty (NonEmpty (..))
-import Data.Map.Strict qualified as Map
 import Data.Maybe (fromMaybe)
 import Data.Ord (Down (..))
 import Data.Set (Set)
@@ -39,257 +31,14 @@ import Data.Vector qualified as V
 import Data.Yaml qualified as Y
 import Development.Shake hiding (Verbosity (..))
 import Development.Shake.FilePath
-import GHC.Generics (Generic)
-import Lucid qualified as L
-import Text.MMark qualified as MMark
-import Text.MMark.Extension qualified as Ext
-import Text.MMark.Extension.Common qualified as Ext
-import Text.Megaparsec qualified as M
+import Essay (Essay (..))
+import Exhibition (Exhibition (..))
+import Exhibition.PerYear (ExhibitionPerYear (..))
+import Markdown qualified
+import Route (Route)
+import Route qualified
 import Text.Mustache
-import Text.URI (URI)
-import Text.URI qualified as URI
-import Text.URI.Lens (uriPath, uriScheme)
-import Text.URI.QQ (scheme)
-
-----------------------------------------------------------------------------
--- Settings
-
--- | Top-level output directory of the site.
-outdir :: FilePath
-outdir = "_build"
-
-----------------------------------------------------------------------------
--- Routing
-
--- | A route equipped with 'FilePattern' for input source files and a
--- function how to get output file name from input file name. The function
--- should not mess with 'outdir', that will be done for users automatically.
-data Route
-  = -- | Produced from inputs
-    Ins FilePattern (FilePath -> FilePath)
-  | -- | Generated, fixed file
-    Gen FilePath
-  | -- | Generated, pattern
-    GenPat FilePath
-
--- | A helper for defining rules.
-buildRoute ::
-  -- | 'Route' we want to build
-  Route ->
-  -- | Input file, output file
-  (FilePath -> FilePath -> Action ()) ->
-  Rules ()
-buildRoute (Ins pat mapOut') f = do
-  let mapOut x = outdir </> mapOut' x
-  action $
-    getMatchingFiles pat >>= need . fmap mapOut
-  inputMap <- fmap ($ ()) . newCache $ \() -> do
-    ifiles <- getMatchingFiles pat
-    return $ Map.fromList (zip (mapOut <$> ifiles) ifiles)
-  mapOut pat %> \output -> do
-    input <- (Map.! output) <$> inputMap
-    f input output
-buildRoute (Gen outFile') f = do
-  let outFile = outdir </> outFile'
-  want [outFile]
-  outFile %> \output ->
-    f output output
-buildRoute (GenPat outFile') f = do
-  let outFile = outdir </> outFile'
-  outFile %> \output ->
-    f output output
-
-----------------------------------------------------------------------------
--- Routes
-
-essayPattern :: FilePath
-essayPattern = "essay/*.md"
-
-essayMapOut :: FilePath -> FilePath
-essayMapOut = (-<.> "html")
-
-notFoundR,
-  exhibitionsR,
-  exhibitionR,
-  artR,
-  artYearR,
-  essaysR,
-  essayR,
-  contactR ::
-    Route
-notFoundR = Gen "404.html"
-exhibitionsR = Gen "exhibitions.html"
-exhibitionR = GenPat "exhibition/*.html"
-artR = Gen "art.html"
-artYearR = GenPat "art/*.html"
-essaysR = Gen "essays.html"
-essayR = Ins essayPattern essayMapOut
-contactR = Ins "contact.md" (-<.> "html")
-
-----------------------------------------------------------------------------
--- Types (site content)
-
--- | Information about an exhibition.
-data Exhibition = Exhibition
-  { exhibitionTitle :: !Text,
-    exhibitionLocation :: !Text,
-    exhibitionDescriptionRaw :: !Text,
-    exhibitionDescriptionRendered :: !TL.Text,
-    exhibitionLink :: !Text,
-    exhibitionStart :: !Day,
-    exhibitionEnd :: !Day,
-    exhibitionArtworks :: !(Set ArtworkId),
-    exhibitionFile :: !FilePath
-  }
-  deriving (Eq, Show)
-
-deriving stock instance Generic Day
-
-deriving anyclass instance Binary Day
-
-instance FromJSON Exhibition where
-  parseJSON = withObject "exhibition" $ \o -> do
-    exhibitionTitle <- o .: "title"
-    exhibitionLocation <- o .: "location"
-    exhibitionDescriptionRaw <- o .: "description"
-    let exhibitionDescriptionRendered = TL.empty
-    exhibitionLink <- o .: "link"
-    exhibitionStart <- (o .: "start") >>= parseDay
-    exhibitionEnd <- (o .: "end") >>= parseDay
-    exhibitionArtworks <- Set.fromList <$> (o .: "artworks")
-    let exhibitionDigest :: Hash.Digest SHA256
-        exhibitionDigest =
-          (Hash.hash . BS.toStrict . Binary.encode)
-            (exhibitionLink, exhibitionStart, exhibitionEnd)
-        exhibitionFile =
-          "exhibition" </> show exhibitionDigest <.> "html"
-    return Exhibition {..}
-
-instance ToJSON Exhibition where
-  toJSON Exhibition {..} =
-    object
-      [ "title" .= exhibitionTitle,
-        "location" .= exhibitionLocation,
-        "description_raw" .= exhibitionDescriptionRaw,
-        "description_rendered" .= exhibitionDescriptionRendered,
-        "link" .= exhibitionLink,
-        "start" .= renderDay exhibitionStart,
-        "end" .= renderDay exhibitionEnd,
-        "artworks" .= toJSON exhibitionArtworks,
-        "file" .= ("/" ++ exhibitionFile)
-      ]
-
--- | Exhibitions grouped by year.
-data ExhibitionPerYear = ExhibitionPerYear
-  { epyYear :: Year,
-    epyExhibitions :: [Exhibition]
-  }
-  deriving (Eq, Show)
-
-instance ToJSON ExhibitionPerYear where
-  toJSON ExhibitionPerYear {..} =
-    object
-      [ "year" .= epyYear,
-        "exhibition" .= epyExhibitions
-      ]
-
--- | Artwork id.
-newtype ArtworkId = ArtworkId Text
-  deriving (Eq, Ord, Show)
-  deriving newtype (FromJSON, ToJSON)
-
--- | Information about an artwork.
-data Artwork = Artwork
-  { artworkId :: ArtworkId,
-    artworkTitle :: !(Maybe Text),
-    artworkDescription :: !(Maybe Text),
-    artworkMedium :: !Medium,
-    artworkDimensions :: !(Maybe (Int, Int)),
-    artworkDate :: !Day
-  }
-  deriving (Eq, Show)
-
-instance FromJSON Artwork where
-  parseJSON = withObject "artwork" $ \o -> do
-    artworkId <- o .: "id"
-    artworkTitle <- o .:? "title"
-    artworkDescription <- o .:? "description"
-    artworkMedium <- o .: "medium"
-    artworkDimensions <- case artworkMedium of
-      Photograph -> return Nothing
-      _ -> do
-        artworkHeight <- o .: "height"
-        artworkWidth <- o .: "width"
-        return $ Just (artworkHeight, artworkWidth)
-    artworkDate <- (o .: "date") >>= parseDay
-    return Artwork {..}
-
-instance ToJSON Artwork where
-  toJSON Artwork {..} =
-    object
-      [ "id" .= artworkId,
-        "title" .= artworkTitle,
-        "description" .= artworkDescription,
-        "medium" .= artworkMedium,
-        "height" .= (fst <$> artworkDimensions),
-        "width" .= (snd <$> artworkDimensions),
-        "date" .= renderDay artworkDate
-      ]
-
--- | Art mediums.
-data Medium
-  = OilOnCanvas
-  | OilOnPaper
-  | Watercolor
-  | WatercolorAndInk
-  | MixedMedia
-  | CPencilsConteOnPaper
-  | Photograph
-  deriving (Eq, Show)
-
-instance FromJSON Medium where
-  parseJSON = withText "medium" $ \txt ->
-    case txt of
-      "oil_on_canvas" -> return OilOnCanvas
-      "oil_on_paper" -> return OilOnPaper
-      "watercolor" -> return Watercolor
-      "watercolor_and_ink" -> return WatercolorAndInk
-      "mixed_media" -> return MixedMedia
-      "cpencils_conte_on_paper" -> return CPencilsConteOnPaper
-      "photograph" -> return Photograph
-      _ -> fail ("unknown medium: " ++ T.unpack txt)
-
-instance ToJSON Medium where
-  toJSON = toJSON . mediumName
-
--- | Information about an essay.
-data Essay = Essay
-  { essayTitle :: !Text,
-    essayPublished :: !Day,
-    essayUpdated :: !(Maybe Day),
-    essayFile :: !FilePath
-  }
-  deriving (Eq, Show)
-
-instance FromJSON Essay where
-  parseJSON = withObject "essay" $ \o -> do
-    essayTitle <- o .: "title"
-    essayPublished <- (o .: "date") >>= (.: "published") >>= parseDay
-    essayUpdated <-
-      (o .: "date")
-        >>= (.:? "updated")
-        >>= maybe (pure Nothing) (fmap Just . parseDay)
-    let essayFile = ""
-    return Essay {..}
-
-instance ToJSON Essay where
-  toJSON Essay {..} =
-    object
-      [ "title" .= essayTitle,
-        "published" .= renderDay essayPublished,
-        "updated" .= fmap renderDay essayUpdated,
-        "file" .= ("/" ++ essayFile)
-      ]
+import Utils (getMatchingFiles, newCache')
 
 ----------------------------------------------------------------------------
 -- Menu items
@@ -316,28 +65,30 @@ menuItemTitle = \case
 main :: IO ()
 main = shakeArgs shakeOptions $ do
   -- Helpers
-  phony "clean" $ do
-    putNormal ("Cleaning files in " ++ outdir)
-    removeFilesAfter outdir ["//*"]
   envCache <- cacheYamlFile "env.yaml"
   exhibitionCache :: Action [Exhibition] <-
     fmap (sortOn (Down . exhibitionStart)) <$> cacheYamlFile "exhibitions.yaml"
   artworkCache :: Action [Artwork] <-
     fmap (sortOn artworkId) <$> cacheYamlFile "artworks.yaml"
   templateCache <- newCache' $ \() -> do
-    let templateP = "templates/*.mustache"
-    getMatchingFiles templateP >>= need
-    liftIO (compileMustacheDir "default" (takeDirectory templateP))
+    liftIO (compileMustacheDir "default" (takeDirectory "templates/*.mustache"))
   getMd <- newCache $ \path -> do
     env <- envCache
     getMdHelper env path
   essayCache <- newCache' $ \() -> do
-    srcs <- getMatchingFiles essayPattern
-    fmap (sortOn essayPublished) . forM srcs $ \src -> do
-      need [src]
-      v <- getMd src >>= interpretValue . fst
-      return v {essayFile = essayMapOut src}
-  let justFromTemplate ::
+    srcs <- getMatchingFiles Route.essayPattern
+    fmap (sortOn (essayPublished . Route.unWithPage)) . forM srcs $ \src -> do
+      v :: Essay <- getMd src >>= interpretValue . fst
+      return (Route.withPage Route.essay src v)
+  let routeArtYear :: Route Year
+      routeArtYear =
+        Route.artYear $
+          getArtworkYears <$> artworkCache
+      routeExhibition :: Route (Hash.Digest SHA256)
+      routeExhibition =
+        Route.exhibition $
+          Set.fromList . fmap exhibitionDigest <$> exhibitionCache
+      justFromTemplate ::
         Either Text MenuItem ->
         PName ->
         FilePath ->
@@ -355,17 +106,21 @@ main = shakeArgs shakeOptions $ do
           output
 
   -- Page implementations
-  buildRoute notFoundR $ \_ output ->
+  Route.rule Route.notFound $ \() output ->
     justFromTemplate (Left "404 Not Found") "404" output
-  buildRoute exhibitionsR $ \_ output -> do
+  Route.rule Route.exhibitions $ \() output -> do
     env <- envCache
     exhibitions <- exhibitionCache
     templates <- templateCache
-    need ((outdir </>) . exhibitionFile <$> exhibitions)
     let exhibitionsByYear =
           fmap
-            (\xs -> ExhibitionPerYear (exhibitionYear (head xs)) xs)
+            ( \xs ->
+                ExhibitionPerYear
+                  (exhibitionYear (head xs))
+                  (wrapWithOutput <$> xs)
+            )
             (groupBy ((==) `on` exhibitionYear) exhibitions)
+        wrapWithOutput x = Route.withPage routeExhibition (exhibitionDigest x) x
     renderAndWrite
       templates
       ["exhibitions", "default"]
@@ -375,19 +130,19 @@ main = shakeArgs shakeOptions $ do
         mkTitle Exhibitions
       ]
       output
-  buildRoute exhibitionR $ \_ output -> do
+  Route.rule routeExhibition $ \thisExhibitionDigest output -> do
     env <- envCache
     exhibitions <- exhibitionCache
     artworks <- artworkCache
     templates <- templateCache
-    thisExhibition <- case find ((== output) . (outdir </>) . exhibitionFile) exhibitions of
+    thisExhibition <- case find ((== thisExhibitionDigest) . exhibitionDigest) exhibitions of
       Nothing ->
         fail $
           "Trying to build " ++ output ++ " but no matching exhibitions found"
       Just x -> do
         descRendered <-
           snd
-            <$> renderMarkdown
+            <$> Markdown.render
               env
               (exhibitionDescriptionRaw x)
               ("Description of " ++ T.unpack (exhibitionTitle x))
@@ -405,26 +160,25 @@ main = shakeArgs shakeOptions $ do
         provideAs "artwork" relevantArtworks
       ]
       output
-  buildRoute artR $ \_ output -> do
+  Route.rule Route.art $ \() output -> do
     env <- envCache
     templates <- templateCache
     years <- getArtworkYears <$> artworkCache
-    need (artworkYearToPath <$> Set.toList years)
+    let presentYear year = Route.withPage routeArtYear year year
     renderAndWrite
       templates
       ["art", "default"]
       Nothing
       [ menuItem Art env,
-        provideAs "year" (Set.toDescList years),
+        provideAs "year" (presentYear <$> Set.toDescList years),
         mkTitle Art
       ]
       output
-  buildRoute artYearR $ \_ output -> do
+  Route.rule routeArtYear $ \thisYear output -> do
     env <- envCache
     artworks <- artworkCache
     templates <- templateCache
-    let thisYear = read (takeBaseName output)
-        prefaceFile = "art-per-year" </> show thisYear <.> "md"
+    let prefaceFile = "art-per-year" </> show thisYear <.> "md"
         thisYearArtworks = filterArtworksByYear thisYear artworks
     preface <- snd <$> getMd prefaceFile
     renderAndWrite
@@ -438,7 +192,7 @@ main = shakeArgs shakeOptions $ do
         provideAs "title" (menuItemTitle Art <> " " <> T.pack (show thisYear))
       ]
       output
-  buildRoute essaysR $ \_ output -> do
+  Route.rule Route.essays $ \() output -> do
     env <- envCache
     essays <- essayCache
     templates <- templateCache
@@ -451,10 +205,9 @@ main = shakeArgs shakeOptions $ do
         mkTitle Essays
       ]
       output
-  buildRoute essayR $ \input output -> do
+  Route.rule Route.essay $ \input output -> do
     env <- envCache
     templates <- templateCache
-    need [input]
     (v, content) <- getMd input
     essayMetadata :: Essay <- interpretValue v
     renderAndWrite
@@ -465,10 +218,9 @@ main = shakeArgs shakeOptions $ do
         toJSON essayMetadata
       ]
       output
-  buildRoute contactR $ \input output -> do
+  Route.rule Route.contact $ \input output -> do
     env <- envCache
     templates <- templateCache
-    need [input]
     (v, content) <- getMd input
     renderAndWrite
       templates
@@ -481,52 +233,7 @@ main = shakeArgs shakeOptions $ do
       output
 
 ----------------------------------------------------------------------------
--- Custom MMark extensions
-
-addTableClasses :: MMark.Extension
-addTableClasses = Ext.blockRender $ \old block ->
-  case block of
-    t@(Ext.Table _ _) -> L.with (old t) [L.class_ "table table-striped"]
-    other -> old other
-
-addImageClasses :: MMark.Extension
-addImageClasses = Ext.inlineRender $ \old inline ->
-  case inline of
-    i@Ext.Image {} -> L.with (old i) [L.class_ "img-fluid"]
-    other -> old other
-
-provideSocialUrls :: Value -> MMark.Extension
-provideSocialUrls v = Ext.inlineTrans $ \case
-  l@(Ext.Link inner uri mtitle) ->
-    if URI.uriScheme uri == Just [scheme|social|]
-      then case uri ^. uriPath of
-        [x] ->
-          case v
-            ^? key "social"
-              . key (Key.fromText (URI.unRText x))
-              . _String
-              . getURI of
-            Nothing -> Ext.Plain "!lookup failed!"
-            Just t ->
-              if Ext.asPlainText inner == "x"
-                then
-                  Ext.Link
-                    (Ext.Plain (URI.render t) :| [])
-                    ((uriScheme ?~ [scheme|mailto|]) t)
-                    mtitle
-                else Ext.Link inner t mtitle
-        _ -> l
-      else l
-  other -> other
-
-getURI :: Traversal' Text URI
-getURI f txt = maybe txt URI.render <$> traverse f (URI.mkURI txt :: Maybe URI)
-
-----------------------------------------------------------------------------
 -- Helpers
-
-getMatchingFiles :: FilePattern -> Action [FilePath]
-getMatchingFiles = getDirectoryFiles "" . pure
 
 selectTemplate :: PName -> Template -> Template
 selectTemplate name t = t {templateActual = name}
@@ -562,22 +269,6 @@ menuItem item = over (key "main_menu" . _Array) . V.map $ \case
         else m
   v -> v
 
-mediumName :: Medium -> Text
-mediumName = \case
-  OilOnCanvas -> "oil on canvas"
-  OilOnPaper -> "oil on paper"
-  Watercolor -> "watercolor"
-  WatercolorAndInk -> "watercolor and ink"
-  MixedMedia -> "mixed media"
-  CPencilsConteOnPaper -> "colored pencils and conté crayon on paper"
-  Photograph -> "Photograph"
-
-parseDay :: (MonadFail m) => Text -> m Day
-parseDay = parseTimeM True defaultTimeLocale "%F" . T.unpack
-
-renderDay :: Day -> String
-renderDay = formatTime defaultTimeLocale "%d.%m.%Y"
-
 mkContext :: [Value] -> Value
 mkContext = foldl1' f
   where
@@ -590,12 +281,8 @@ mkTitle = provideAs "title" . menuItemTitle
 provideAs :: (ToJSON v) => Text -> v -> Value
 provideAs k v = Object (KeyMap.singleton (Key.fromText k) (toJSON v))
 
-newCache' :: (() -> Action v) -> Rules (Action v)
-newCache' = fmap ($ ()) . newCache
-
 cacheYamlFile :: (FromJSON v) => FilePath -> Rules (Action v)
 cacheYamlFile yamlFile = newCache' $ \() -> do
-  need [yamlFile]
   r <- liftIO (Y.decodeFileEither yamlFile)
   case r of
     Left err -> fail (Y.prettyPrintParseException err)
@@ -604,30 +291,7 @@ cacheYamlFile yamlFile = newCache' $ \() -> do
 getMdHelper :: Value -> FilePath -> Action (Value, TL.Text)
 getMdHelper env path = do
   txt <- liftIO (T.readFile path)
-  renderMarkdown env txt path
-
-renderMarkdown :: Value -> Text -> FilePath -> Action (Value, TL.Text)
-renderMarkdown env txt path =
-  case MMark.parse path txt of
-    Left bundle -> fail (M.errorBundlePretty bundle)
-    Right doc -> do
-      let toc = MMark.runScanner doc (Ext.tocScanner (\x -> x > 1 && x < 5))
-          r =
-            MMark.useExtensions
-              [ Ext.fontAwesome,
-                Ext.footnotes,
-                Ext.kbd,
-                Ext.linkTarget,
-                Ext.obfuscateEmail "protected-email",
-                Ext.punctuationPrettifier,
-                Ext.toc "toc" toc,
-                addTableClasses,
-                addImageClasses,
-                provideSocialUrls env
-              ]
-              doc
-          v = fromMaybe (object []) (MMark.projectYaml doc)
-      return (v, L.renderText (MMark.render r))
+  Markdown.render env txt path
 
 interpretValue :: (FromJSON v) => Value -> Action v
 interpretValue v =
@@ -640,9 +304,6 @@ exhibitionYear Exhibition {..} = dayPeriod exhibitionStart
 
 getArtworkYears :: [Artwork] -> Set Year
 getArtworkYears = Set.fromList . fmap (dayPeriod . artworkDate)
-
-artworkYearToPath :: Year -> FilePath
-artworkYearToPath year = outdir </> "art" </> show year <.> "html"
 
 filterArtworksByYear :: Year -> [Artwork] -> [Artwork]
 filterArtworksByYear year = filter f
