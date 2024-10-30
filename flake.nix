@@ -17,6 +17,7 @@
       compiler = "ghc963";
       appSourceRegex = [
         "^app.*$"
+        "^lib.*$"
         "^markkarpov-art\.cabal$"
         "^README\.md$"
       ];

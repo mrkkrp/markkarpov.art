@@ -15,9 +15,19 @@ source-repository head
     type:     git
     location: https://github.com/mrkkrp/markkarpov.com.git
 
-executable mk-art
-    main-is:          Main.hs
-    hs-source-dirs:   app
+library
+    exposed-modules:
+        Artwork
+        Artwork.Id
+        Essay
+        Exhibition
+        Exhibition.PerYear
+        Markdown
+        Medium
+        Route
+        Utils
+
+    hs-source-dirs:   lib
     default-language: GHC2021
     ghc-options:
         -O2 -Wall -threaded -Wall -Werror -Wredundant-constraints
@@ -37,6 +47,26 @@ executable mk-art
         mmark,
         mmark-ext,
         modern-uri,
+        shake,
+        text,
+        time
+
+executable mk-art
+    main-is:          Main.hs
+    hs-source-dirs:   app
+    default-language: GHC2021
+    ghc-options:
+        -O2 -Wall -threaded -Wall -Werror -Wredundant-constraints
+        -Wpartial-fields -Wunused-packages
+
+    build-depends:
+        aeson >=2,
+        base,
+        containers,
+        cryptonite,
+        lens,
+        lens-aeson >=1.2,
+        markkarpov-art,
         shake,
         stache,
         text,
