@@ -3,15 +3,17 @@
 
 module Artwork
   ( Artwork (..),
+    date,
   )
 where
 
-import Artwork.Id (ArtworkId (..))
+import Artwork.Id (ArtworkId)
+import Artwork.Id qualified
 import Data.Aeson
 import Data.Text (Text)
 import Data.Time
 import Medium (Medium (..))
-import Utils (parseDay, renderDay)
+import Utils (renderDay)
 
 -- | Information about an artwork.
 data Artwork = Artwork
@@ -19,8 +21,7 @@ data Artwork = Artwork
     artworkTitle :: !(Maybe Text),
     artworkDescription :: !(Maybe Text),
     artworkMedium :: !Medium,
-    artworkDimensions :: !(Maybe (Int, Int)),
-    artworkDate :: !Day
+    artworkDimensions :: !(Maybe (Int, Int))
   }
   deriving (Eq, Show)
 
@@ -36,7 +37,6 @@ instance FromJSON Artwork where
         artworkHeight <- o .: "height"
         artworkWidth <- o .: "width"
         return $ Just (artworkHeight, artworkWidth)
-    artworkDate <- (o .: "date") >>= parseDay
     return Artwork {..}
 
 instance ToJSON Artwork where
@@ -48,5 +48,9 @@ instance ToJSON Artwork where
         "medium" .= artworkMedium,
         "height" .= (fst <$> artworkDimensions),
         "width" .= (snd <$> artworkDimensions),
-        "date" .= renderDay artworkDate
+        "date" .= renderDay (Artwork.Id.date artworkId)
       ]
+
+-- | Project artwork's creation date.
+date :: Artwork -> Day
+date = Artwork.Id.date . artworkId

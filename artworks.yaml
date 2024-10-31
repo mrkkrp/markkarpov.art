@@ -3,789 +3,628 @@
   medium: oil_on_canvas
   height: 55
   width: 38
-  date: 2022-04-20
 - id: '20220428a'
   title: Chierry
   medium: oil_on_canvas
   height: 38
   width: 46
-  date: 2022-04-28
 - id: '20220428b'
   title: Château-Thierry
   medium: oil_on_canvas
   height: 38
   width: 55
-  date: 2022-04-28
 - id: '20220504'
   title: Brasles
   medium: oil_on_canvas
   height: 38
   width: 46
-  date: 2022-05-04
 - id: '20220511'
   title: Château-Thierry, Avenue de la République
   medium: watercolor
   height: 38
   width: 55
-  date: 2022-05-11
 - id: '20220527'
   medium: watercolor
   height: 38
   width: 55
-  date: 2022-05-27
 - id: '20220603'
   title: Château-Thierry
   medium: watercolor
   height: 38
   width: 55
-  date: 2022-06-03
 - id: '20220604a'
   title: Curious cows
   medium: oil_on_canvas
   height: 38
   width: 46
-  date: 2022-06-04
 - id: '20220604b'
   title: Château-Thierry
   medium: watercolor
   height: 38
   width: 55
-  date: 2022-06-04
 - id: '20220606'
   title: Château-Thierry
   medium: oil_on_canvas
   height: 33
   width: 55
-  date: 2022-06-06
 - id: '20220702'
   medium: oil_on_canvas
   height: 40
   width: 40
-  date: 2022-07-02
 - id: '20220720'
   medium: oil_on_canvas
   height: 38
   width: 46
-  date: 2022-07-20
 - id: '20220807'
   medium: oil_on_canvas
   height: 46
   width: 55
-  date: 2022-08-07
 - id: '20221016a'
   title: In Nuna's garden
   medium: watercolor
   height: 33
   width: 55
-  date: 2022-10-16
 - id: '20221016b'
   title: In Nuna's garden
   medium: watercolor
   height: 38
   width: 46
-  date: 2022-10-16
 - id: '20221111'
   medium: oil_on_canvas
   height: 55
   width: 38
-  date: 2022-11-11
 - id: '20221129'
   medium: watercolor_and_ink
   height: 38
   width: 55
-  date: 2022-11-29
 - id: '20221130'
   title: Our garden
   medium: oil_on_canvas
   height: 46
   width: 38
-  date: 2022-11-30
 - id: '20221210'
   title: Brasles
   medium: oil_on_canvas
   height: 38
   width: 46
-  date: 2022-12-10
 - id: '20230106'
   medium: oil_on_canvas
   height: 61
   width: 38
-  date: 2023-01-06
 - id: '20230108'
   medium: oil_on_canvas
   height: 61
   width: 38
-  date: 2023-01-08
 - id: '20230110'
   title: Self-portrait
   medium: oil_on_canvas
   height: 46
   width: 38
-  date: 2023-01-10
 - id: '20230121'
   title: Brasles
   medium: photograph
-  date: 2023-01-21
   description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
 - id: '20230204'
   medium: photograph
-  date: 2023-02-04
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20230207'
   medium: photograph
-  date: 2023-02-07
   description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Fujicolor Pro 400H
 - id: '20230304'
   title: Brasles
   medium: oil_on_canvas
   height: 55
   width: 46
-  date: 2023-03-04
 - id: '20230305'
   medium: oil_on_canvas
   height: 50
   width: 50
-  date: 2023-03-05
 - id: '20230312a'
   medium: photograph
-  date: 2023-03-12
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20230312b'
   medium: photograph
-  date: 2023-03-12
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20230401'
   title: Oni is preparing for gardening
   medium: oil_on_canvas
   height: 60
   width: 30
-  date: 2023-04-01
 - id: '20230407'
   title: Bucket of water
   medium: oil_on_canvas
   height: 46
   width: 38
-  date: 2023-04-07
 - id: '20230408'
   title: Chierry
   medium: oil_on_canvas
   height: 38
   width: 61
-  date: 2023-04-08
 - id: '20230415'
   medium: oil_on_canvas
   height: 50
   width: 50
-  date: 2023-04-15
 - id: '20230425'
   title: Oni gardening
   medium: cpencils_conte_on_paper
   height: 38
   width: 27
-  date: 2023-04-25
 - id: '20230430'
   title: Brasles
   medium: oil_on_canvas
   height: 30
   width: 60
-  date: 2023-04-30
 - id: '20230501'
   title: Brasles
   medium: oil_on_canvas
   height: 38
   width: 46
-  date: 2023-05-01
 - id: '20230504'
   title: Oni planting flowers
   medium: cpencils_conte_on_paper
   height: 38
   width: 27
-  date: 2023-05-04
 - id: '20230508'
   medium: oil_on_canvas
   height: 55
   width: 46
-  date: 2023-05-08
 - id: '20230514'
   title: Brasles
   medium: photograph
-  date: 2023-05-14
   description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Fujicolor Pro 400H
 - id: '20230528'
   medium: oil_on_canvas
   height: 40
   width: 40
-  date: 2023-05-28
 - id: '20230529'
   title: Brasles
   medium: oil_on_canvas
   height: 38
   width: 55
-  date: 2023-05-29
 - id: '20230601'
   medium: photograph
-  date: 2023-06-01
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20230610'
   title: Château-Thierry
   medium: watercolor
   height: 56
   width: 38
-  date: 2023-06-10
 - id: '20230611'
   title: Château-Thierry
   medium: watercolor
   height: 33
   width: 56
-  date: 2023-06-11
 - id: '20230626'
   title: Les Évaux
   medium: watercolor
   height: 38
   width: 46
-  date: 2023-06-26
 - id: '20230627'
   title: Blesmes
   medium: watercolor
   height: 46
   width: 38
-  date: 2023-06-27
 - id: '20230701a'
   title: Brasles
   medium: photograph
-  date: 2023-07-01
   description: Harman Titan 4x5 + 150mm cone + Kodak Portra 160
 - id: '20230701b'
   title: Brasles
   medium: photograph
-  date: 2023-07-01
   description: Harman Titan 4x5 + 150mm cone + Kodak Portra 160
 - id: '20230715'
   title: In Nuna's garden
   medium: photograph
-  date: 2023-07-15
   description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Fujicolor Pro 400H
 - id: '20230731'
   title: Self-portrait
   medium: oil_on_canvas
   height: 46
   width: 38
-  date: 2023-07-31
 - id: '20230807'
   medium: oil_on_canvas
   height: 55
   width: 38
-  date: 2023-08-07
 - id: '20230812'
   medium: oil_on_canvas
   height: 38
   width: 61
-  date: 2023-08-12
 - id: '20230814'
   title: Brasles
   medium: watercolor
   height: 38
   width: 46
-  date: 2023-08-14
 - id: '20230818'
   title: Blesmes
   medium: oil_on_canvas
   height: 55
   width: 46
-  date: 2023-08-18
 - id: '20230827'
   title: Blesmes
   medium: watercolor
   height: 46
   width: 38
-  date: 2023-08-27
 - id: '20230902'
   medium: oil_on_canvas
   height: 38
   width: 46
-  date: 2023-09-02
 - id: '20230905'
   title: Brasles
   medium: oil_on_canvas
   height: 38
   width: 46
-  date: 2023-09-05
 - id: '20230910'
   medium: oil_on_canvas
   height: 55
   width: 46
-  date: 2023-09-10
 - id: '20230916'
   medium: oil_on_canvas
   height: 33
   width: 55
-  date: 2023-09-16
 - id: '20230921'
   medium: oil_on_canvas
   height: 30
   width: 60
-  date: 2023-09-21
 - id: '20230927'
   medium: oil_on_canvas
   height: 55
   width: 38
-  date: 2023-09-27
 - id: '20231001a'
   medium: mixed_media
   height: 33
   width: 56
-  date: 2023-10-01
 - id: '20231001b'
   medium: mixed_media
   height: 38
   width: 46
-  date: 2023-10-01
 - id: '20231004'
   medium: oil_on_canvas
   height: 61
   width: 38
-  date: 2023-10-04
 - id: '20231007a'
   title: Piles of rubbish with poppies in bloom
   medium: oil_on_canvas
   height: 60
   width: 60
-  date: 2023-10-07
 - id: '20231007b'
   medium: photograph
-  date: 2023-10-07
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20231007c'
   medium: photograph
-  date: 2023-10-07
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20231008'
   medium: oil_on_canvas
   height: 50
   width: 61
-  date: 2023-10-08
 - id: '20231013'
   medium: photograph
-  date: 2023-10-13
   description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
 - id: '20231016'
   medium: oil_on_canvas
   height: 46
   width: 61
-  date: 2023-10-16
 - id: '20231021a'
   title: Self-portrait
   medium: oil_on_canvas
   height: 65
   width: 50
-  date: 2023-10-21
 - id: '20231021b'
   title: An eternal sponge (for Yves Klein)
   medium: oil_on_canvas
   height: 55
   width: 38
-  date: 2023-10-21
 - id: '20231028'
   medium: oil_on_canvas
   height: 61
   width: 50
-  date: 2023-10-28
 - id: '20231101'
   medium: oil_on_canvas
   height: 54
   width: 65
-  date: 2023-11-01
 - id: '20231105'
   medium: oil_on_canvas
   height: 50
   width: 50
-  date: 2023-11-05
 - id: '20231118'
   medium: oil_on_canvas
   height: 65
   width: 46
-  date: 2023-11-18
 - id: '20231124'
   medium: oil_on_canvas
   height: 61
   width: 46
-  date: 2023-11-24
 - id: '20231207a'
   medium: photograph
-  date: 2023-12-07
   description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
 - id: '20231207b'
   medium: photograph
-  date: 2023-12-07
   description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
 - id: '20231207c'
   medium: photograph
-  date: 2023-12-07
   description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
 - id: '20231207d'
   medium: photograph
-  date: 2023-12-07
   description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
 - id: '20231207e'
   medium: photograph
-  date: 2023-12-07
   description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
 - id: '20231208a'
   medium: photograph
-  date: 2023-12-08
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20231208b'
   medium: photograph
-  date: 2023-12-08
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20231208c'
   medium: photograph
-  date: 2023-12-08
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20231218a'
   medium: photograph
-  date: 2023-12-18
   description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
 - id: '20231218b'
   medium: photograph
-  date: 2023-12-18
   description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
 - id: '20231218c'
   medium: photograph
-  date: 2023-12-18
   description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
 - id: '20231219'
   medium: oil_on_canvas
   height: 54
   width: 65
-  date: 2023-12-19
 - id: '20231220'
   medium: oil_on_canvas
   height: 50
   width: 65
-  date: 2023-12-20
 - id: '20231226'
   title: Evening rain
   medium: photograph
-  date: 2023-12-26
   description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
 - id: '20231231a'
   medium: photograph
-  date: 2023-12-31
   description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
 - id: '20231231b'
   medium: photograph
-  date: 2023-12-31
   description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
 - id: '20240106'
   title: Brasles
   medium: watercolor
   height: 46
   width: 46
-  date: 2024-01-06
 - id: '20240114'
   medium: oil_on_canvas
   height: 40
   width: 80
-  date: 2024-01-14
 - id: '20240125'
   medium: watercolor
   height: 46
   width: 46
-  date: 2024-01-25
 - id: '20240209'
   title: Essômes-sur-Marne
   medium: watercolor
   height: 38
   width: 46
-  date: 2024-02-09
 - id: '20240217'
   medium: oil_on_canvas
   height: 55
   width: 38
-  date: 2024-02-17
 - id: '20240305a'
   medium: photograph
-  date: 2024-03-05
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20240305b'
   medium: photograph
-  date: 2024-03-05
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20240305c'
   medium: photograph
-  date: 2024-03-05
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20240305d'
   medium: photograph
-  date: 2024-03-05
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20240305e'
   medium: photograph
-  date: 2024-03-05
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20240305f'
   medium: photograph
-  date: 2024-03-05
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
 - id: '20240310'
   medium: oil_on_canvas
   height: 46
   width: 61
-  date: 2024-03-10
 - id: '20240316'
   medium: oil_on_canvas
   height: 50
   width: 50
-  date: 2024-03-16
 - id: '20240322'
   title: Brasles
   medium: oil_on_canvas
   height: 50
   width: 65
-  date: 2024-03-22
 - id: '20240324a'
   medium: photograph
-  date: 2024-03-24
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
 - id: '20240324b'
   medium: photograph
-  date: 2024-03-24
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
 - id: '20240324c'
   medium: photograph
-  date: 2024-03-24
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
 - id: '20240329'
   medium: oil_on_canvas
   height: 40
   width: 80
-  date: 2024-03-29
 - id: '20240330'
   title: Étampes-sur-Marne
   medium: oil_on_canvas
   height: 38
   width: 61
-  date: 2024-03-30
 - id: '20240406a'
   medium: photograph
-  date: 2024-04-06
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
 - id: '20240406b'
   medium: photograph
-  date: 2024-04-06
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
 - id: '20240406c'
   medium: photograph
-  date: 2024-04-06
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
 - id: '20240406d'
   medium: photograph
-  date: 2024-04-06
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
 - id: '20240406e'
   medium: photograph
-  date: 2024-04-06
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
 - id: '20240408'
   medium: oil_on_canvas
   height: 54
   width: 65
-  date: 2024-04-08
 - id: '20240421a'
   medium: photograph
-  date: 2024-04-21
   description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
 - id: '20240421b'
   medium: photograph
-  date: 2024-04-21
   description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
 - id: '20240421c'
   medium: photograph
-  date: 2024-04-21
   description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
 - id: '20240509a'
   medium: photograph
-  date: 2024-05-09
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Portra 400
 - id: '20240509b'
   medium: photograph
-  date: 2024-05-09
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Portra 400
 - id: '20240516a'
   medium: photograph
-  date: 2024-05-16
   description: Nikon F2AS + Nikkor 50mm f/1.8 ais + Kodak Portra 400
 - id: '20240516b'
   medium: photograph
-  date: 2024-05-16
   description: Nikon F2AS + Nikkor 50mm f/1.8 ais + Kodak Portra 400
 - id: '20240516c'
   medium: photograph
-  date: 2024-05-16
   description: Nikon F2AS + Nikkor 50mm f/1.8 ais + Kodak Portra 400
 - id: '20240526a'
   medium: photograph
-  date: 2024-05-26
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + Kodak Portra 400
 - id: '20240526b'
   medium: photograph
-  date: 2024-05-26
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + Kodak Portra 400
 - id: '20240526c'
   medium: photograph
-  date: 2024-05-26
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + Kodak Portra 400
 - id: '20240603'
   medium: photograph
-  date: 2024-06-03
   description: Nikon F2 + Nikkor 85mm f/2.0 ais + Kodak Portra 400
 - id: '20240616'
   medium: photograph
-  date: 2024-06-16
   description: Nikon F2 + Nikkor 50mm f/1.8 ais + Kodak Portra 400
 - id: '20240622'
   medium: photograph
-  date: 2024-06-22
   description: Nikon F2 + Nikkor 50mm f/1.8 ais + Kodak Portra 400
 - id: '20240623a'
   medium: photograph
-  date: 2024-06-23
   description: Nikon F2 + Nikkor 85mm f/2.0 ais + Kodak Portra 400
 - id: '20240623b'
   medium: photograph
-  date: 2024-06-23
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Portra 400
 - id: '20240623c'
   medium: photograph
-  date: 2024-06-23
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Portra 400
 - id: '20240623d'
   medium: photograph
-  date: 2024-06-23
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
 - id: '20240708a'
   medium: photograph
-  date: 2024-07-08
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
 - id: '20240708b'
   medium: photograph
-  date: 2024-07-08
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
 - id: '20240708c'
   medium: photograph
-  date: 2024-07-08
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
 - id: '20240708d'
   medium: photograph
-  date: 2024-07-08
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
 - id: '20240708e'
   medium: photograph
-  date: 2024-07-08
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
 - id: '20240708f'
   medium: photograph
-  date: 2024-07-08
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
 - id: '20240714'
   medium: photograph
-  date: 2024-07-14
   description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
 - id: '20240728'
   medium: photograph
-  date: 2024-07-28
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + Kodak Portra 400
 - id: '20240802'
   title: Château-Thierry, an overcast day
   medium: oil_on_canvas
   height: 65
   width: 50
-  date: 2024-08-02
 - id: '20240803'
   medium: photograph
-  date: 2024-08-03
   description: Pentax SV + Auto-Takumar 55mm f/2.0 + Kodak Portra 400
 - id: '20240806'
   title: Our garden in the evening
   medium: oil_on_canvas
   height: 50
   width: 50
-  date: 2024-08-06
 - id: '20240820'
   title: Château-Thierry, a bright day, noon
   medium: oil_on_canvas
   height: 61
   width: 38
-  date: 2024-08-20
 - id: '20240828'
   medium: photograph
-  date: 2024-08-28
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Portra 400
 - id: '20240906'
   title: A view near the railroad
   medium: oil_on_canvas
   height: 38
   width: 61
-  date: 2024-09-06
 - id: '20240908'
   title: A view near the railroad
   medium: oil_on_canvas
   height: 65
   width: 46
-  date: 2024-09-08
 - id: '20240914'
   title: Brasles
   medium: oil_on_canvas
   height: 60
   width: 60
-  date: 2024-09-14
 - id: '20240918'
   medium: photograph
-  date: 2024-09-18
   description: Mamiya Universal Press + Mamiya-Sekor 100mm f/3.5 + Kodak Portra 400
 - id: '20240923'
   title: "Our garden"
   medium: oil_on_canvas
   height: 61
   width: 46
-  date: 2024-09-23
 - id: '20241001'
   title: "Our garden"
   medium: oil_on_canvas
   height: 30
   width: 60
-  date: 2024-10-01
 - id: '20241002'
   medium: oil_on_canvas
   height: 38
   width: 55
-  date: 2024-10-02
 - id: '20241004'
   title: Château-Thierry, roofs at noon
   medium: oil_on_canvas
   height: 46
   width: 55
-  date: 2024-10-04
 - id: '20241005'
   title: The electrical station close to Nogentel
   medium: oil_on_canvas
   height: 38
   width: 55
-  date: 2024-10-05
 - id: '20241006'
   title: A view near the railroad
   medium: oil_on_canvas
   height: 46
   width: 65
-  date: 2024-10-06
 - id: '20241007'
   medium: photograph
-  date: 2024-10-07
   description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
 - id: '20241008'
   title: A rose
   medium: oil_on_canvas
   height: 55
   width: 46
-  date: 2024-10-08

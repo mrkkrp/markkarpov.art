@@ -6,6 +6,7 @@
 module Main (main) where
 
 import Artwork (Artwork (..))
+import Artwork qualified
 import Control.Lens hiding ((.=), (<.>))
 import Control.Monad
 import Control.Monad.IO.Class
@@ -309,9 +310,9 @@ exhibitionYear :: Exhibition -> Year
 exhibitionYear Exhibition {..} = dayPeriod exhibitionStart
 
 getArtworkYears :: [Artwork] -> Set Year
-getArtworkYears = Set.fromList . fmap (dayPeriod . artworkDate)
+getArtworkYears = Set.fromList . fmap (dayPeriod . Artwork.date)
 
 filterArtworksByYear :: Year -> [Artwork] -> [Artwork]
 filterArtworksByYear year = filter f
   where
-    f x = dayPeriod (artworkDate x) == year
+    f x = dayPeriod (Artwork.date x) == year
