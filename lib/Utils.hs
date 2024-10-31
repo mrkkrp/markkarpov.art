@@ -18,7 +18,7 @@ newCache' :: (() -> Action v) -> Rules (Action v)
 newCache' = fmap ($ ()) . newCache
 
 parseDay :: (MonadFail m) => Text -> m Day
-parseDay = parseTimeM True defaultTimeLocale "%F" . T.unpack
+parseDay = parseTimeM False defaultTimeLocale "%F" . T.unpack
 
 renderDay :: Day -> String
 renderDay = formatTime defaultTimeLocale "%d.%m.%Y"
