@@ -24,6 +24,7 @@ library
         Exhibition.PerYear
         Markdown
         Medium
+        PhotoMetadata
         Route
         Utils
 
@@ -47,6 +48,7 @@ library
         mmark,
         mmark-ext,
         modern-uri,
+        scientific,
         shake,
         text,
         time

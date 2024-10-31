@@ -13,41 +13,44 @@ import Data.Aeson
 import Data.Text (Text)
 import Data.Time
 import Medium (Medium (..))
+import PhotoMetadata (PhotoMetadata)
 import Utils (renderDay)
 
 -- | Information about an artwork.
 data Artwork = Artwork
   { artworkId :: ArtworkId,
     artworkTitle :: !(Maybe Text),
-    artworkDescription :: !(Maybe Text),
     artworkMedium :: !Medium,
-    artworkDimensions :: !(Maybe (Int, Int))
+    artworkDimensions :: !(Maybe (Int, Int)),
+    artworkPhotoMetadata :: !(Maybe PhotoMetadata)
   }
-  deriving (Eq, Show)
 
 instance FromJSON Artwork where
   parseJSON = withObject "artwork" $ \o -> do
     artworkId <- o .: "id"
     artworkTitle <- o .:? "title"
-    artworkDescription <- o .:? "description"
     artworkMedium <- o .: "medium"
-    artworkDimensions <- case artworkMedium of
-      Photograph -> return Nothing
+    case artworkMedium of
+      Photograph -> do
+        let artworkDimensions = Nothing
+        artworkPhotoMetadata <- parseJSON (Object o)
+        return Artwork {..}
       _ -> do
         artworkHeight <- o .: "height"
         artworkWidth <- o .: "width"
-        return $ Just (artworkHeight, artworkWidth)
-    return Artwork {..}
+        let artworkDimensions = Just (artworkHeight, artworkWidth)
+            artworkPhotoMetadata = Nothing
+        return Artwork {..}
 
 instance ToJSON Artwork where
   toJSON Artwork {..} =
     object
       [ "id" .= artworkId,
         "title" .= artworkTitle,
-        "description" .= artworkDescription,
         "medium" .= artworkMedium,
         "height" .= (fst <$> artworkDimensions),
         "width" .= (snd <$> artworkDimensions),
+        "photo_metadata" .= toJSON artworkPhotoMetadata,
         "date" .= renderDay (Artwork.Id.date artworkId)
       ]
 
