@@ -71,13 +71,16 @@ main = shakeArgs shakeOptions $ do
   artworkCache :: Action [Artwork] <-
     fmap (sortOn artworkId) <$> cacheYamlFile "artworks.yaml"
   templateCache <- newCache' $ \() -> do
-    liftIO (compileMustacheDir "default" (takeDirectory "templates/*.mustache"))
+    let templatePattern = "templates/*.mustache"
+    getMatchingFiles templatePattern >>= need
+    liftIO (compileMustacheDir "default" (takeDirectory templatePattern))
   getMd <- newCache $ \path -> do
     env <- envCache
     getMdHelper env path
   essayCache <- newCache' $ \() -> do
     srcs <- getMatchingFiles Route.essayPattern
     fmap (sortOn (essayPublished . Route.unWithPage)) . forM srcs $ \src -> do
+      need [src]
       v :: Essay <- getMd src >>= interpretValue . fst
       return (Route.withPage Route.essay src v)
   let routeArtYear :: Route Year
@@ -206,6 +209,7 @@ main = shakeArgs shakeOptions $ do
       ]
       output
   Route.rule Route.essay $ \input output -> do
+    need [input]
     env <- envCache
     templates <- templateCache
     (v, content) <- getMd input
@@ -219,6 +223,7 @@ main = shakeArgs shakeOptions $ do
       ]
       output
   Route.rule Route.contact $ \input output -> do
+    need [input]
     env <- envCache
     templates <- templateCache
     (v, content) <- getMd input
@@ -283,6 +288,7 @@ provideAs k v = Object (KeyMap.singleton (Key.fromText k) (toJSON v))
 
 cacheYamlFile :: (FromJSON v) => FilePath -> Rules (Action v)
 cacheYamlFile yamlFile = newCache' $ \() -> do
+  need [yamlFile]
   r <- liftIO (Y.decodeFileEither yamlFile)
   case r of
     Left err -> fail (Y.prettyPrintParseException err)
