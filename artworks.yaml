@@ -103,13 +103,19 @@
 - id: '20230121'
   title: Brasles
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 80
+  film: portra400
 - id: '20230204'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+  camera: pentaxsv
+  lens: 55
+  film: cinestill400d
 - id: '20230207'
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Fujicolor Pro 400H
+  camera: hasselblad
+  lens: 80
+  film: fuji400h
 - id: '20230304'
   title: Brasles
   medium: oil_on_canvas
@@ -121,10 +127,14 @@
   width: 50
 - id: '20230312a'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+  camera: pentaxsv
+  lens: 55
+  film: cinestill400d
 - id: '20230312b'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+  camera: pentaxsv
+  lens: 55
+  film: cinestill400d
 - id: '20230401'
   title: Oni is preparing for gardening
   medium: oil_on_canvas
@@ -171,7 +181,9 @@
 - id: '20230514'
   title: Brasles
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Fujicolor Pro 400H
+  camera: hasselblad
+  lens: 80
+  film: fuji400h
 - id: '20230528'
   medium: oil_on_canvas
   height: 40
@@ -183,7 +195,9 @@
   width: 55
 - id: '20230601'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+  camera: pentaxsv
+  lens: 55
+  film: cinestill400d
 - id: '20230610'
   title: Château-Thierry
   medium: watercolor
@@ -207,15 +221,21 @@
 - id: '20230701a'
   title: Brasles
   medium: photograph
-  description: Harman Titan 4x5 + 150mm cone + Kodak Portra 160
+  camera: titan
+  lens: 150
+  film: portra160
 - id: '20230701b'
   title: Brasles
   medium: photograph
-  description: Harman Titan 4x5 + 150mm cone + Kodak Portra 160
+  camera: titan
+  lens: 150
+  film: portra160
 - id: '20230715'
   title: In Nuna's garden
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Fujicolor Pro 400H
+  camera: hasselblad
+  lens: 80
+  film: fuji400h
 - id: '20230731'
   title: Self-portrait
   medium: oil_on_canvas
@@ -288,17 +308,23 @@
   width: 60
 - id: '20231007b'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+  camera: pentaxsv
+  lens: 55
+  film: cinestill400d
 - id: '20231007c'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+  camera: pentaxsv
+  lens: 55
+  film: cinestill400d
 - id: '20231008'
   medium: oil_on_canvas
   height: 50
   width: 61
 - id: '20231013'
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 80
+  film: portra400
 - id: '20231016'
   medium: oil_on_canvas
   height: 46
@@ -335,37 +361,59 @@
   width: 46
 - id: '20231207a'
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 150
+  film: portra400
 - id: '20231207b'
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 150
+  film: portra400
 - id: '20231207c'
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 150
+  film: portra400
 - id: '20231207d'
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 150
+  film: portra400
 - id: '20231207e'
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 150
+  film: portra400
 - id: '20231208a'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+  camera: pentaxsv
+  lens: 55
+  film: cinestill400d
 - id: '20231208b'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+  camera: pentaxsv
+  lens: 55
+  film: cinestill400d
 - id: '20231208c'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+  camera: pentaxsv
+  lens: 55
+  film: cinestill400d
 - id: '20231218a'
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 150
+  film: portra400
 - id: '20231218b'
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 150
+  film: portra400
 - id: '20231218c'
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 150
+  film: portra400
 - id: '20231219'
   medium: oil_on_canvas
   height: 54
@@ -377,13 +425,19 @@
 - id: '20231226'
   title: Evening rain
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 150
+  film: portra400
 - id: '20231231a'
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 150
+  film: portra400
 - id: '20231231b'
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 150
+  film: portra400
 - id: '20240106'
   title: Brasles
   medium: watercolor
@@ -408,22 +462,34 @@
   width: 38
 - id: '20240305a'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+  camera: pentaxsv
+  lens: 55
+  film: cinestill400d
 - id: '20240305b'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+  camera: pentaxsv
+  lens: 55
+  film: cinestill400d
 - id: '20240305c'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+  camera: pentaxsv
+  lens: 55
+  film: cinestill400d
 - id: '20240305d'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+  camera: pentaxsv
+  lens: 55
+  film: cinestill400d
 - id: '20240305e'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+  camera: pentaxsv
+  lens: 55
+  film: cinestill400d
 - id: '20240305f'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + CineStill 400D
+  camera: pentaxsv
+  lens: 55
+  film: cinestill400d
 - id: '20240310'
   medium: oil_on_canvas
   height: 46
@@ -439,13 +505,19 @@
   width: 65
 - id: '20240324a'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+  camera: mamiyarb67
+  lens: 90
+  film: ektachrome
 - id: '20240324b'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+  camera: mamiyarb67
+  lens: 90
+  film: ektachrome
 - id: '20240324c'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+  camera: mamiyarb67
+  lens: 90
+  film: ektachrome
 - id: '20240329'
   medium: oil_on_canvas
   height: 40
@@ -457,101 +529,163 @@
   width: 61
 - id: '20240406a'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
+  camera: mamiyarb67
+  lens: 180
+  film: ektachrome
 - id: '20240406b'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+  camera: mamiyarb67
+  lens: 90
+  film: ektachrome
 - id: '20240406c'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+  camera: mamiyarb67
+  lens: 90
+  film: ektachrome
 - id: '20240406d'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+  camera: mamiyarb67
+  lens: 90
+  film: ektachrome
 - id: '20240406e'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+  camera: mamiyarb67
+  lens: 90
+  film: ektachrome
 - id: '20240408'
   medium: oil_on_canvas
   height: 54
   width: 65
 - id: '20240421a'
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 150mm f/4.0 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 150
+  film: portra400
 - id: '20240421b'
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 80
+  film: portra400
 - id: '20240421c'
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 80
+  film: portra400
 - id: '20240509a'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Portra 400
+  camera: mamiyarb67
+  lens: 180
+  film: portra400
 - id: '20240509b'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Portra 400
+  camera: mamiyarb67
+  lens: 180
+  film: portra400
 - id: '20240516a'
   medium: photograph
-  description: Nikon F2AS + Nikkor 50mm f/1.8 ais + Kodak Portra 400
+  camera: nikonf2
+  lens: 50
+  film: portra400
 - id: '20240516b'
   medium: photograph
-  description: Nikon F2AS + Nikkor 50mm f/1.8 ais + Kodak Portra 400
+  camera: nikonf2
+  lens: 50
+  film: portra400
 - id: '20240516c'
   medium: photograph
-  description: Nikon F2AS + Nikkor 50mm f/1.8 ais + Kodak Portra 400
+  camera: nikonf2
+  lens: 50
+  film: portra400
 - id: '20240526a'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + Kodak Portra 400
+  camera: pentaxsv
+  lens: 55
+  film: portra400
 - id: '20240526b'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + Kodak Portra 400
+  camera: pentaxsv
+  lens: 55
+  film: portra400
 - id: '20240526c'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + Kodak Portra 400
+  camera: pentaxsv
+  lens: 55
+  film: portra400
 - id: '20240603'
   medium: photograph
-  description: Nikon F2 + Nikkor 85mm f/2.0 ais + Kodak Portra 400
+  camera: nikonf2
+  lens: 85
+  film: portra400
 - id: '20240616'
   medium: photograph
-  description: Nikon F2 + Nikkor 50mm f/1.8 ais + Kodak Portra 400
+  camera: nikonf2
+  lens: 50
+  film: portra400
 - id: '20240622'
   medium: photograph
-  description: Nikon F2 + Nikkor 50mm f/1.8 ais + Kodak Portra 400
+  camera: nikonf2
+  lens: 50
+  film: portra400
 - id: '20240623a'
   medium: photograph
-  description: Nikon F2 + Nikkor 85mm f/2.0 ais + Kodak Portra 400
+  camera: nikonf2
+  lens: 85
+  film: portra400
 - id: '20240623b'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Portra 400
+  camera: mamiyarb67
+  lens: 180
+  film: portra400
 - id: '20240623c'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Portra 400
+  camera: mamiyarb67
+  lens: 90
+  film: portra400
 - id: '20240623d'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+  camera: mamiyarb67
+  lens: 90
+  film: ektachrome
 - id: '20240708a'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
+  camera: mamiyarb67
+  lens: 180
+  film: ektachrome
 - id: '20240708b'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+  camera: mamiyarb67
+  lens: 90
+  film: ektachrome
 - id: '20240708c'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
+  camera: mamiyarb67
+  lens: 180
+  film: ektachrome
 - id: '20240708d'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
+  camera: mamiyarb67
+  lens: 180
+  film: ektachrome
 - id: '20240708e'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
+  camera: mamiyarb67
+  lens: 180
+  film: ektachrome
 - id: '20240708f'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Ektachrome E100
+  camera: mamiyarb67
+  lens: 180
+  film: ektachrome
 - id: '20240714'
   medium: photograph
-  description: Hasselblad 503cx + Carl Zeiss 80mm f/2.8 CF T* + Kodak Portra 400
+  camera: hasselblad
+  lens: 80
+  film: portra400
 - id: '20240728'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + Kodak Portra 400
+  camera: pentaxsv
+  lens: 55
+  film: portra400
 - id: '20240802'
   title: Château-Thierry, an overcast day
   medium: oil_on_canvas
@@ -559,7 +693,9 @@
   width: 50
 - id: '20240803'
   medium: photograph
-  description: Pentax SV + Auto-Takumar 55mm f/2.0 + Kodak Portra 400
+  camera: pentaxsv
+  lens: 55
+  film: portra400
 - id: '20240806'
   title: Our garden in the evening
   medium: oil_on_canvas
@@ -572,7 +708,9 @@
   width: 38
 - id: '20240828'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 180mm f/4.5 + Kodak Portra 400
+  camera: mamiyarb67
+  lens: 180
+  film: portra400
 - id: '20240906'
   title: A view near the railroad
   medium: oil_on_canvas
@@ -590,7 +728,9 @@
   width: 60
 - id: '20240918'
   medium: photograph
-  description: Mamiya Universal Press + Mamiya-Sekor 100mm f/3.5 + Kodak Portra 400
+  camera: mamiyapress
+  lens: 100
+  film: portra400
 - id: '20240923'
   title: "Our garden"
   medium: oil_on_canvas
@@ -622,7 +762,9 @@
   width: 65
 - id: '20241007'
   medium: photograph
-  description: Mamiya RB67 Pro-S + Mamiya-Sekor C 90mm f/3.8 + Kodak Ektachrome E100
+  camera: mamiyarb67
+  lens: 90
+  film: ektachrome
 - id: '20241008'
   title: A rose
   medium: oil_on_canvas
