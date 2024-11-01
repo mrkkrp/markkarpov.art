@@ -14,7 +14,7 @@
         system = "x86_64-linux";
         config.allowUnfree = true;
       };
-      compiler = "ghc963";
+      compiler = "ghc982";
       appSourceRegex = [
         "^app.*$"
         "^lib.*$"
@@ -36,7 +36,6 @@
             "markkarpov-art" = super.callCabal2nix "markkarpov-art"
               (pkgs.lib.sourceByRegex ./. appSourceRegex)
               { };
-            ghc-syntax-highlighter = super.ghc-syntax-highlighter_0_0_10_0;
           });
         };
       html5validator = with pkgs.python39Packages; buildPythonPackage rec {

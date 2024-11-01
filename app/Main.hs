@@ -17,7 +17,8 @@ import Data.Aeson.Key qualified as Key
 import Data.Aeson.KeyMap qualified as KeyMap
 import Data.Aeson.Lens
 import Data.Function (on)
-import Data.List (find, foldl1', groupBy, sortOn)
+import Data.List (find, foldl1', sortOn)
+import Data.List.NonEmpty qualified as NonEmpty
 import Data.Maybe (fromMaybe)
 import Data.Ord (Down (..))
 import Data.Set (Set)
@@ -120,10 +121,10 @@ main = shakeArgs shakeOptions $ do
           fmap
             ( \xs ->
                 ExhibitionPerYear
-                  (exhibitionYear (head xs))
+                  (exhibitionYear (NonEmpty.head xs))
                   (wrapWithOutput <$> xs)
             )
-            (groupBy ((==) `on` exhibitionYear) exhibitions)
+            (NonEmpty.groupBy ((==) `on` exhibitionYear) exhibitions)
         wrapWithOutput x = Route.withPage routeExhibition (exhibitionDigest x) x
     renderAndWrite
       templates
