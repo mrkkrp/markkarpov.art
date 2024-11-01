@@ -32,8 +32,8 @@ instance FromJSON PhotoMetadata where
       PentaxSV -> do
         lens :: Lens 'PentaxSV <- o .: "lens"
         pure PhotoMetadata {..}
-      NikonF2 -> do
-        lens :: Lens 'NikonF2 <- o .: "lens"
+      NikonF2AS -> do
+        lens :: Lens 'NikonF2AS <- o .: "lens"
         pure PhotoMetadata {..}
       Hasselblad503cx -> do
         lens :: Lens 'Hasselblad503cx <- o .: "lens"
@@ -55,7 +55,7 @@ instance ToJSON PhotoMetadata where
 
 data Camera
   = PentaxSV
-  | NikonF2
+  | NikonF2AS
   | Hasselblad503cx
   | MamiyaRB67ProS
   | MamiyaUniversalPress
@@ -65,7 +65,7 @@ instance FromJSON Camera where
   parseJSON = withText "camera id" $ \txt ->
     case txt of
       "pentaxsv" -> pure PentaxSV
-      "nikonf2" -> pure NikonF2
+      "nikonf2" -> pure NikonF2AS
       "hasselblad" -> pure Hasselblad503cx
       "mamiyarb67" -> pure MamiyaRB67ProS
       "mamiyapress" -> pure MamiyaUniversalPress
@@ -78,7 +78,7 @@ class KnownCamera camera where
 instance KnownCamera PentaxSV where
   cameraPretty Proxy = "Pentax SV"
 
-instance KnownCamera NikonF2 where
+instance KnownCamera NikonF2AS where
   cameraPretty Proxy = "Nikon F2AS"
 
 instance KnownCamera Hasselblad503cx where
@@ -95,9 +95,9 @@ instance KnownCamera HarmanTitan4x5 where
 
 data Lens (camera :: Camera) where
   AutoTakumar55mm :: Lens 'PentaxSV
-  Nikkor35mm :: Lens 'NikonF2
-  Nikkor50mm :: Lens 'NikonF2
-  Nikkor85mm :: Lens 'NikonF2
+  Nikkor35mm :: Lens 'NikonF2AS
+  Nikkor50mm :: Lens 'NikonF2AS
+  Nikkor85mm :: Lens 'NikonF2AS
   CarlZeiss60mm :: Lens 'Hasselblad503cx
   CarlZeiss80mm :: Lens 'Hasselblad503cx
   CarlZeiss150mm :: Lens 'Hasselblad503cx
@@ -112,7 +112,7 @@ data Lens (camera :: Camera) where
 instance FromJSON (Lens 'PentaxSV) where
   parseJSON = parseLens [(55, AutoTakumar55mm)]
 
-instance FromJSON (Lens 'NikonF2) where
+instance FromJSON (Lens 'NikonF2AS) where
   parseJSON = parseLens [(35, Nikkor35mm), (50, Nikkor50mm), (85, Nikkor85mm)]
 
 instance FromJSON (Lens 'Hasselblad503cx) where
