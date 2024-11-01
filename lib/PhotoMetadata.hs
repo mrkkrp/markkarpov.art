@@ -25,27 +25,11 @@ data PhotoMetadata = forall (camera :: Camera). (KnownCamera camera) => PhotoMet
 
 instance FromJSON PhotoMetadata where
   parseJSON = withObject "photo metadata" $ \o -> do
-    cameraValue <- o .: "camera"
+    someCamera <- o .: "camera"
     film <- o .: "film"
-    let camera = Proxy
-    case cameraValue of
-      PentaxSV -> do
-        lens :: Lens 'PentaxSV <- o .: "lens"
-        pure PhotoMetadata {..}
-      NikonF2AS -> do
-        lens :: Lens 'NikonF2AS <- o .: "lens"
-        pure PhotoMetadata {..}
-      Hasselblad503cx -> do
-        lens :: Lens 'Hasselblad503cx <- o .: "lens"
-        pure PhotoMetadata {..}
-      MamiyaRB67ProS -> do
-        lens :: Lens 'MamiyaRB67ProS <- o .: "lens"
-        pure PhotoMetadata {..}
-      MamiyaUniversalPress -> do
-        lens :: Lens 'MamiyaUniversalPress <- o .: "lens"
-        pure PhotoMetadata {..}
-      HarmanTitan4x5 -> do
-        lens :: Lens 'HarmanTitan4x5 <- o .: "lens"
+    case someCamera of
+      SomeCamera (camera :: Proxy camera) -> do
+        lens :: Lens camera <- o .: "lens"
         pure PhotoMetadata {..}
 
 instance ToJSON PhotoMetadata where
@@ -71,6 +55,22 @@ instance FromJSON Camera where
       "mamiyapress" -> pure MamiyaUniversalPress
       "titan" -> pure HarmanTitan4x5
       _ -> fail $ "unknown camera id: " ++ T.unpack txt
+
+data SomeCamera
+  = forall (camera :: Camera).
+    (KnownCamera camera, FromJSON (Lens camera)) =>
+    SomeCamera (Proxy camera)
+
+instance FromJSON SomeCamera where
+  parseJSON v = do
+    camera <- parseJSON v
+    pure $ case camera of
+      PentaxSV -> SomeCamera (Proxy @'PentaxSV)
+      NikonF2AS -> SomeCamera (Proxy @'NikonF2AS)
+      Hasselblad503cx -> SomeCamera (Proxy @'Hasselblad503cx)
+      MamiyaRB67ProS -> SomeCamera (Proxy @'MamiyaRB67ProS)
+      MamiyaUniversalPress -> SomeCamera (Proxy @'MamiyaUniversalPress)
+      HarmanTitan4x5 -> SomeCamera (Proxy @'HarmanTitan4x5)
 
 class KnownCamera camera where
   cameraPretty :: Proxy camera -> Text
