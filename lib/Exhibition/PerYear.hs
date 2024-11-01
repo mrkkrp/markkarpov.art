@@ -7,6 +7,7 @@ module Exhibition.PerYear
 where
 
 import Data.Aeson
+import Data.List.NonEmpty (NonEmpty)
 import Data.Time
 import Exhibition (Exhibition)
 import Route (WithPage)
@@ -14,7 +15,7 @@ import Route (WithPage)
 -- | Exhibitions grouped by year.
 data ExhibitionPerYear = ExhibitionPerYear
   { epyYear :: Year,
-    epyExhibitions :: [WithPage Exhibition]
+    epyExhibitions :: NonEmpty (WithPage Exhibition)
   }
 
 instance ToJSON ExhibitionPerYear where
