@@ -37,6 +37,7 @@ import Essay (Essay (..))
 import Exhibition (Exhibition (..))
 import Exhibition.PerYear (ExhibitionPerYear (..))
 import Markdown qualified
+import Medium qualified
 import Route (Route)
 import Route qualified
 import Text.Mustache
@@ -193,7 +194,7 @@ main = shakeArgs shakeOptions $ do
       [ menuItem Art env,
         provideAs "artwork" thisYearArtworks,
         provideAs "this_year" thisYear,
-        provideAs "artworks_total" (length thisYearArtworks),
+        provideAs "summary" (Medium.summary thisYearArtworks artworkMedium),
         provideAs "title" (menuItemTitle Art <> " " <> T.pack (show thisYear))
       ]
       output
