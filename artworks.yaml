@@ -591,17 +591,7 @@
   camera: nikonf2
   lens: 50
   film: portra400
-- id: '20240526a'
-  medium: photograph
-  camera: pentaxsv
-  lens: 55
-  film: portra400
-- id: '20240526b'
-  medium: photograph
-  camera: pentaxsv
-  lens: 55
-  film: portra400
-- id: '20240526c'
+- id: '20240526'
   medium: photograph
   camera: pentaxsv
   lens: 55
