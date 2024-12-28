@@ -28,7 +28,6 @@
         "^env\.yaml$"
         "^essay.*$"
         "^exhibitions\.yaml$"
-        "^robots\.txt$"
         "^templates.*$"
       ];
       haskellPackages = pkgs.haskell.packages.${compiler}.override
@@ -51,12 +50,12 @@
         src = pkgs.lib.sourceByRegex ./. siteSourceRegex;
         buildPhase = ''
           mk-art
+          echo 'User-agent: *' > _build/robots.txt
         '' + (if isPreview
         then ''
-          echo 'User-agent: *' > _build/robots.txt
           echo 'Disallow: /' >> _build/robots.txt
         ''
-        else "cp robots.txt _build/robots.txt");
+        else "");
         inherit doCheck;
         checkPhase = ''
           vnu --version
