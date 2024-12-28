@@ -82,7 +82,7 @@ main = shakeArgs shakeOptions $ do
     getMdHelper env path
   essayCache <- newCache' $ \() -> do
     srcs <- getMatchingFiles Route.essayPattern
-    fmap (sortOn (essayPublished . Route.unWithPage)) . forM srcs $ \src -> do
+    fmap (sortOn (Down . essayPublished . Route.unWithPage)) . forM srcs $ \src -> do
       need [src]
       v :: Essay <- getMd src >>= interpretValue . fst
       return (Route.withPage Route.essay src v)
