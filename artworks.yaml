@@ -697,12 +697,12 @@
   lens: 180
   film: portra400
 - id: '20240906'
-  title: A view near the railroad
+  title: View near the railroad
   medium: oil_on_canvas
   height: 38
   width: 61
 - id: '20240908'
-  title: A view near the railroad
+  title: View near the railroad
   medium: oil_on_canvas
   height: 65
   width: 46
@@ -741,7 +741,7 @@
   height: 38
   width: 55
 - id: '20241006'
-  title: A view near the railroad
+  title: View near the railroad
   medium: oil_on_canvas
   height: 46
   width: 65
@@ -751,7 +751,75 @@
   lens: 90
   film: ektachrome
 - id: '20241008'
-  title: A rose
+  title: Rose
   medium: oil_on_canvas
   height: 55
   width: 46
+- id: '20241016'
+  title: Corner
+  medium: watercolor
+  height: 46
+  width: 38
+- id: '20241018'
+  medium: watercolor
+  height: 46
+  width: 55
+- id: '20241019'
+  title: Blesmes
+  medium: oil_on_canvas
+  height: 55
+  width: 38
+- id: '20241111a'
+  title: View with a field near Blesmes
+  medium: oil_on_canvas
+  height: 46
+  width: 65
+- id: '20241111b'
+  title: View with a field and a tractor near Blesmes
+  medium: oil_on_canvas
+  height: 38
+  width: 55
+- id: '20241114'
+  medium: oil_on_canvas
+  height: 55
+  width: 38
+- id: '20241116'
+  title: Self-portrait
+  medium: oil_on_canvas
+  height: 46
+  width: 38
+- id: '20241123'
+  title: Corner
+  medium: oil_on_canvas
+  height: 50
+  width: 50
+- id: '20241126'
+  title: View with our garden and contiguous areas
+  medium: oil_on_canvas
+  height: 54
+  width: 65
+- id: '20241130'
+  title: Cold November morning, fields south of Étampes-sur-Marne
+  medium: oil_on_canvas
+  height: 50
+  width: 65
+- id: '20241209'
+  title: Interior
+  medium: oil_on_canvas
+  height: 65
+  width: 46
+- id: '20241214'
+  title: Private garden in December
+  medium: oil_on_canvas
+  height: 60
+  width: 60
+- id: '20241223'
+  title: "The Russian / Oil spill in the Black Sea"
+  medium: oil_on_canvas
+  height: 46
+  width: 38
+- id: '20241230'
+  title: View with a railway track and a big pile of sand
+  medium: oil_on_canvas
+  height: 50
+  width: 65
