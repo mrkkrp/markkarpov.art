@@ -90,11 +90,6 @@
   medium: oil_on_canvas
   height: 61
   width: 38
-- id: '20230110'
-  title: Self-portrait
-  medium: oil_on_canvas
-  height: 46
-  width: 38
 - id: '20230121'
   title: Brasles
   medium: photograph
@@ -451,10 +446,6 @@
   medium: watercolor
   height: 38
   width: 46
-- id: '20240217'
-  medium: oil_on_canvas
-  height: 55
-  width: 38
 - id: '20240305a'
   medium: photograph
   camera: pentaxsv
