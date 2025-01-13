@@ -34,7 +34,7 @@ render env txt path =
   case MMark.parse path txt of
     Left bundle -> fail (M.errorBundlePretty bundle)
     Right doc -> do
-      let toc = MMark.runScanner doc (Ext.tocScanner (\x -> x > 1 && x < 5))
+      let toc = MMark.runScanner doc (Ext.tocScanner (\x -> x > 1 && x < 4))
           r =
             MMark.useExtensions
               [ Ext.fontAwesome,
