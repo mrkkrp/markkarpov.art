@@ -770,6 +770,31 @@
   medium: oil_on_canvas
   height: 60
   width: 60
+- id: '20241215a'
+  medium: photograph
+  camera: mamiyapress
+  lens: 100
+  film: portra400
+- id: '20241215b'
+  medium: photograph
+  camera: mamiyapress
+  lens: 150
+  film: portra400
+- id: '20241215c'
+  medium: photograph
+  camera: mamiyapress
+  lens: 100
+  film: portra400
+- id: '20241216'
+  medium: photograph
+  camera: mamiyapress
+  lens: 100
+  film: portra400
+- id: '20241217'
+  medium: photograph
+  camera: mamiyapress
+  lens: 100
+  film: portra400
 - id: '20241223'
   title: "The Russian / Oil spill in the Black Sea"
   medium: oil_on_canvas
