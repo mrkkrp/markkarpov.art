@@ -101,10 +101,13 @@ data Lens (camera :: Camera) where
   CarlZeiss60mm :: Lens 'Hasselblad503cx
   CarlZeiss80mm :: Lens 'Hasselblad503cx
   CarlZeiss150mm :: Lens 'Hasselblad503cx
+  MamiyaSekor50mm :: Lens 'MamiyaUniversalPress
   MamiyaSekor65mm :: Lens 'MamiyaRB67ProS
+  MamiyaSekor75mm :: Lens 'MamiyaUniversalPress
   MamiyaSekor90mm :: Lens 'MamiyaRB67ProS
   MamiyaSekor180mm :: Lens 'MamiyaRB67ProS
   MamiyaSekor100mm :: Lens 'MamiyaUniversalPress
+  MamiyaSekor150mm :: Lens 'MamiyaUniversalPress
   Cone72mm :: Lens 'HarmanTitan4x5
   Cone110mm :: Lens 'HarmanTitan4x5
   Cone150mm :: Lens 'HarmanTitan4x5
@@ -122,7 +125,7 @@ instance FromJSON (Lens 'MamiyaRB67ProS) where
   parseJSON = parseLens [(65, MamiyaSekor65mm), (90, MamiyaSekor90mm), (180, MamiyaSekor180mm)]
 
 instance FromJSON (Lens 'MamiyaUniversalPress) where
-  parseJSON = parseLens [(100, MamiyaSekor100mm)]
+  parseJSON = parseLens [(50, MamiyaSekor50mm), (75, MamiyaSekor75mm), (100, MamiyaSekor100mm), (150, MamiyaSekor150mm)]
 
 instance FromJSON (Lens 'HarmanTitan4x5) where
   parseJSON = parseLens [(72, Cone72mm), (110, Cone110mm), (150, Cone150mm)]
@@ -145,10 +148,13 @@ lensPretty = \case
   CarlZeiss60mm -> "Carl Zeiss Distagon 60mm f/3.5 CF T*"
   CarlZeiss80mm -> "Carl Zeiss Planar 80mm f/2.8 CF T*"
   CarlZeiss150mm -> "Carl Zeiss Sonnar 150mm f/4.0 CF T*"
+  MamiyaSekor50mm -> "Mamiya-Sekor 50mm f/6.3"
   MamiyaSekor65mm -> "Mamiya-Sekor C 65mm f/4.5"
+  MamiyaSekor75mm -> "Mamiya-Sekor 75mm f/5.6"
   MamiyaSekor90mm -> "Mamiya-Sekor C 90mm f/3.8"
   MamiyaSekor180mm -> "Mamiya-Sekor C 180mm f/4.5"
   MamiyaSekor100mm -> "Mamiya-Sekor 100mm f/3.5"
+  MamiyaSekor150mm -> "Mamiya-Sekor 150mm f/5.6"
   Cone72mm -> "72mm cone"
   Cone110mm -> "110mm cone"
   Cone150mm -> "150mm cone"
