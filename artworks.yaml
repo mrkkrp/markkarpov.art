@@ -3,16 +3,11 @@
   medium: oil_on_canvas
   height: 55
   width: 38
-- id: '20220428a'
+- id: '20220428'
   title: Chierry
   medium: oil_on_canvas
   height: 38
   width: 46
-- id: '20220428b'
-  title: Château-Thierry
-  medium: oil_on_canvas
-  height: 38
-  width: 55
 - id: '20220504'
   title: Brasles
   medium: oil_on_canvas
@@ -42,19 +37,10 @@
   medium: watercolor
   height: 38
   width: 55
-- id: '20220606'
-  title: Château-Thierry
-  medium: oil_on_canvas
-  height: 33
-  width: 55
 - id: '20220702'
   medium: oil_on_canvas
   height: 40
   width: 40
-- id: '20220720'
-  medium: oil_on_canvas
-  height: 38
-  width: 46
 - id: '20220807'
   medium: oil_on_canvas
   height: 46
@@ -125,11 +111,6 @@
   camera: pentaxsv
   lens: 55
   film: cinestill400d
-- id: '20230401'
-  title: Oni is preparing for gardening
-  medium: oil_on_canvas
-  height: 60
-  width: 30
 - id: '20230407'
   title: Bucket of water
   medium: oil_on_canvas
@@ -149,11 +130,6 @@
   medium: cpencils_conte_on_paper
   height: 38
   width: 27
-- id: '20230430'
-  title: Brasles
-  medium: oil_on_canvas
-  height: 30
-  width: 60
 - id: '20230501'
   title: Brasles
   medium: oil_on_canvas
@@ -319,16 +295,11 @@
   medium: oil_on_canvas
   height: 46
   width: 61
-- id: '20231021a'
+- id: '20231021'
   title: Self-portrait
   medium: oil_on_canvas
   height: 65
   width: 50
-- id: '20231021b'
-  title: An eternal sponge (for Yves Klein)
-  medium: oil_on_canvas
-  height: 55
-  width: 38
 - id: '20231028'
   medium: oil_on_canvas
   height: 61
