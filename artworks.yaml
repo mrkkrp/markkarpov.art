@@ -795,6 +795,21 @@
   camera: mamiyapress
   lens: 100
   film: portra400
+- id: '20241220a'
+  medium: photograph
+  camera: mamiyarb67
+  lens: 65
+  film: portra400
+- id: '20241220b'
+  medium: photograph
+  camera: mamiyarb67
+  lens: 65
+  film: portra400
+- id: '20241220c'
+  medium: photograph
+  camera: mamiyarb67
+  lens: 65
+  film: portra400
 - id: '20241223'
   title: "The Russian / Oil spill in the Black Sea"
   medium: oil_on_canvas
