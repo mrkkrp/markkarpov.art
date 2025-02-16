@@ -583,11 +583,6 @@
   camera: mamiyarb67
   lens: 90
   film: portra400
-- id: '20240623d'
-  medium: photograph
-  camera: mamiyarb67
-  lens: 90
-  film: ektachrome
 - id: '20240708a'
   medium: photograph
   camera: mamiyarb67
@@ -604,16 +599,6 @@
   lens: 180
   film: ektachrome
 - id: '20240708d'
-  medium: photograph
-  camera: mamiyarb67
-  lens: 180
-  film: ektachrome
-- id: '20240708e'
-  medium: photograph
-  camera: mamiyarb67
-  lens: 180
-  film: ektachrome
-- id: '20240708f'
   medium: photograph
   camera: mamiyarb67
   lens: 180
