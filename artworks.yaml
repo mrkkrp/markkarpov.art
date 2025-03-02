@@ -820,6 +820,16 @@
   medium: oil_on_canvas
   height: 50
   width: 65
+- id: '20250105'
+  title: Interior
+  medium: oil_on_canvas
+  height: 46
+  width: 65
+- id: '20250111'
+  title: Composition with two screens
+  medium: oil_on_canvas
+  height: 54
+  width: 65
 - id: '20250112a'
   medium: photograph
   camera: mamiyarb67
@@ -840,6 +850,21 @@
   camera: mamiyarb67
   lens: 90
   film: portra400
+- id: '20250114'
+  title: Corner of the bathroom
+  medium: oil_on_canvas
+  height: 61
+  width: 50
+- id: '20250116'
+  title: Château-Thierry, Avenue de la République
+  medium: oil_on_canvas
+  height: 54
+  width: 73
+- id: '20250117'
+  title: Sink
+  medium: oil_on_canvas
+  height: 50
+  width: 50
 - id: '20250119a'
   medium: photograph
   camera: mamiyarb67
