@@ -7,8 +7,6 @@ date:
 ```toc
 ```
 
-# Perception routines
-
 The present essay builds upon [my earlier work on real
 realism][real-realism] and revisits many of the ideas that originally were
 introduced there, such as the concept of non-trivial intentions and the real
