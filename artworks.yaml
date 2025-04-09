@@ -875,6 +875,16 @@
   camera: mamiyarb67
   lens: 90
   film: portra400
+- id: '20250125a'
+  medium: photograph
+  camera: mamiyapress
+  lens: 100
+  film: portra400
+- id: '20250125b'
+  medium: photograph
+  camera: mamiyapress
+  lens: 150
+  film: portra400
 - id: '20250214'
   title: Tulips and the rice cooker
   medium: oil_on_canvas
