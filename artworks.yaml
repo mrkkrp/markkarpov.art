@@ -805,6 +805,26 @@
   camera: mamiyarb67
   lens: 65
   film: portra400
+- id: '20241220d'
+  medium: photograph
+  camera: mamiyarb67
+  lens: 180
+  film: ektachrome
+- id: '20241220e'
+  medium: photograph
+  camera: mamiyarb67
+  lens: 65
+  film: ektachrome
+- id: '20241220f'
+  medium: photograph
+  camera: mamiyarb67
+  lens: 180
+  film: ektachrome
+- id: '20241220g'
+  medium: photograph
+  camera: mamiyarb67
+  lens: 65
+  film: ektachrome
 - id: '20241223'
   title: "The Russian / Oil spill in the Black Sea"
   medium: oil_on_canvas
@@ -895,6 +915,11 @@
   medium: oil_on_canvas
   height: 73
   width: 50
+- id: '20250221'
+  medium: photograph
+  camera: mamiyarb67
+  lens: 90
+  film: ektachrome
 - id: '20250222'
   title: Weeds in the city during the winter
   medium: oil_on_canvas
