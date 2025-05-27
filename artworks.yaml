@@ -395,10 +395,6 @@
   medium: watercolor
   height: 46
   width: 46
-- id: '20240114'
-  medium: oil_on_canvas
-  height: 40
-  width: 80
 - id: '20240125'
   medium: watercolor
   height: 46
@@ -461,10 +457,6 @@
   camera: mamiyarb67
   lens: 90
   film: ektachrome
-- id: '20240329'
-  medium: oil_on_canvas
-  height: 40
-  width: 80
 - id: '20240330'
   title: Étampes-sur-Marne
   medium: oil_on_canvas
