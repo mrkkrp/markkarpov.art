@@ -87,11 +87,6 @@
   camera: pentaxsv
   lens: 55
   film: cinestill400d
-- id: '20230207'
-  medium: photograph
-  camera: hasselblad
-  lens: 80
-  film: fuji400h
 - id: '20230304'
   title: Brasles
   medium: oil_on_canvas
@@ -465,7 +460,7 @@
 - id: '20240406a'
   medium: photograph
   camera: mamiyarb67
-  lens: 180
+  lens: 90
   film: ektachrome
 - id: '20240406b'
   medium: photograph
@@ -478,11 +473,6 @@
   lens: 90
   film: ektachrome
 - id: '20240406d'
-  medium: photograph
-  camera: mamiyarb67
-  lens: 90
-  film: ektachrome
-- id: '20240406e'
   medium: photograph
   camera: mamiyarb67
   lens: 90
