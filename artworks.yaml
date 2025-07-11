@@ -41,10 +41,6 @@
   medium: oil_on_canvas
   height: 40
   width: 40
-- id: '20220807'
-  medium: oil_on_canvas
-  height: 46
-  width: 55
 - id: '20221016a'
   title: In Nuna's garden
   medium: watercolor
@@ -55,10 +51,6 @@
   medium: watercolor
   height: 38
   width: 46
-- id: '20221111'
-  medium: oil_on_canvas
-  height: 55
-  width: 38
 - id: '20221129'
   medium: watercolor_and_ink
   height: 38
@@ -111,11 +103,6 @@
   medium: oil_on_canvas
   height: 46
   width: 38
-- id: '20230408'
-  title: Chierry
-  medium: oil_on_canvas
-  height: 38
-  width: 61
 - id: '20230415'
   medium: oil_on_canvas
   height: 50
@@ -215,37 +202,20 @@
   medium: watercolor
   height: 38
   width: 46
-- id: '20230818'
-  title: Blesmes
-  medium: oil_on_canvas
-  height: 55
-  width: 46
 - id: '20230827'
   title: Blesmes
   medium: watercolor
   height: 46
   width: 38
-- id: '20230902'
-  medium: oil_on_canvas
-  height: 38
-  width: 46
 - id: '20230905'
   title: Brasles
   medium: oil_on_canvas
   height: 38
   width: 46
-- id: '20230910'
-  medium: oil_on_canvas
-  height: 55
-  width: 46
 - id: '20230921'
   medium: oil_on_canvas
   height: 30
   width: 60
-- id: '20230927'
-  medium: oil_on_canvas
-  height: 55
-  width: 38
 - id: '20231001a'
   medium: mixed_media
   height: 33
@@ -276,10 +246,6 @@
 - id: '20231008'
   medium: oil_on_canvas
   height: 50
-  width: 61
-- id: '20231016'
-  medium: oil_on_canvas
-  height: 46
   width: 61
 - id: '20231021'
   title: Self-portrait
