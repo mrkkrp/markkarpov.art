@@ -17,16 +17,16 @@
   title: Château-Thierry, Avenue de la République
   medium: watercolor
   height: 38
-  width: 55
+  width: 56
 - id: '20220527'
   medium: watercolor
   height: 38
-  width: 55
+  width: 56
 - id: '20220603'
   title: Château-Thierry
   medium: watercolor
   height: 38
-  width: 55
+  width: 56
 - id: '20220604a'
   title: Curious cows
   medium: oil_on_canvas
@@ -36,7 +36,7 @@
   title: Château-Thierry
   medium: watercolor
   height: 38
-  width: 55
+  width: 56
 - id: '20220702'
   medium: oil_on_canvas
   height: 40
@@ -45,7 +45,7 @@
   title: In Nuna's garden
   medium: watercolor
   height: 33
-  width: 55
+  width: 56
 - id: '20221016b'
   title: In Nuna's garden
   medium: watercolor
@@ -54,7 +54,7 @@
 - id: '20221129'
   medium: watercolor_and_ink
   height: 38
-  width: 55
+  width: 56
 - id: '20221130'
   title: Our garden
   medium: oil_on_canvas
@@ -655,7 +655,7 @@
 - id: '20241018'
   medium: watercolor
   height: 46
-  width: 55
+  width: 56
 - id: '20241019'
   title: Blesmes
   medium: oil_on_canvas
@@ -891,8 +891,8 @@
   width: 73
 - id: '20250525'
   medium: watercolor
-  height: 33
-  width: 50
+  height: 38
+  width: 56
 - id: '20250527'
   title: On the banks of the Marne
   medium: oil_on_canvas
@@ -906,5 +906,5 @@
 - id: '20250609'
   title: Hills on a rainy day
   medium: watercolor
-  height: 28
-  width: 50
+  height: 33
+  width: 56
