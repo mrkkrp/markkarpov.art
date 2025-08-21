@@ -632,7 +632,12 @@
   medium: oil_on_canvas
   height: 46
   width: 65
-- id: '20241007'
+- id: '20241007a'
+  medium: photograph
+  camera: mamiyarb67
+  lens: 90
+  film: ektachrome
+- id: '20241007b'
   medium: photograph
   camera: mamiyarb67
   lens: 90
