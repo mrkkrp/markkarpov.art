@@ -351,15 +351,6 @@
   camera: hasselblad
   lens: 150
   film: portra400
-- id: '20240106'
-  title: Brasles
-  medium: watercolor
-  height: 46
-  width: 46
-- id: '20240125'
-  medium: watercolor
-  height: 46
-  width: 46
 - id: '20240209'
   title: Essômes-sur-Marne
   medium: watercolor
@@ -487,12 +478,12 @@
   camera: nikonf2
   lens: 50
   film: portra400
-- id: '20240526a'
+- id: '20240516d'
   medium: photograph
-  camera: pentaxsv
-  lens: 55
+  camera: nikonf2
+  lens: 50
   film: portra400
-- id: '20240526b'
+- id: '20240526'
   medium: photograph
   camera: pentaxsv
   lens: 55
@@ -562,11 +553,6 @@
   medium: oil_on_canvas
   height: 65
   width: 50
-- id: '20240803'
-  medium: photograph
-  camera: pentaxsv
-  lens: 55
-  film: portra400
 - id: '20240806'
   title: Our garden in the evening
   medium: oil_on_canvas
@@ -657,10 +643,6 @@
   medium: watercolor
   height: 46
   width: 38
-- id: '20241018'
-  medium: watercolor
-  height: 46
-  width: 56
 - id: '20241019'
   title: Blesmes
   medium: oil_on_canvas
