@@ -877,6 +877,7 @@
   height: 60
   width: 73
 - id: '20250525'
+  title: Path near Mont-Saint-Père
   medium: watercolor
   height: 38
   width: 56
@@ -894,4 +895,24 @@
   title: Hills on a rainy day
   medium: watercolor
   height: 33
+  width: 56
+- id: '20250819'
+  title: Château-Thierry, weeds in summer
+  medium: watercolor
+  height: 38
+  width: 56
+- id: '20250820'
+  title: Rain over the fields near Nogentel
+  medium: watercolor
+  height: 38
+  width: 56
+- id: '20250821'
+  title: Path along the railroad on a rainy day
+  medium: watercolor
+  height: 38
+  width: 56
+- id: '20250822'
+  title: Château-Thierry, avenue de Montmirail
+  medium: watercolor
+  height: 38
   width: 56
