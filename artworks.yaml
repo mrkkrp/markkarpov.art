@@ -740,14 +740,9 @@
 - id: '20241220e'
   medium: photograph
   camera: mamiyarb67
-  lens: 65
-  film: ektachrome
-- id: '20241220f'
-  medium: photograph
-  camera: mamiyarb67
   lens: 180
   film: ektachrome
-- id: '20241220g'
+- id: '20241220f'
   medium: photograph
   camera: mamiyarb67
   lens: 65
