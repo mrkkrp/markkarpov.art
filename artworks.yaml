@@ -876,11 +876,36 @@
   medium: oil_on_canvas
   height: 30
   width: 60
+- id: '20250608'
+  title: Weeds
+  medium: oil_on_canvas
+  height: 50
+  width: 73
 - id: '20250609'
   title: Hills on a rainy day
   medium: watercolor
   height: 33
   width: 56
+- id: '20250623'
+  title: Château-Thierry, the false Marne
+  medium: oil_on_canvas
+  height: 54
+  width: 73
+- id: '20250709'
+  title: Path along the Marne
+  medium: oil_on_canvas
+  height: 38
+  width: 55
+- id: '20250712'
+  title: Fileds near Azy-sur-Marne
+  medium: oil_on_canvas
+  height: 50
+  width: 80
+- id: '20250727'
+  title: Château-Thierry, waste collection point
+  medium: oil_on_canvas
+  height: 50
+  width: 80
 - id: '20250819'
   title: Château-Thierry, weeds in summer
   medium: watercolor
