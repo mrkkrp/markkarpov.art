@@ -906,6 +906,11 @@
   medium: oil_on_canvas
   height: 50
   width: 80
+- id: '20250805'
+  title: Fenced area next to a parking lot
+  medium: oil_on_canvas
+  height: 50
+  width: 65
 - id: '20250819'
   title: Château-Thierry, weeds in summer
   medium: watercolor
@@ -926,3 +931,8 @@
   medium: watercolor
   height: 38
   width: 56
+- id: '20250825'
+  title: Corner of the garden
+  medium: oil_on_canvas
+  height: 60
+  width: 73
