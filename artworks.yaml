@@ -817,6 +817,11 @@
   medium: oil_on_canvas
   height: 50
   width: 73
+- id: '20250307'
+  medium: photograph
+  camera: mamiyapress
+  lens: 50
+  film: portra400
 - id: '20250308'
   title: Sidewalk in March
   medium: oil_on_canvas
@@ -881,6 +886,11 @@
   medium: oil_on_canvas
   height: 54
   width: 73
+- id: '20250702'
+  medium: photograph
+  camera: mamiyapress
+  lens: 100
+  film: portra400
 - id: '20250709'
   title: Path along the Marne
   medium: oil_on_canvas
