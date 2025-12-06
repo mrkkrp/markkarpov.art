@@ -28,3 +28,16 @@
   end: 2025-11-02
   artworks:
     - '20250308'
+- title: Salon des Artistes Français
+  location: Grand Palais des Champs Elysées, Paris
+  description: |
+    Salon des Artistes Français that takes place as part of the big
+    exhibition “Art Capital” in Grand Palais happens to be the first
+    occasion for me to expose a landscape painting in oils. I am quite
+    pleased with this painting of Château-Thierry in March and I find that
+    it is a suitable sample of my work from 2025.
+  link: https://www.artistes-francais.com/
+  start: 2026-02-13
+  end: 2026-02-15
+  artworks:
+    - '20250329'
