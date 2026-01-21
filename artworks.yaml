@@ -807,6 +807,16 @@
   medium: oil_on_canvas
   height: 73
   width: 50
+- id: '20250216a'
+  medium: photograph
+  camera: nikonf2
+  lens: 50
+  film: portra400
+- id: '20250216b'
+  medium: photograph
+  camera: nikonf2
+  lens: 50
+  film: portra400
 - id: '20250221'
   medium: photograph
   camera: mamiyarb67
@@ -956,6 +966,16 @@
   medium: oil_on_canvas
   height: 50
   width: 80
+- id: '20251012a'
+  medium: photograph
+  camera: nikonf2
+  lens: 50
+  film: portra400
+- id: '20251012b'
+  medium: photograph
+  camera: nikonf2
+  lens: 50
+  film: portra400
 - id: '20251020'
   title: Brasles
   medium: watercolor
@@ -966,3 +986,33 @@
   medium: watercolor
   height: 33
   width: 56
+- id: '20251123a'
+  medium: photograph
+  camera: nikonf2
+  lens: 50
+  film: portra400
+- id: '20251123b'
+  medium: photograph
+  camera: nikonf2
+  lens: 50
+  film: portra400
+- id: '20260107a'
+  medium: photograph
+  camera: nikonf2
+  lens: 50
+  film: portra400
+- id: '20260107b'
+  medium: photograph
+  camera: nikonf2
+  lens: 50
+  film: portra400
+- id: '20260107c'
+  medium: photograph
+  camera: nikonf2
+  lens: 50
+  film: portra400
+- id: '20260107d'
+  medium: photograph
+  camera: nikonf2
+  lens: 50
+  film: portra400
