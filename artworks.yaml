@@ -966,6 +966,11 @@
   medium: oil_on_canvas
   height: 50
   width: 80
+- id: '20251011'
+  title: Street in Chierry
+  medium: oil_on_canvas
+  height: 40
+  width: 80
 - id: '20251012a'
   medium: photograph
   camera: nikonf2
@@ -976,6 +981,11 @@
   camera: nikonf2
   lens: 50
   film: portra400
+- id: '20251014'
+  title: Grisaille à la campagne
+  medium: oil_on_canvas
+  height: 38
+  width: 55
 - id: '20251020'
   title: Brasles
   medium: watercolor
@@ -986,6 +996,24 @@
   medium: watercolor
   height: 33
   width: 56
+- id: '20251027'
+  title: Nature morte
+  medium: oil_on_canvas
+  height: 60
+  width: 73
+- id: '20251110a'
+  medium: oil_on_canvas
+  height: 54
+  width: 81
+- id: '20251110b'
+  medium: oil_on_canvas
+  height: 50
+  width: 80
+- id: '20251111'
+  title: Late autumn, apple trees
+  medium: oil_on_canvas
+  height: 54
+  width: 81
 - id: '20251123a'
   medium: photograph
   camera: nikonf2
@@ -996,6 +1024,11 @@
   camera: nikonf2
   lens: 50
   film: portra400
+- id: '20251124'
+  title: Behind the hospital of Château-Thierry during rain
+  medium: oil_on_canvas
+  height: 50
+  width: 73
 - id: '20260107a'
   medium: photograph
   camera: nikonf2
