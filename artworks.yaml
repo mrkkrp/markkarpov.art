@@ -876,21 +876,11 @@
   medium: oil_on_canvas
   height: 50
   width: 73
-- id: '20250528'
-  title: Hills on a rainy day
-  medium: oil_on_canvas
-  height: 30
-  width: 60
 - id: '20250608'
   title: Weeds
   medium: oil_on_canvas
   height: 50
   width: 73
-- id: '20250609'
-  title: Hills on a rainy day
-  medium: watercolor
-  height: 33
-  width: 56
 - id: '20250623'
   title: Château-Thierry, the false Marne
   medium: oil_on_canvas
@@ -990,11 +980,6 @@
   title: Brasles
   medium: watercolor
   height: 38
-  width: 56
-- id: '20251021'
-  title: Brasles
-  medium: watercolor
-  height: 33
   width: 56
 - id: '20251027'
   title: Nature morte
