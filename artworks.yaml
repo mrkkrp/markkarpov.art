@@ -1024,6 +1024,11 @@
   title: Château-Thierry, avenue de Montmirail
   height: 54
   width: 65
+- id: '20260103'
+  medium: oil_on_canvas
+  title: January growth
+  height: 50
+  width: 80
 - id: '20260107a'
   medium: photograph
   camera: nikonf2
@@ -1044,3 +1049,53 @@
   camera: nikonf2
   lens: 50
   film: portra400
+- id: '20260112'
+  medium: oil_on_canvas
+  title: Corner (macro)
+  height: 50
+  width: 80
+- id: '20260114'
+  medium: oil_on_canvas
+  title: Pile of rags
+  height: 50
+  width: 73
+- id: '20260220'
+  medium: watercolor
+  title: Brasles
+  height: 33
+  width: 56
+- id: '20260221'
+  medium: oil_on_canvas
+  title: View of Château-Thierry from behind the trees
+  height: 50
+  width: 73
+- id: '20260222'
+  medium: oil_on_canvas
+  title: View of an abandoned plot of land featuring the hospital of Château-Thierry
+  height: 50
+  width: 80
+- id: '20260307'
+  medium: oil_on_canvas
+  title: Château-Thierry, the false Marne on an overcast March day
+  height: 50
+  width: 100
+- id: '20260314'
+  medium: oil_on_canvas
+  title: March growth
+  height: 60
+  width: 81
+- id: '20260318'
+  medium: watercolor
+  title: Château-Thierry, March morning
+  height: 38
+  width: 56
+- id: '20260328'
+  medium: oil_on_canvas
+  title: Chierry
+  height: 54
+  width: 65
+- id: '20260513'
+  medium: watercolor
+  title: La Maison d'Eloïse
+  height: 38
+  width: 56
