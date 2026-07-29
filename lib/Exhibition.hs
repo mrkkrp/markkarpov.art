@@ -21,7 +21,6 @@ import Data.Set qualified as Set
 import Data.Text (Text)
 import Data.Text.Lazy qualified as TL
 import Data.Time
-import GHC.Generics (Generic)
 import Utils (parseDay, renderDay)
 
 -- | Information about an exhibition.
@@ -37,8 +36,6 @@ data Exhibition = Exhibition
     exhibitionDigest :: !(Hash.Digest SHA256)
   }
   deriving (Eq, Show)
-
-deriving stock instance Generic Day
 
 deriving anyclass instance Binary Day
 
