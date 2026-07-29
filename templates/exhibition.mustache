@@ -1,11 +1,11 @@
 <h1>{{ title }}</h1>
 
-<p>
-  <em class="text-muted">
+<p class="mt-4">
+  <em class="text-neutral-500">
     {{ location }} from {{ start }} to {{ end }}
   </em>
 </p>
-<p><a href="{{ link }}">{{ link }}</a></p>
+<p><a href="{{ link }}" target="_blank" rel="noopener noreferrer">{{ link }}</a> {{> icon-external-link }}</p>
 {{& description_rendered }}
 
 {{# artwork }}

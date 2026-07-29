@@ -2,52 +2,62 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Mark Karpov">
     <title>{{ title }}</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <meta name="description" content="{{# desc }}{{ desc }}{{/ desc }}{{^ desc }}{{ site_description }}{{/ desc }}">
+    <link rel="canonical" href="{{ host }}{{ page_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mark Karpov">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{# desc }}{{ desc }}{{/ desc }}{{^ desc }}{{ site_description }}{{/ desc }}">
+    <meta property="og:url" content="{{ host }}{{ page_url }}">
+    <meta property="og:image" content="{{ host }}/static/img/site-icon.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{# desc }}{{ desc }}{{/ desc }}{{^ desc }}{{ site_description }}{{/ desc }}">
+    <meta name="twitter:image" content="{{ host }}/static/img/site-icon.png">
+    <link rel="icon" type="image/png" href="/static/img/site-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&amp;display=swap">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
   </head>
-  <body>
-    <nav class="navbar navbar-expand-md">
-      <div class="container">
-        <a class="navbar-brand" href="/" title="Mark Karpov">
+  <body class="min-h-screen flex flex-col bg-neutral-50">
+    <nav class="bg-white border-b border-neutral-200">
+      <div class="mx-auto max-w-(--container-content) px-4 flex items-center justify-between h-14">
+        <a class="text-xl font-semibold tracking-tight no-underline text-(--color-ink) hover:text-(--color-ink)" href="/" title="Mark Karpov">
           Mark Karpov
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="navbar-nav ml-auto">
-            {{# main_menu }}
-            <li class="nav-item">
-              {{# active }}
-              <a class="nav-link active"
-                 {{/ active }}
-                 {{^ active }}
-                 <a class="nav-link"
-                    {{/ active }}
-                    href="{{& link }}">{{ title }}</a>
-            </li>
-            {{/ main_menu }}
-          </ul>
-        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle sr-only" aria-label="Toggle navigation">
+        <label for="nav-toggle" class="md:hidden flex items-center justify-center p-2 text-neutral-600 hover:text-(--color-ink) cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </label>
+        <ul class="nav-menu hidden md:flex flex-col md:flex-row md:items-center md:gap-1 absolute md:static left-0 right-0 top-14 md:top-auto bg-white md:bg-transparent border-b border-neutral-200 md:border-0 px-4 md:px-0 py-2 md:py-0 z-10">
+          {{# main_menu }}
+          <li>
+            <a class="block px-3 py-2 no-underline text-neutral-600 hover:text-(--color-ink) {{# active }}font-semibold text-(--color-ink){{/ active }}"
+               href="{{& link }}">{{ title }}</a>
+          </li>
+          {{/ main_menu }}
+        </ul>
       </div>
     </nav>
-    <main>
-      <div class="container">
-        <div class="content">
+    <main class="flex-1">
+      <div class="mx-auto max-w-(--container-content) px-4 py-8">
+        <div class="content rounded-xl border border-neutral-200 bg-white px-6 py-4 shadow-sm sm:px-8 sm:py-6">
           {{& inner }}
         </div>
       </div>
     </main>
-    <footer class="footer">
-      <div class="text-center text-muted">
+    <footer class="py-4 mt-8">
+      <div class="text-center text-neutral-500 text-sm">
         {{ copyright }}
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <script src="/static/js/custom.js"></script>
   </body>
 </html>
