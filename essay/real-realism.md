@@ -22,8 +22,8 @@ The invention of photographic film once made the visual arts seek values
 other than accurate reproduction of observable reality. This direction
 proved fertile for more than a century. Now artists are facing a different
 challenge: AI technologies demonstrate that they can, or soon will be able
-to, produce output that is on par or superior to human creativity in purely
-technical terms. This is the future that cannot be avoided, no matter how
+to, produce output that is on par with or superior to human creativity in
+purely technical terms. This is the future that cannot be avoided, no matter how
 many open letters people write in attempts to hold the technology back. The
 solution is to search, once again, for alternative values. It appears
 logical that the new values in art should be something that technology
@@ -98,7 +98,7 @@ central to this essay. One goal of art is to focus on things that are less
 known, scarce, poorly understood, or about to disappear. For example, it is
 no coincidence that the impressionists were in love with the countryside and
 the peasant lifestyle. It was a natural response to industrialization. Many
-changes in today's world are rapid and drastic, they fit in a person's
+changes in today's world are rapid and drastic; they fit within a person's
 lifetime. However, there are also those that are more fundamental, slower,
 and therefore may not be obvious. One such change might have been happening
 throughout the whole human history and it concerns our perception of
@@ -138,11 +138,11 @@ reality than in observing raw reality which by definition does not transmit
 any cultural messages. Instances of carrier reality have been produced
 throughout human history at an ever-increasing rate. It can be argued that
 carrier reality in the form of books, recordings, artworks, etc. is a medium
-of culture and culture becomes increasingly important as we progress as a
+of culture, and culture becomes increasingly important as we progress as a
 species. In today's world computers (a particularly versatile type of
 carrier reality) occupy our attention more than any other type of object
-before. The internet in general and social networks in particular definitely
-claim a lot of real estate in our minds. Assuming this is only a
+before them. The internet in general and social networks in particular
+definitely claim a lot of real estate in our minds. Assuming this is only a
 continuation of a general trend, we could formulate a hypothesis:
 
 > Development of humanity progressively shifts the attention of people from
@@ -170,8 +170,8 @@ want to do with the latest technological advances.
 
 ### The principal goal of real realism
 
-Strictly speaking, there is no need in art for appreciation of reality.
-There is nothing preventing people from enjoying it outside of museums and
+Strictly speaking, art is not needed for the appreciation of reality. There
+is nothing preventing people from enjoying it outside of museums and
 galleries. Perceiving reality for its own sake is an infinitely more
 intimate and pure act compared to perceiving reality while also creating an
 artwork, since all kinds of extraneous considerations enter the artist's
@@ -197,15 +197,15 @@ how an artwork is made:
   reality is arranged and in the way it is represented.
 
 The definition above seems to stipulate that a real realist artwork
-represents reality as closely as possible, but an artwork can only be
-abstraction of reality and it will never render it completely correctly to
-the last detail. How to resolve this conflict?
+represents reality as closely as possible, but an artwork can only ever be an
+abstraction of reality and will never render it completely correctly, to the
+last detail. How is this conflict to be resolved?
 
 One possibility would be to strive for a representation that is accurate and
-contains as many details as possible, something close to e.g. photorealism
-in painting. It should be noted though that thorough execution takes a lot
-of time and is often incompatible with direct observation of reality since
-many subjects are often in constant change.
+contains as many details as possible, something close to photorealism in
+painting. It should be noted, though, that thorough execution takes a lot of
+time and is often incompatible with direct observation of reality, since many
+subjects are in constant change.
 
 Another option would be to concentrate on intention rather than the result.
 Is the intention to represent reality faithfully through observation not
@@ -247,10 +247,10 @@ logical that it should be:
 Let us call this *the real realist message* (RRM).
 
 It is worth noting that a given artwork rarely has only one cultural
-message. Typically an artwork has one more obvious cultural message which we
-are going to call *the primary cultural message* and other, *secondary
-cultural messages* that are less prominent, similar to how a periodic signal
-has the first harmonic and higher harmonics. Secondary cultural messages are
+message. Typically an artwork has one more obvious cultural message, which we
+are going to call *the primary cultural message*, and other, *secondary
+cultural messages*, that are less prominent, similar to how a periodic signal
+has a first harmonic and higher harmonics. Secondary cultural messages are
 irrelevant for our discussion. They are less predictable and different
 individuals are more likely to infer different secondary cultural messages
 for the same artwork, while they might still agree on the same primary
@@ -263,24 +263,24 @@ that has been made available to the public:
 > A real realist artwork has the real realist message as its primary
   cultural message.
 
-The task of thinking about what others will think about an artwork is not
-new for artists, even though it has been somewhat less of an issue in the
-modernist era where the artist became free to explore their creativity and
-others were often left to their devices in understanding what the artist did
-and why. One can be vague in their art but as soon as they decide to make it
-public this uncertainty becomes part of the cultural message of the artwork
-in question. It may or may not be desirable. For real realism being vague is
+The task of thinking about what others will think of an artwork is not new
+for artists, even though it has been somewhat less of an issue in the
+modernist era, when the artist became free to explore their creativity and
+others were often left to their own devices in understanding what the artist
+did and why. One can be vague in one's art, but as soon as one decides to
+make it public this uncertainty becomes part of the cultural message of the
+artwork in question. It may or may not be desirable. For real realism being vague is
 not desirable because it makes the impact of real realist art weaker, it
 becomes less clear what the point is.
 
 So far we have defined cultural message as something that is specific to an
-individual. Individuals are many, how can the artist ensure that their work
+individual. Individuals are many; how can the artist ensure that their work
 satisfies the IGRR? One could perhaps find a reasonable definition of
 *objective cultural message*, e.g. by averaging different interpretations of
 an artwork over a statistically significant group of people, but that
 approach is of no use to the artist at the moment of creation and it is most
 likely incompatible with the intimate nature of the PGRR. The solution, it
-seems, is to admit that the IGRR, just like the PGRR is all about the
+seems, is to admit that the IGRR, just like the PGRR, is all about the
 intention. The artist should try to anticipate what others will think and
 take that into account. There is not much more they can or should do.
 
@@ -330,18 +330,18 @@ flower is meant to show the beauty of the flower and/or be itself beautiful
 as an object). We are going to call this phenomenon *message capture through
 classification* (MCTC).
 
-MCTC is the primary obstacle for fulfilling the IGRR. Cultural messages
-assigned through classification tend to be quite strong and therefore they
-often end up being perceived as primary cultural messages. On the other hand
-the RRM is not common or familiar, it is weak and is going to be readily
-shadowed by other cultural messages. Therefore, *for an artwork to have the
+MCTC is the primary obstacle to fulfilling the IGRR. Cultural messages
+assigned through classification tend to be quite strong, and therefore they
+often end up being perceived as primary cultural messages. The RRM, on the
+other hand, is neither common nor familiar; it is weak and is going to be
+readily overshadowed by other cultural messages. Therefore, *for an artwork to have the
 RRM as its primary cultural message, all stronger (more obvious) messages
 must be eliminated*.
 
 In the following sections I'm going to discuss how the two goals of real
 realism can be achieved in painting. I chose painting because it is the form
 of art with which I am most familiar and which seems suitable for real
-realistic practice. Some of the ideas from this essay might apply to other
+realist practice. Some of the ideas from this essay might apply to other
 forms of art.
 
 ## Reality through painting
@@ -367,7 +367,7 @@ Painting a painting typically has to do with one or more of the following:
 * Sourcing the ideas from anything other than reality observed during the
   painting process.
 
-It would appear that there should be at least an intersection between
+It would appear that there should be at least some intersection between
 painting reality and painting paintings, since painting paintings can also
 be done by observation and sometimes with minimal intentional alterations.
 There might be, if such a work satisfies the PGRR and is never made public.
@@ -393,7 +393,7 @@ messages, all works of art have to assume a certain aesthetic in order to
 exist. It also must be accepted that considerations for beauty will
 inevitably enter the artist's mind even if the artist is intending to
 produce a real realist artwork. They are so deeply ingrained in our
-collective mind that it is pointless to try to completely unroot them.
+collective mind that it is pointless to try to uproot them completely.
 Fortunately, within the real realist framework there is enough freedom for
 these considerations as long as they have a subordinate role to the goals of
 real realism and especially to the IGRR. It can also be argued that artists
@@ -427,13 +427,13 @@ for avoiding MCTC. Not everything is suitable:
   cannot be used (unless in a heavily cropped way, see the next section)
   since they broadcast the message “I want you to appreciate the beauty of
   X” and there is little that can be done to cancel it.
-* Certain subjects even though they are not usually thought of as beautiful
-  per se, however have strong symbolic connotations attached to them (e.g.
-  skulls will bring up the theme of vanitas). These should be avoided as
-  well.
+* Certain subjects, even though they are not usually thought of as beautiful
+  per se, nevertheless have strong symbolic connotations attached to them
+  (e.g. skulls will bring up the theme of vanitas). These should be avoided
+  as well.
 * Certain arrangements or themes that may not have a clear message per se,
   but may be linked to the art movements of the past or suggest “deeper
-  meaning” are to be avoided.
+  meaning”, are to be avoided.
 * Many views of nature can no longer be depicted because this subject matter
   has been thoroughly used in the past and is strongly connected to the
   concept of beauty, hence most scenes with nature or vegetation in them
@@ -451,13 +451,13 @@ landscapes, etc.
 Finally, it must be pointed out that even though real realist paintings may
 appear to treat this or that subject, fundamentally they always treat the
 same subject—reality itself. Reality cannot be shown or understood in its
-entirety, therefore only a fragment of reality is depicted in any given
-painting. Does it matter what fragment is shown as long as the goals of real
-realism are satisfied? It matters in the sense that the artist may find
-certain scenes more interesting than the others when it comes to exercising
-their perception, but no matter what is shown in a real realist painting it
-is at best only a link to the whole of reality that the audience can
-continue discovering on their own.
+entirety, therefore only a fragment of it is depicted in any given painting.
+Does it matter which fragment is shown, as long as the goals of real realism
+are satisfied? It matters in the sense that the artist may find certain
+scenes more interesting than others when it comes to exercising their
+perception, but no matter what is shown in a real realist painting, it is at
+best only a link to the whole of reality that the audience can continue
+discovering on their own.
 
 ### Framing
 
@@ -472,9 +472,9 @@ interpretation of a given scene through cropping of objects that might
 otherwise assume too much importance, so that the viewer is forced to
 perceive the image as a depiction of raw reality instead. This works because
 reality does not stop being reality even when there is not much to see. The
-only danger with cropping too much is that the resulting picture may start
-to look abstract and abstract art has a totally different cultural message.
-On the other hand even though through cropping we can completely avoid
+only danger in cropping too much is that the resulting picture may start
+to look abstract, and abstract art has a totally different cultural message.
+On the other hand, even though through cropping we can completely avoid
 having the main subject in a real realist painting, there is no need to do
 so in every painting. By choosing rarely used subjects the IGRR can be
 achieved even without cropping them.
@@ -483,7 +483,7 @@ Another major concern when it comes to framing is the danger of having an
 image that satisfies the idea of a beautiful composition according to our
 culture. It is pretty common (especially in photography, but habits of
 visual perception quickly become universal) to have images of mundane
-objects that nevertheless are arranged in interesting and aesthetically
+objects that are nevertheless arranged in interesting and aesthetically
 satisfying ways. Pleasing arrangements are often understood as the cultural
 message and the intention behind such works, therefore they are going to
 provoke MCTC and should be avoided. In other words, the perceived beauty of
@@ -528,18 +528,18 @@ imprint or a signature of reality on the artwork and therefore are welcome.
 ### Rendition and style
 
 Given how saturated our culture is with imagery these days, the style of
-depiction does not make a difference when it comes to representation of
+depiction does not make a difference when it comes to the representation of
 reality. Because we are used to so many graphical styles, they are
-normalized in our perception. Be it photorealistic, impressionistic, flat,
-or other style of rendition, it is the subject matter and the framing that
-contribute most to depicting reality. There seems to be one rule though:
+normalized in our perception. Be the style of rendition photorealistic,
+impressionistic, flat, or otherwise, it is the subject matter and the
+framing that contribute most to depicting reality. There seems to be one rule though:
 reality should be recognizable as such and resemblance to abstract art is to
 be avoided. Abstract art is at the opposite pole of real realism.
 
-In general, it does not matter how thick or thin the paint is, whether an
+In general, it does not matter how thick or thin the paint is, or whether an
 artwork is assembled from pieces of rubbish or constructed in some other
-way, what is the most important part is the intention behind its creation
-and its cultural message.
+way; what matters most is the intention behind its creation and its cultural
+message.
 
 ### The principle of maximal concentration
 
@@ -574,13 +574,13 @@ photography as a real realist medium we have to start with the PGRR. It
 calls for:
 
 1. Observation of raw reality.
-2. No intentional modifications in the arrangement of raw reality.
-3. No intentional modifications in the way reality is represented.
+2. No intentional modifications to the arrangement of raw reality.
+3. No intentional modifications to the way reality is represented.
 
 \(3) is automatically satisfied by the nature of the photographic process.
 (2) is trivial to follow. The real problem is (1), since photography does
-not require observation for taking a picture. Or rather it does, but for
-finding and composing a picture rather than for the process of actually
+not require observation in order to take a picture. Or rather it does, but
+for finding and composing a picture rather than for the process of actually
 taking it. The easy way would be to declare that some observation always
 happens in the photographic process and that is enough for it being a real
 realist medium. Some photographic mediums such as large format film
@@ -588,8 +588,8 @@ photography encourage more observation, but is that enough? Can we make more
 observation necessary in a meaningful way?
 
 Another problem has to do with the IGRR and the impact of photos that are
-made public. Photos became too common, they are too easily taken, and have
-become trivialized. Therefore I do not believe that photography makes the
+made public. Photos have become too common; they are too easily taken, and
+have become trivialized. Therefore I do not believe that photography makes the
 point as convincingly as painting when it comes to real realism. However,
 nothing of this matters if photography is practiced without making the
 resulting photographs public.
@@ -612,12 +612,12 @@ real it looks* in the finished painting. It also has the same fundamental
 conviction that reality is interesting and art-worthy by itself, without any
 beautification. Fundamentally, realism is concerned with truth, while most
 other art movements are concerned with beauty in one way or another. (This
-does not exclude the overlap where reality is beautiful, although it is up
+does not exclude the overlap where reality is beautiful, although it is open
 to debate whether all reality is beautiful and whether all that is true is
-beautiful.) So, there are quite a few similarities between realism and real
-realism. When it comes to the differences, the realist movement of mid-19th
-century was largely (but not exclusively) about people, while real realism
-is about perception of reality and as such it does not have an obvious
+beautiful.) So there are quite a few similarities between realism and real
+realism. When it comes to the differences, the realist movement of the
+mid-19th century was largely (but not exclusively) about people, while real
+realism is about perception of reality and as such does not have an obvious
 social agenda.
 
 ### Impressionism
@@ -635,7 +635,7 @@ preceding realist movement of mid-19th century:
   of impressionistic works is also a consequence of a faster pace of work
   which is something impressionism and real realism have in common.
 * *Painting en plein air* means quite literally working by observing reality
-  in real time and I think it is justified to say that it is more realist
+  in real time, and I think it is justified to say that this is more realist
   than artificial arrangements of figures done in the studio.
 * *Attention to light and atmospheric conditions* is attention to something
   quite real, therefore it is realist.
@@ -656,7 +656,7 @@ However, real realism accepts that any artwork that is presented as such
 will be viewed as an artwork and not as a piece of raw reality, therefore it
 will be subject to interpretation and will be assigned a cultural message.
 
-These are other differences between real realism and nouveau réalisme:
+Here are some other differences between real realism and nouveau réalisme:
 
 * According to real realism, reality is art-worthy to the extent that no
   additional manipulation is required to make it interesting. An ordinary
@@ -693,7 +693,7 @@ with short explanations.
 
 *Untitled*
 
-The first real realist painting produced. In the absence of an obvious
+The first real realist painting I produced. In the absence of an obvious
 subject or message, the picture is likely to be interpreted as a depiction
 of raw reality.
 

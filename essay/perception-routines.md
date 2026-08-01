@@ -8,7 +8,7 @@ date:
 ```
 
 The present essay builds upon [my earlier work on real
-realism][real-realism] and revisits many of the ideas that originally were
+realism][real-realism] and revisits many of the ideas that were originally
 introduced there, such as the concept of non-trivial intentions and the real
 realist intention (RRI). My goal is to develop an approach to perception of
 material reality that implements the RRI better than conventional art forms,
@@ -30,10 +30,10 @@ In the essay on real realism I formulate two ideas:
 
 The rest of the essay on real realism is concerned with how the RRI can be
 implemented through painting. While acknowledging that there is still the
-hanging question about the exact meaning of the RRI (what does it mean to
-explore reality “more thoroughly”?), I think that it is not meaningless to
-point out a number of ways in which painting does not seem to be suitable
-for implementation of the RRI:
+open question of the exact meaning of the RRI (what does it mean to explore
+reality “more thoroughly”?), I think it is not meaningless to point out a
+number of ways in which painting does not seem to be suitable for
+implementing the RRI:
 
 * Most importantly, it is the artist and not the audience that goes through
   the perceptual experience that is aligned with the RRI. It should be the
@@ -65,10 +65,10 @@ Because of these considerations I want to backtrack and explore how reality
 can be experienced “more thoroughly” without art-making in the traditional
 sense.
 
-Before I begin though, there is the subtle question of whether it is
+Before I begin, though, there is the subtle question of whether it is
 meaningful to implement the RRI through something that may or may not be
-considered art, given that both the RRI and the thesis of the importance of
-non-trivial intentions were derived in the context of a discussion on art.
+considered art, given that both the RRI and the thesis about the importance
+of non-trivial intentions were derived in the context of a discussion of art.
 
 ## Art and non-trivial intentions
 
@@ -87,12 +87,12 @@ hardware equipment that is necessary to produce outstanding artworks of a
 given type according to whatever jury or consensus. It does not matter who
 is in the jury. Let it be configurable. Further, let us say that the process
 P is not static in the sense that it is capable of not only satisfying a
-fixed criteria of what constitutes a good work of art, but it is also
+fixed criterion of what constitutes a good work of art, but it is also
 capable of innovation through extrapolation from a significant body of
 existing artworks. Let us further grant that P has access to information
 about current developments in the world and their significance, so that it
 is capable of basing its artistic output on this data in a creative way. All
-of this is technically within the reach of the AI technology of the (near)
+of this is technically within reach of the AI technology of the (near)
 future. For many people, P constitutes a perfect artist capable of producing
 an unlimited stream of valuable artworks.
 
@@ -109,7 +109,7 @@ considerations. There are, however, problems with this stance:
   or by P?
 * The argument that something is valuable simply because it is produced by a
   human needs philosophical defense and justification. Whatever moral
-  considerations that support this stance have to be explicitly stated and
+  considerations support this stance have to be explicitly stated and
   critically analyzed. It is perhaps more promising to suppose that there
   should be something more to human-produced output than simply the fact
   that it is human-produced.
@@ -157,7 +157,7 @@ they are rare. Indeed, this goes well with the economical insight mentioned
 earlier, namely that the value of something is increased by its paucity. But
 is being rare enough for being valuable? If we continue taking inspiration
 from the analogy with the open market, something is valuable at all if
-someone needs it. A stone of a particular shape can be pretty rare, but if
+someone needs it. A stone of a particular shape can be quite rare, but if
 it is not useful in any way, it is not valuable. A fallacy arising from the
 confusion between what is rare and what is valuable is widespread in the art
 world. There it takes the form of the pursuit of novelty as a
@@ -178,10 +178,10 @@ the dictionary we have to ask ourselves what are the qualities of an
 intention? First, it is a conscious act. Second, it is something that has a
 rationale and an expected result.
 
-To what extent a conscious actor is aware of the set of reasons that concern
+To what extent is a conscious actor aware of the set of reasons that concern
 it? From the human vantage point we can say with confidence that animals and
-insects are not aware of all reasons that concern them. An ant is hardly
-consciously aware (or can be aware due to its simple brain) what role it
+insects are not aware of all the reasons that concern them. An ant is hardly
+consciously aware (nor can it be, given its simple brain) of what role it
 plays in the organization of its own colony. Many moths have “eye-spots”
 patterns on their wings. Their design takes into account such factors as eye
 sensitivity of potential predators and their likely position at the crucial
@@ -212,7 +212,7 @@ It cannot. Its current state evolved naturally from a few general ideas and
 needs that most individuals share. Even when we look at a lower level, most
 people are extremely individualistic. This is not a reproach, but a fact. (A
 reproach would require a moral system that is applicable at the scale of
-humanity, but the moral systems we have evolved to suit much smaller scales,
+humanity, but the moral systems we have evolved to suit much smaller scales;
 they may or may not be fully applicable.) Business people think about making
 money, engineers think about how to solve technical problems, writers think
 about what is interesting to read. Rarely do people ask “to what end in the
@@ -255,7 +255,7 @@ of reasons that concern it. It is important to note, however, that by
 physical survival as in the case of evolutionary development, but also those
 that have to do with its stability and development according to its nature.
 What this means is that non-triviality in relation to X depends on the
-casual path that led to formation X. For example, the analogue of
+causal path that led to the formation of X. For example, the analogue of
 non-trivial intentions in the case of the moth are non-trivial mutations.
 The moth could probably do without “eye-spots” patterns on its wings; it
 could have evolved in a different direction entirely and in that case we
@@ -268,7 +268,7 @@ this is a sound principle in a universe with the arrow of time.
 Finally, an intention may be called non-trivial by an individual, but how do
 we know that it is? This is an epistemological problem. Meaningful
 estimation of non-triviality from the human point of view is only possible
-in retrospect, sometimes much later, when we are in a position to understand
+in retrospect—sometimes much later—when we are in a position to understand
 the context in which it arose and its consequences at an appropriate scale.
 
 Seen from this angle, the idea of non-trivial intentions does not seem to be
@@ -434,8 +434,8 @@ its instrumental value?” Let us look at some examples:
 
 * When I look at a painting I do not care about the colored matter in front
   of me for its own sake; what I care about is seeing the painting this
-  matter happens to mediate. Therefore in this case material reality is
-  percevied for its instrumental value.
+  matter happens to mediate. Therefore, in this case, material reality is
+  perceived for its instrumental value.
 * When I observe an experimental setup in a laboratory with a practical goal
   in mind (perhaps I am about to conduct an experiment), I do it for its
   instrumental value.
@@ -471,8 +471,8 @@ existence. Existence, of course, is not a property that is immediately
 perceivable in the same way as, say, color; it has to be perceived through
 attending to existential relations as outlined above.
 
-It seems like we have gone full circle without getting closer to a
-straightforward criteria of when a perceptual experience is aligned with the
+It seems as though we have gone full circle without getting closer to a
+straightforward criterion of when a perceptual experience is aligned with the
 RRI. One thing is clear: there needs to be some flexibility in how and what
 existential relations are perceived if we want to avoid obstruction by
 particulars. Perhaps a vocabulary of real realist perceptual tactics (RRPTs)
@@ -523,7 +523,7 @@ for survival or rapid scanning of an area. The endogenously driven attention
 control, on the other hand, is a more recent top-down mechanism and serves
 to enable sustained attention (Nakayama, 1989). There are in fact many ways
 in which the two styles of attention control differ, but I do not have the
-space to go in details on this. Suffice it to say that only endogenously
+space to go into detail on this. Suffice it to say that only endogenously
 driven attention is aligned with the RRI, since only this style of attention
 control can be informed by an internally set goal or intention.
 
@@ -577,10 +577,10 @@ To answer that question let us consider what attention selects for. Let us
 take spatial attention as an example. In this area there are at least two
 competing models:
 
-* space-based, that posits that space is the primary unit of selection;
-* object-based, that holds that attentional selection is a two-stage process
+* space-based, which posits that space is the primary unit of selection;
+* object-based, which holds that attentional selection is a two-stage process
   where in the first stage the visual field is parsed into perceptual units
-  according to gestalt principles of grouping and those units are then
+  according to gestalt principles of grouping, and those units are then
   available for selection in the second stage.
 
 Each of the two theories is supported by findings that are difficult to make
@@ -590,7 +590,7 @@ sense of in terms of the other one:
   is negatively impacted when a target stimulus is flanked by spatially
   contiguous distractors (e.g. Eriksen & Eriksen, 1974; Posner et al.,
   1980).
-* There seem to be a need for spatial attention to disengage from its origin
+* There seems to be a need for spatial attention to disengage from its origin
   before it can shift to another location (Posner & Petersen, 1990; Mackeben
   & Nakayama, 1993; Pratt & Nghiem, 2000).
 * Many space-based theories assume that the attentional field is indivisible
@@ -699,10 +699,10 @@ that decisions made voluntarily have a kind of internal justification and
 validity that an imposed sequence of actions cannot have.
 
 The last question that I want to mention in this section is, “if one is free
-to choose which RRPTs to use and when, how should they go about it?” This
-may sound like a non-issue, but it is actually an important question, since
-there are more than twenty RRPTs defined at the moment of this writing and
-most of the time all of them are applicable in a given situation. If left
+to choose which RRPTs to use and when, how should one go about it?” This may
+sound like a non-issue, but it is actually an important question, since there
+are more than twenty RRPTs defined at the time of this writing and most of
+the time all of them are applicable in a given situation. If left
 completely to their devices, the individual risks preferring some perceptual
 tactics and forgetting the others or having to resort to ad-hoc mnemonic
 devices in order to constrain their choices. It has to be noted that
@@ -907,7 +907,7 @@ and verify your intuitions.
 
 #### Expectation of rearrangement
 
-**Formulation**: Choose an area and imagine what it would like if you
+**Formulation**: Choose an area and imagine what it would look like if you
 rearranged certain objects in that area in some way. Carry out the
 rearrangement and compare your expectation with what you actually see.
 
@@ -962,7 +962,7 @@ supposed to bring out existential relations in the world, perceptual
 constancy can be used to better isolate the essence of such relations, since
 “the essentials become evident in the context of changing nonessentials”
 *\(ibid\.\)*. For example, observing a surface of a certain
-color[7](footnote:7) in a variety of lighting condition gives us a better
+color[7](footnote:7) in a variety of lighting conditions gives us a better
 idea of what the color is like, compared to a single experience with one
 specific illumination. In the latter case, one could argue that it is
 difficult to make sense of what aspects of the perceptual experience are the
@@ -1034,14 +1034,14 @@ exemplify?
 **Formulation**: Choose an object or an area. Scrutinize it carefully over a
 period of time. How does it change in time, if at all? Concentrate on how
 the thing you are attending to persists through time; try to see it as an
-active process rather than something gratuitous.
+active process rather than something given.
 
 ## From tactics to perception routines
 
 Now that we have defined some RRPTs, we must return to the question of how
 to compose perception routines from individual perceptual tactics. In the
-section on attention I have argued that the choice of when to exercise a
-particular RRPT should be left to the individual lest they are distracted by
+section on attention I argued that the choice of when to exercise a
+particular RRPT should be left to the individual, lest they be distracted by
 the machinery that an externally guided choice would inevitably imply. That
 section concludes with the following:
 
@@ -1259,8 +1259,8 @@ rearrangement which normally should be quite common but they end up being
 assigned to rather rare letters. This solution is simply the result of
 fitting a collection of tactics into a particular real-world alphabet.
 
-Now that we have assigned RRPTs to letters we must find a way to generate
-mnemonic words that will stand for perception routines and will allow us to
+Now that we have assigned RRPTs to letters, we must find a way to generate
+mnemonic words that will stand for perception routines and allow us to
 memorize them. In general, the task of generating words that phonetically
 resemble some source material can be accomplished with something as simple
 as a Markov chain. Such a Markov chain can be constructed through analysis
@@ -1328,14 +1328,14 @@ the surface and much more work still needs to be done. For example, I have
 no confidence that the set of RRPTs presented in this essay is optimal. It
 is my hope that it can grow and improve organically at its own pace.
 
-Now that some progress has been done in the area of phenomenology of
+Now that some progress has been made in the area of phenomenology of
 perception of reality, it is clear to me that progress is also possible in
 the domain of aesthetics of the real. Perhaps it is too early to give up on
 art. I believe that the essay on real realism did have something important
-to say with respect to a new kind of artworks that honor reality better than
-conventional attempts, however, there is still much more we can do in this
-area; perhaps the most important discoveries are yet to be made. Let this be
-a subject for future work.
+to say with respect to a new kind of artwork that honors reality better than
+conventional attempts; however, there is still much more we can do in this
+area, and perhaps the most important discoveries are yet to be made. Let this
+be a subject for future work.
 
 ## References
 
