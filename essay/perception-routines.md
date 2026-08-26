@@ -291,7 +291,7 @@ intention in question.
 Let us recall the real realist intention (RRI):
 
 > Resist the general trend in allocation of attention and explore raw
-  reality more thoroughly.
+> reality more thoroughly.
 
 For now I am going to ignore the adjective “raw” in this formulation. It
 will become important later, once we have made progress with understanding
@@ -422,8 +422,8 @@ Perhaps a better way to define the RRI is in terms of values, hence here I
 propose the *axiological formulation of the RRI*:
 
 > Perception of material reality is aligned with the RRI when material
-  reality is perceived for its intrinsic rather than instrumental
-  (extrinsic) value.
+> reality is perceived for its intrinsic rather than instrumental
+> (extrinsic) value.
 
 According to this formulation, as long as material reality is perceived “for
 its own sake” the perceptual experience is aligned with the RRI. This, of
@@ -622,7 +622,7 @@ attention. Therefore, we arrive at segregation of styles of attention by
 goals. This gives us *the phenomenological formulation of the RRI*:
 
 > The RRI is to experience a style of attention where the goal is defined by
-  a real realist perceptual tactic (RRPT).
+> a real realist perceptual tactic (RRPT).
 
 RRPTs set the goals and inform the individual what to pay attention to. We
 will consider a range of RRPTs in the following section, but before we do
@@ -758,11 +758,11 @@ contribution of olfaction is perhaps most obvious if we consider what
 happens when people lose the ability to perceive smells:
 
 > Patients who lose the sense of smell suddenly complain of life's having
-  lost its savour. Affect is flat and the quality of life diminishes. <…>
-  Sufferers of anosmia often describe themselves as living behind glass, cut
-  off from the world and feeling alienated from familiar settings.
-
-  Smith, 2015
+> lost its savour. Affect is flat and the quality of life diminishes. <…>
+> Sufferers of anosmia often describe themselves as living behind glass, cut
+> off from the world and feeling alienated from familiar settings.
+>
+> Smith, 2015
 
 That said, much of normal smell perception happens unconsciously. Conscious
 odor perception seems to have evolved to inform us about properties of
@@ -1046,8 +1046,8 @@ the machinery that an externally guided choice would inevitably imply. That
 section concludes with the following:
 
 > …it seems helpful to quasi-randomly limit the set of perceptual tactics
-  for any given perception routine to a small fixed number while providing a
-  good mnemonic for remembering the selected RRPTs.
+> for any given perception routine to a small fixed number while providing a
+> good mnemonic for remembering the selected RRPTs.
 
 The present section will concern itself with technicalities of one way to
 achieve this.
@@ -1552,77 +1552,77 @@ Here are 100 pre-generated pentads (the output can be reproduced by running
 ----
 
 > footnotes
-
-  1. It is legitimate to ask what kind of value is meant here. Obviously, it
-     is not monetary value. The reader will probably infer that what I mean
-     is not exactly the folk notion of value nor the notion of value used by
-     art critics and the art world in general in relation to contemporary
-     developments (notion A). Can there be a better definition? Value can
-     only be attributed by a conscious actor (or should we say by a *caring*
-     actor?), it cannot be assigned “mechanically” based on a principle.
-     Therefore a notion of value is either subjective and private or
-     otherwise it is the result of a consensus of some kind. A subjective
-     notion of value does not require justification, but it is also of
-     limited applicability. Clearly, this is not what I have in mind since
-     relevance to the society figures prominently in my text. What is the
-     source of consensus for the notion of value that I employ? It has to be
-     future humanity (notion B). How is this different from the notion A
-     mentioned above? I think the crucial difference is that in the notion B
-     it is future generations that perform the judgment and they do so from
-     a comfortable and relatively objective position of being temporarily
-     removed from what they judge while having the benefit of knowing much
-     more context e.g. about what came next. We, of course, do not have
-     direct access to judgments of future generations, therefore various
-     heuristics must be used instead.
-
-     Even if the notion B seems plausible, there are more questions to be
-     asked about it, such as whether attribution of value through a
-     consensus that happens later is always more accurate (in some
-     yet-to-be-defined sense) than earlier attributions of value.
-     Unfortunately, I do not have the space to develop this topic further
-     here.
-
-  2. Here and later when I talk about possibilities I always mean
-     epistemological and phenomenological possibilities, lest we fall into
-     the trap of discussing such things as actualism. Granted, this colors
-     existence as subjective, but there is no harm done, since the RRI
-     itself is subjective.
-
-  3. This phrase is beautiful, but it needs clarifications. One would not be
-     wrong to say that as long as one lives and remains conscious they
-     attend to their existential reflection. In this essay I am after a
-     particular “flavor” of existential reflection, one that has to do with
-     how we can confront material reality phenomenologically at the most
-     fundamental level.
-
-  4. It might seem that I mean that we can actually control what we
-     perceive, which is obviously not the case. What we can do is control
-     how we allocate our attention. Attention is discussed in the next
-     section.
-
-  5. Obviously, nothing that exists can be separate from reality. Still, I
-     believe there is a useful metaphorical sense in which the phrase can be
-     understood.
-
-  6. The attentive reader must have noticed that in relation to obstruction
-     by particulars via the subject's bias, there is the elephant in the
-     room, namely that since we leave the choice of objects and situations
-     in which a given perceptual tactic is employed completely to the
-     individual, they will inevitably exhibit biases in their choices,
-     whether or not they are aware of them. For example, if someone prefers
-     interacting with objects of type X, it becomes hard to tell whether
-     they are following a perception routine in order to implement the RRI
-     or they fall victim to obstruction by particulars and all they are
-     really interested in is X-ness. After some consideration I decided that
-     this problem is a lesser evil than its possible solutions, since a
-     completely unbiased selection of objects and situations would
-     inevitably introduce delegation of control and thus gamification of the
-     whole process.
-
-  7. The reader could object to my liberal use of the word “color” here. It
-     is true that more formal treatment of this example would require us to
-     take a detour into philosophy of perception and give a satisfactory
-     definition of color. This is something I have no space to go into. My
-     point is simple: witnessing X in a variety of different situations
-     generally gives more information about what X is compared to observing
-     it in one single situation.
+>
+> 1. It is legitimate to ask what kind of value is meant here. Obviously, it
+>    is not monetary value. The reader will probably infer that what I mean
+>    is not exactly the folk notion of value nor the notion of value used by
+>    art critics and the art world in general in relation to contemporary
+>    developments (notion A). Can there be a better definition? Value can
+>    only be attributed by a conscious actor (or should we say by a *caring*
+>    actor?), it cannot be assigned “mechanically” based on a principle.
+>    Therefore a notion of value is either subjective and private or
+>    otherwise it is the result of a consensus of some kind. A subjective
+>    notion of value does not require justification, but it is also of
+>    limited applicability. Clearly, this is not what I have in mind since
+>    relevance to the society figures prominently in my text. What is the
+>    source of consensus for the notion of value that I employ? It has to be
+>    future humanity (notion B). How is this different from the notion A
+>    mentioned above? I think the crucial difference is that in the notion B
+>    it is future generations that perform the judgment and they do so from
+>    a comfortable and relatively objective position of being temporarily
+>    removed from what they judge while having the benefit of knowing much
+>    more context e.g. about what came next. We, of course, do not have
+>    direct access to judgments of future generations, therefore various
+>    heuristics must be used instead.
+>
+>    Even if the notion B seems plausible, there are more questions to be
+>    asked about it, such as whether attribution of value through a
+>    consensus that happens later is always more accurate (in some
+>    yet-to-be-defined sense) than earlier attributions of value.
+>    Unfortunately, I do not have the space to develop this topic further
+>    here.
+>
+> 2. Here and later when I talk about possibilities I always mean
+>    epistemological and phenomenological possibilities, lest we fall into
+>    the trap of discussing such things as actualism. Granted, this colors
+>    existence as subjective, but there is no harm done, since the RRI
+>    itself is subjective.
+>
+> 3. This phrase is beautiful, but it needs clarifications. One would not be
+>    wrong to say that as long as one lives and remains conscious they
+>    attend to their existential reflection. In this essay I am after a
+>    particular “flavor” of existential reflection, one that has to do with
+>    how we can confront material reality phenomenologically at the most
+>    fundamental level.
+>
+> 4. It might seem that I mean that we can actually control what we
+>    perceive, which is obviously not the case. What we can do is control
+>    how we allocate our attention. Attention is discussed in the next
+>    section.
+>
+> 5. Obviously, nothing that exists can be separate from reality. Still, I
+>    believe there is a useful metaphorical sense in which the phrase can be
+>    understood.
+>
+> 6. The attentive reader must have noticed that in relation to obstruction
+>    by particulars via the subject's bias, there is the elephant in the
+>    room, namely that since we leave the choice of objects and situations
+>    in which a given perceptual tactic is employed completely to the
+>    individual, they will inevitably exhibit biases in their choices,
+>    whether or not they are aware of them. For example, if someone prefers
+>    interacting with objects of type X, it becomes hard to tell whether
+>    they are following a perception routine in order to implement the RRI
+>    or they fall victim to obstruction by particulars and all they are
+>    really interested in is X-ness. After some consideration I decided that
+>    this problem is a lesser evil than its possible solutions, since a
+>    completely unbiased selection of objects and situations would
+>    inevitably introduce delegation of control and thus gamification of the
+>    whole process.
+>
+> 7. The reader could object to my liberal use of the word “color” here. It
+>    is true that more formal treatment of this example would require us to
+>    take a detour into philosophy of perception and give a satisfactory
+>    definition of color. This is something I have no space to go into. My
+>    point is simple: witnessing X in a variety of different situations
+>    generally gives more information about what X is compared to observing
+>    it in one single situation.

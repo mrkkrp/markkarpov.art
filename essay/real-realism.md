@@ -146,7 +146,7 @@ definitely claim a lot of real estate in our minds. Assuming this is only a
 continuation of a general trend, we could formulate a hypothesis:
 
 > Development of humanity progressively shifts the attention of people from
-  raw reality to carrier reality.
+> raw reality to carrier reality.
 
 Now, this seems plausible, yet it may or may not be true. It may be as well
 that there is a natural balance between the time an average person spends
@@ -159,7 +159,7 @@ attention than it could have received otherwise, then there is a basis for
 the *real realist intention*:
 
 > Resist the general trend in allocation of attention and explore raw
-  reality more thoroughly.
+> reality more thoroughly.
 
 One goal of real realism is to remind us that perception of reality is a
 great privilege, the foundation for everything else. Another goal of real
@@ -192,9 +192,9 @@ Let us define *the principal goal of real realism* (PGRR). It has to do with
 how an artwork is made:
 
 > A real realist artwork is created through an exercise of perception, by
-  confronting a fragment of raw reality and paying full attention to it and
-  without any intentional modifications both in the way observable raw
-  reality is arranged and in the way it is represented.
+> confronting a fragment of raw reality and paying full attention to it and
+> without any intentional modifications both in the way observable raw
+> reality is arranged and in the way it is represented.
 
 The definition above seems to stipulate that a real realist artwork
 represents reality as closely as possible, but an artwork can only ever be an
@@ -242,7 +242,7 @@ artwork, what is the most appropriate cultural message to have? It seems
 logical that it should be:
 
 > The artist has satisfied the principal goal of real realism while creating
-  the artwork.
+> the artwork.
 
 Let us call this *the real realist message* (RRM).
 
@@ -261,7 +261,7 @@ At this point we can define *the interpretational goal of real realism*
 that has been made available to the public:
 
 > A real realist artwork has the real realist message as its primary
-  cultural message.
+> cultural message.
 
 The task of thinking about what others will think of an artwork is not new
 for artists, even though it has been somewhat less of an issue in the
