@@ -19,7 +19,7 @@ data ExhibitionPerYear = ExhibitionPerYear
   }
 
 instance ToJSON ExhibitionPerYear where
-  toJSON ExhibitionPerYear {..} =
+  toJSON ExhibitionPerYear{..} =
     object
       [ "year" .= epyYear,
         "exhibition" .= epyExhibitions
