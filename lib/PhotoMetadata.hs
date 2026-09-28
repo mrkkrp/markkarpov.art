@@ -30,10 +30,10 @@ instance FromJSON PhotoMetadata where
     case someCamera of
       SomeCamera (camera :: Proxy camera) -> do
         lens :: Lens camera <- o .: "lens"
-        pure PhotoMetadata {..}
+        pure PhotoMetadata{..}
 
 instance ToJSON PhotoMetadata where
-  toJSON PhotoMetadata {..} =
+  toJSON PhotoMetadata{..} =
     toJSON $
       cameraPretty camera <> " + " <> lensPretty lens <> " + " <> filmPretty film
 

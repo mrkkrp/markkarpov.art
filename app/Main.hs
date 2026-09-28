@@ -152,7 +152,7 @@ main = shakeArgs shakeOptions $ do
               env
               (exhibitionDescriptionRaw x)
               ("Description of " ++ T.unpack (exhibitionTitle x))
-        return x {exhibitionDescriptionRendered = descRendered}
+        return x{exhibitionDescriptionRendered = descRendered}
     let relevantArtworks =
           filter
             ((`Set.member` exhibitionArtworks thisExhibition) . artworkId)
@@ -244,7 +244,7 @@ main = shakeArgs shakeOptions $ do
 -- Helpers
 
 selectTemplate :: PName -> Template -> Template
-selectTemplate name t = t {templateActual = name}
+selectTemplate name t = t{templateActual = name}
 
 renderAndWrite ::
   (MonadIO m) =>
@@ -314,7 +314,7 @@ interpretValue v =
     Success a -> return a
 
 exhibitionYear :: Exhibition -> Year
-exhibitionYear Exhibition {..} = dayPeriod exhibitionStart
+exhibitionYear Exhibition{..} = dayPeriod exhibitionStart
 
 getArtworkYears :: [Artwork] -> Set Year
 getArtworkYears = Set.fromList . fmap (dayPeriod . Artwork.date)

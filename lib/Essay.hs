@@ -24,10 +24,10 @@ instance FromJSON Essay where
       (o .: "date")
         >>= (.:? "updated")
         >>= maybe (pure Nothing) (fmap Just . parseDay)
-    return Essay {..}
+    return Essay{..}
 
 instance ToJSON Essay where
-  toJSON Essay {..} =
+  toJSON Essay{..} =
     object
       [ "title" .= essayTitle,
         "published" .= renderDay essayPublished,

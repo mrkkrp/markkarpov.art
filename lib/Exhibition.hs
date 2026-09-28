@@ -52,10 +52,10 @@ instance FromJSON Exhibition where
     let exhibitionDigest =
           (Hash.hash . BS.toStrict . Binary.encode)
             (exhibitionLink, exhibitionStart, exhibitionEnd)
-    return Exhibition {..}
+    return Exhibition{..}
 
 instance ToJSON Exhibition where
-  toJSON Exhibition {..} =
+  toJSON Exhibition{..} =
     object
       [ "title" .= exhibitionTitle,
         "location" .= exhibitionLocation,

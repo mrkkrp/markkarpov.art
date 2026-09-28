@@ -34,16 +34,16 @@ instance FromJSON Artwork where
       Photograph -> do
         let artworkDimensions = Nothing
         artworkPhotoMetadata <- parseJSON (Object o)
-        return Artwork {..}
+        return Artwork{..}
       _ -> do
         artworkHeight <- o .: "height"
         artworkWidth <- o .: "width"
         let artworkDimensions = Just (artworkHeight, artworkWidth)
             artworkPhotoMetadata = Nothing
-        return Artwork {..}
+        return Artwork{..}
 
 instance ToJSON Artwork where
-  toJSON Artwork {..} =
+  toJSON Artwork{..} =
     object
       [ "id" .= artworkId,
         "title" .= artworkTitle,
