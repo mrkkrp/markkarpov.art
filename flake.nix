@@ -7,8 +7,9 @@
       inputs.stackage.url = "github:input-output-hk/empty-flake";
     };
     nixpkgs.follows = "haskellNix/nixpkgs-unstable";
+    tilia.url = "github:mrkkrp/tilia";
   };
-  outputs = { self, nixpkgs, haskellNix }:
+  outputs = { self, nixpkgs, haskellNix, tilia }:
     let
       system = "x86_64-linux";
       compiler = "ghc9122";
@@ -30,7 +31,20 @@
           "^README\.md$"
         ];
         compiler-nix-name = compiler;
+        modules = [{
+          packages.markkarpov-art.components = {
+            library.preBuild = tiliaCheck "lib:markkarpov-art";
+            exes.mk-art.preBuild = tiliaCheck "exe:mk-art";
+          };
+        }];
       };
+      tiliaCheck = target: ''
+        ${tilia.legacyPackages.${system}.ghc9124.tilia}/bin/tilia check ${target} \
+          --build-plan ${hsProject.plan-nix}/plan.json \
+          --no-cache \
+          --no-downloads \
+          --must-not-decline
+      '';
       hsPkgs = hsProject.hsPkgs;
       mk-art = hsPkgs.markkarpov-art.components.exes.mk-art;
 
@@ -117,10 +131,12 @@
     extra-substituters = [
       "https://cache.iog.io"
       "https://markkarpov-sites.cachix.org"
+      "https://tilia.cachix.org"
     ];
     extra-trusted-public-keys = [
       "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
       "markkarpov-sites.cachix.org-1:tzrAG4NHl/VkbtjotbuQJ7kCSaq/dkzj2IaSUgxo4Gs="
+      "tilia.cachix.org-1:bxzzQCOu9D/Suuzll8oRj2RaOb37KVTsETMiTDMLiJ4="
     ];
   };
 }
